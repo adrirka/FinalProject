@@ -14,15 +14,7 @@ class UserController extends ControllerAbstract{
         if (!empty($_POST)){
             
             //Validation
-            
-            if(!$this->validate($_POST['lastname'], new Assert\NotBlank())){
-                $errors['lastname'] = 'Le nom est obligatoire';
-            }
-            
-            if(!$this->validate($_POST['firstname'], new Assert\NotBlank())){
-                $errors['firstname'] = 'Le prénom est obligatoire';
-            }
-            
+           
             if(!$this->validate($_POST['email'], new Assert\NotBlank())){
                 $errors['email'] = 'L\'email est obligatoire';
             }
@@ -37,15 +29,13 @@ class UserController extends ControllerAbstract{
             if(empty($errors)){
             
                 $user
-                    ->setLastname($_POST['lastname'])
-                    ->setFirstname($_POST['firstname'])
                     ->setEmail($_POST['email'])
                     ->setPassword($this->app['user.manager']->encodePassword($_POST['password']));
 
                 $this->app['user.repository']->insert($user);
                 $this->app['user.manager']->login($user);
 
-                return $this->render('homepage');
+                return $this->redirectRoute('homepage');
             }
             else{
                 $msg = '<strong>Le formulaire contient des erreurs</strong>';

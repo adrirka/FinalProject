@@ -2,18 +2,13 @@
 namespace Repository;
 
 use Entity\Article;
-use Entity\Category;
 
 class ArticleRepository extends RepositoryAbstract {
 
     public function findAll(){
-        
         $query = <<<EOS
-SELECT a.*, c.name
-FROM article a
-JOIN category c ON a.category_id = c.id
+SELECT a.* FROM article a
 EOS;
-
         $dbArticles = $this -> db -> fetchAll($query);
         $articles = [];
         
@@ -42,6 +37,8 @@ EOS;
             ['title' => $article->getTitle(),
             'content' => $article->getContent(),
             'short_content' => $article->getShortContent(),
+            'img' => $article->getImg(),
+
             ] // valeurs
         );
     }
@@ -52,7 +49,7 @@ EOS;
             ['title' => $article->getTitle(),
             'content' => $article->getContent(),
             'short_content' => $article->getShortContent(),
-            'category_id' => $article->getCategoryId(),
+            'img' => $article->getImg(),
             ], //valeurs
             ['id' => $article->getId()] // clause WHERE
         );
@@ -66,58 +63,26 @@ EOS;
     }
     
     private function buildArticleFromArray(array $dbArticle){
-        $category = new Category();
-            
-        $category
-                ->setId($dbArticle['category_id'])
-                ->setName($dbArticle['name']);
-
+        
+        var_dump($dbArticle);
         $article = new Article(); // $article est un objet instance de la classe Entity article
         $article
             ->setId($dbArticle['id'])
             ->setTitle($dbArticle['title'])
             ->setContent($dbArticle['content'])
             ->setShortContent($dbArticle['short_content'])
-            ->setCategory($category);
+            ->setImg($dbArticle['img']);
         return $article;
 
     }
     
     public function find($id){
-        
-        $query = <<<EOS
-SELECT a.*, c.name
-FROM article a
-JOIN category c ON a.category_id = c.id
-WHERE a.id = :id
-EOS;
-        
+          
         $dbArticle = $this->db->fetchAssoc(
             $query, [':id' => $id]);
         
         $article = $this->buildArticleFromArray($dbArticle);
         return $article;
-    }
-    
-    public function findByCategory(Category $category){
-        
-         $query = <<<EOS
-SELECT a.*, c.name
-FROM article a
-JOIN category c ON a.category_id = c.id
-WHERE c.id = :id
-EOS;
-        
-        $dbArticles = $this->db->fetchAll($query, [':id' => $category->getId()]);
-        $articles = [];
-        
-        foreach ($dbArticles as $dbArticle) {
-            
-            $article = $this->buildArticleFromArray($dbArticle);
-            
-            $articles[] = $article;
-        }
-        return $articles;
     }
 }
 

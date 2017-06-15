@@ -1,7 +1,6 @@
 <?php
 
 use Repository\ArticleRepository;
-use Repository\CategoryRepository;
 use Repository\UserRepository;
 use Service\UserManager;
 use Silex\Application;
@@ -32,7 +31,7 @@ $app->register(
         'db.options' => [
             'driver' => 'pdo_mysql',
             'host' => 'localhost',
-            'dbname' => 'silex_blog',
+            'dbname' => 'saraba',
             'user' => 'root',
             'password' => '',
             'charset' => 'utf8',
@@ -47,9 +46,6 @@ $app->register(new ValidatorServiceProvider());
 
 /* Repository */
 
-$app['category.repository'] = function () use ($app){
-    return new CategoryRepository($app['db']);
-};
 
 $app['article.repository'] = function () use ($app){
     return new ArticleRepository($app['db']);

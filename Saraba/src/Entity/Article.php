@@ -26,7 +26,7 @@ class Article {
     /*
      * @var string
      */
-    private $category;
+    private $img;
     
     /*
      * @return int
@@ -55,6 +55,13 @@ class Article {
     public function getShortContent() {
         return $this->shortContent;
     }
+    
+    /*
+     * @return string
+     */
+    public function getImg() {
+        return $this->img;
+    }
 
     public function setId($id) {
         $this->id = $id;
@@ -75,32 +82,11 @@ class Article {
         $this->shortContent = $shortContent;
         return $this;
     }
-    /*
-     * @return Category
-     */
-    public function getCategory() {
-        return $this->category;
-    }
-
-    public function setCategory(Category $category) {
-        $this->category = $category;
+    
+    public function setImg($img) {
+        $this->img = $img;
         return $this;
     }
-    
-    public function getCategoryId(){
-        if(!is_null($this->category)){
-            return $this->category->getId();
-        }
-        return null;
-    }
-    
-    public function getCategoryName(){
-        if(!is_null($this->category)){
-            return $this->category->getName();
-        }
-        return '';
-    }
-
 }
 
 

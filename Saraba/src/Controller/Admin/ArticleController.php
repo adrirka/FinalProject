@@ -16,14 +16,11 @@ class ArticleController extends ControllerAbstract{
     
     public function editAction($id = null){
         
-        $categories = $this->app['category.repository']->findAll();
-        
         if(!is_null($id)){  
             $article = $this->app['article.repository']->find($id);
         }
         else{
             $article = new Article();
-            $article->setCategory(new Category());
         }
         
         if (!empty($_POST)){
@@ -31,7 +28,7 @@ class ArticleController extends ControllerAbstract{
                     ->setContent($_POST['content'])
                     ->setShortContent($_POST['short_content']);
                     
-            $article->getCategory()->setId($_POST['category']);
+
 
             $this->app['article.repository']->save($article); // save vérifie que l'id existe, si non => insert, si oui => update
             $this->addflashMessage('L\'article est enregistrée');

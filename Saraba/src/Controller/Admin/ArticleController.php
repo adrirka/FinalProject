@@ -38,7 +38,7 @@ class ArticleController extends ControllerAbstract{
                 
         return $this->render(
                 'admin/article/edit.html.twig',
-                ['article' => $article, 'categories' => $categories]
+                ['article' => $article]
         );
     }
     

@@ -1,6 +1,7 @@
 <?php
 
 use Controller\IndexController;
+use Controller\PartnerController;
 use Controller\UserController;
 use Controller\Admin\ArticleController;
 use Symfony\Component\HttpFoundation\Request;
@@ -16,6 +17,14 @@ $app
     ->get('/', 'index.controller:indexAction')  
     ->bind('homepage');
 
+$app['partner.controller'] = function () use ($app) {
+    return new PartnerController($app);
+};
+
+$app
+    ->post('/partenaire/contact', 'partner.controller:formPartnerAjaxAction')
+    ->bind('partner_ajax')
+;
 
 /* Utilisateur */
 

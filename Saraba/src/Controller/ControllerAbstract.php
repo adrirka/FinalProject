@@ -12,7 +12,7 @@ use Twig_Environment;
 abstract class ControllerAbstract { // classe qui ne sert qu'à être héritée
     /**
      *
-     * @var Application2
+     * @var Application
      */
     protected $app;
     
@@ -37,7 +37,7 @@ abstract class ControllerAbstract { // classe qui ne sert qu'à être héritée
     protected $validator;
     /**
      * 
-     * @param Application2 $app
+     * @param Application $app
      */
 
     public function __construct(Application $app){

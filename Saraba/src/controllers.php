@@ -16,7 +16,6 @@ $app
     ->get('/', 'index.controller:indexAction')  
     ->bind('homepage');
 
-
 /* Utilisateur */
 
 $app['user.controller'] = function () use ($app) {

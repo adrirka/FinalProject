@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Client :  127.0.0.1
--- Généré le :  Jeu 15 Juin 2017 à 16:42
+-- Généré le :  Ven 16 Juin 2017 à 17:35
 -- Version du serveur :  10.1.21-MariaDB
 -- Version de PHP :  7.1.1
 
@@ -34,6 +34,13 @@ CREATE TABLE `article` (
   `img` varchar(250) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Contenu de la table `article`
+--
+
+INSERT INTO `article` (`id`, `title`, `content`, `short_content`, `img`) VALUES
+(3, 'ads', 'fqsfdqsd', 'dqsdqsdqsd', 'ads_pantalon2.jpg');
+
 -- --------------------------------------------------------
 
 --
@@ -46,6 +53,13 @@ CREATE TABLE `user` (
   `email` varchar(100) NOT NULL,
   `role` enum('admin') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Contenu de la table `user`
+--
+
+INSERT INTO `user` (`id`, `password`, `email`, `role`) VALUES
+(1, '$2y$10$HvMgJvLAOAHKH9IJRfjpauohegNObE7.rkGH4Jw9Ht9E4x3UR8qHW', 'admin@admin.com', 'admin');
 
 --
 -- Index pour les tables exportées
@@ -71,12 +85,12 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT pour la table `article`
 --
 ALTER TABLE `article`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT pour la table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

@@ -40,6 +40,7 @@ EOS;
             'img' => $addpartner->getImg(),
             ] // valeurs
         );
+        
     }
     
     public function update(AddPartner $partner){

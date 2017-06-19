@@ -1,6 +1,7 @@
 <?php
 
 use Repository\ArticleRepository;
+use Repository\PartnerRepository;
 use Repository\UserRepository;
 use Service\UserManager;
 use Silex\Application;
@@ -49,6 +50,14 @@ $app->register(new ValidatorServiceProvider());
 
 $app['article.repository'] = function () use ($app){
     return new ArticleRepository($app['db']);
+};
+
+$app['partner.repository'] = function () use ($app){
+    return new PartnerRepository($app['db']);
+};
+
+$app['addpartner.repository'] = function () use ($app){
+    return new PartnerRepository($app['db']);
 };
 
 $app['user.repository'] = function () use ($app){

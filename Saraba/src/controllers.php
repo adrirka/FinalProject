@@ -1,5 +1,6 @@
 <?php
 
+use Controller\Admin\PartnerController as AdminPartnerController;
 use Controller\IndexController;
 use Controller\PartnerController;
 use Controller\UserController;
@@ -17,8 +18,6 @@ $app
     ->get('/', 'index.controller:indexAction')  
     ->bind('homepage');
 
-<<<<<<< HEAD
-=======
 $app['partner.controller'] = function () use ($app) {
     return new PartnerController($app);
 };
@@ -28,7 +27,6 @@ $app
     ->bind('partner_ajax')
 ;
 
->>>>>>> dbd10bde7a030c14ee3064ccd05f150c433a60af
 /* Utilisateur */
 
 $app['user.controller'] = function () use ($app) {
@@ -47,6 +45,9 @@ $app
     ->get('utilisateur/deconnexion', 'user.controller:logoutAction')
     ->bind ('logout');
 
+$app
+    ->match('/addpartners/edition', 'partner.controller:FormAction') //match accepte plusieurs méthodes, nomtamment get et post
+    ->bind('addpartner_edit');
 /* Admin */
 
 // Créer un sous-ensemble de routes
@@ -82,6 +83,38 @@ $admin
 $admin
     ->match('/articles/suppression/{id}', 'admin.article.controller:deleteAction') //match accepte plusieurs méthodes, nomtamment get et post
     ->bind('admin_article_delete');
+
+$app['admin.partner.controller'] = function () use ($app) {
+    return new AdminPartnerController($app);
+};
+
+$admin
+    ->get('/partners', 'admin.partner.controller:listAction')  
+    ->bind('admin_partners');
+
+$admin
+    ->match('/partners/edition/{id}', 'admin.partner.controller:listAction') //match accepte plusieurs méthodes, nomtamment get et post
+    ->value('id', null) // valeur par défaut (null) pour le paramètre (id) de la route
+    ->assert('id', '\d+')
+    ->bind('admin_partner_edit');
+
+$admin
+    ->match('/partners/suppression/{id}', 'admin.partner.controller:deleteAction') //match accepte plusieurs méthodes, nomtamment get et post
+    ->bind('admin_partner_delete');
+
+
+$app['admin.addpartner.controller'] = function () use ($app) {
+    return new AddPartnerController($app);
+};
+
+$admin
+    ->get('/addpartners', 'addpartner.controller:listAction')  
+    ->bind('admin_addpartners');
+
+
+$admin
+    ->match('/addpartners/suppression/{id}', 'admin.addpartner.controller:deleteAction') //match accepte plusieurs méthodes, nomtamment get et post
+    ->bind('admin_addpartner_delete');
 
 $app->error(function (Exception $e, Request $request, $code) use ($app) {
     if ($app['debug']) {

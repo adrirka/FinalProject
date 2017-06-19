@@ -5,18 +5,14 @@
         <group>
             <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/templates/register.html.twig</file>
             <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/src/Entity/Article.php</file>
-            <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/src/Controller/UserController.php</file>
-            <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/src/Repository/ArticleRepository.php</file>
-            <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/src/Repository/UserRepository.php</file>
-            <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/src/Service/UserManager.php</file>
-            <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/src/Repository/RepositoryAbstract.php</file>
-            <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/src/controllers.php</file>
             <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/templates/admin/article/list.html.twig</file>
+            <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/src/Repository/ArticleRepository.php</file>
             <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/src/Controller/Admin/ArticleController.php</file>
             <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/templates/admin/article/edit.html.twig</file>
             <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/templates/layout.html.twig</file>
-            <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/src/Entity/User.php</file>
-            <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/src/app.php</file>
+            <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/src/Controller/ControllerAbstract.php</file>
+            <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/web/index.php</file>
+            <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/src/controllers.php</file>
         </group>
     </open-files>
 </project-private>

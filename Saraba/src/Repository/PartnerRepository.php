@@ -42,6 +42,8 @@ EOS;
             'img' => $partner->getImg(),
             ] // valeurs
         );
+        
+        $partner->setId($this->db->lastInsertId());
     }
     
     public function update(Partner $partner){

@@ -15,24 +15,30 @@ class AddPartnerController extends ControllerAbstract{
     public function acceptAction($id){
         
         $addpartner = $this->app['addpartner.repository']->find($id);
-        $addpartner->setStatus($_POST['status']);
+        $addpartner->setStatus('accepted');
+                  
+        $partner = new \Entity\Partner();
         
+        $partner->setTitle($addpartner->getPartner());
+        $partner->setContent($addpartner->getPartner());
+        $partner->setImg($addpartner->getPartner());
+
         $this->app['addpartner.repository']->save($addpartner);
         
-        $this->addflashMessage('Le partner est ajouter');
+        $this->addflashMessage('Le partner est accepter');
         
-        return $this->redirectRoute('admin_addpartners');
+        return $this->redirectRoute('admin_partner_edit', ['id' => $partner->getId()]);
         
     }
     
     public function refuseAction($id){
         
         $addpartner = $this->app['addpartner.repository']->find($id);
-        $addpartner->setStatus($_POST['status']);
+        $addpartner->setStatus('refused');
         
         $this->app['addpartner.repository']->save($addpartner);
         
-        $this->addflashMessage('Le partner est refusée');
+        $this->addflashMessage('Le partner est refuser');
         
         return $this->redirectRoute('admin_addpartners');
     }

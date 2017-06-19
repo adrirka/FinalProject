@@ -1,6 +1,7 @@
 <?php
 
 use Controller\Admin\PartnerController as AdminPartnerController;
+use Controller\Admin\AddPartnerController;
 use Controller\IndexController;
 use Controller\PartnerController;
 use Controller\UserController;
@@ -46,7 +47,7 @@ $app
     ->bind ('logout');
 
 $app
-    ->match('/addpartners/edition', 'partner.controller:FormAction') //match accepte plusieurs méthodes, nomtamment get et post
+    ->match('/addpartners/edition', 'partner.controller:formAction') //match accepte plusieurs méthodes, nomtamment get et post
     ->bind('addpartner_edit');
 /* Admin */
 
@@ -108,13 +109,16 @@ $app['admin.addpartner.controller'] = function () use ($app) {
 };
 
 $admin
-    ->get('/addpartners', 'addpartner.controller:listAction')  
+    ->get('/addpartners', 'admin.addpartner.controller:listAction')  
     ->bind('admin_addpartners');
 
+$admin
+    ->match('/addpartners/suppression/{id}', 'admin.addpartner.controller:refuseAction') //match accepte plusieurs méthodes, nomtamment get et post
+    ->bind('admin_addpartner_refuse');
 
 $admin
-    ->match('/addpartners/suppression/{id}', 'admin.addpartner.controller:deleteAction') //match accepte plusieurs méthodes, nomtamment get et post
-    ->bind('admin_addpartner_delete');
+    ->match('/addpartners/suppression/{id}', 'admin.addpartner.controller:accepteAction') //match accepte plusieurs méthodes, nomtamment get et post
+    ->bind('admin_addpartner_accepte');
 
 $app->error(function (Exception $e, Request $request, $code) use ($app) {
     if ($app['debug']) {

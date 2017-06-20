@@ -1,5 +1,6 @@
 <?php
 
+use Repository\AddPartnerRepository;
 use Repository\ArticleRepository;
 use Repository\PartnerRepository;
 use Repository\UserRepository;
@@ -57,7 +58,7 @@ $app['partner.repository'] = function () use ($app){
 };
 
 $app['addpartner.repository'] = function () use ($app){
-    return new PartnerRepository($app['db']);
+    return new AddPartnerRepository($app['db']);
 };
 
 $app['user.repository'] = function () use ($app){

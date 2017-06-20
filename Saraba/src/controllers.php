@@ -49,12 +49,17 @@ $app
 $app
     ->match('/addpartners/edition', 'partner.controller:formAction') //match accepte plusieurs méthodes, nomtamment get et post
     ->bind('addpartner_edit');
+
+
+
 /* Admin */
 
 // Créer un sous-ensemble de routes
+
 $admin = $app['controllers_factory'];
 
-// permet de faire un traitement avant l'accès à la route
+// Permet de faire un traitement avant l'accès à la route
+
 $admin->before(function() use ($app){ 
     if(!$app['user.manager']->isAdmin()){ // si un admin n'est pas connecté
         $app->abort(403, 'Accès refusé'); // HTTP 403 Forbidden
@@ -65,7 +70,7 @@ $admin->before(function() use ($app){
 // Créer un sous-ensemble de routes
 $app->mount('/admin', $admin);
 
-
+// ADMIN ARTCILE
 
 $app['admin.article.controller'] = function () use ($app) {
     return new ArticleController($app);
@@ -82,8 +87,11 @@ $admin
     ->bind('admin_article_edit');
 
 $admin
-    ->match('/articles/suppression/{id}', 'admin.article.controller:deleteAction') //match accepte plusieurs méthodes, nomtamment get et post
+    ->match('/articles/suppression/{id}', 'admin.article.controller:deleteAction')
     ->bind('admin_article_delete');
+
+
+// ADMIN PARTNER
 
 $app['admin.partner.controller'] = function () use ($app) {
     return new AdminPartnerController($app);
@@ -94,15 +102,17 @@ $admin
     ->bind('admin_partners');
 
 $admin
-    ->match('/partners/edition/{id}', 'admin.partner.controller:listAction') //match accepte plusieurs méthodes, nomtamment get et post
-    ->value('id', null) // valeur par défaut (null) pour le paramètre (id) de la route
+    ->match('/partners/edition/{id}', 'admin.partner.controller:editAction') //match accepte plusieurs méthodes, nomtamment get et post
+    ->value('id', null)
     ->assert('id', '\d+')
     ->bind('admin_partner_edit');
 
 $admin
-    ->match('/partners/suppression/{id}', 'admin.partner.controller:deleteAction') //match accepte plusieurs méthodes, nomtamment get et post
+    ->match('/partners/suppression/{id}', 'admin.partner.controller:deleteAction')
     ->bind('admin_partner_delete');
 
+
+// ADMIN ADDPARTNER
 
 $app['admin.addpartner.controller'] = function () use ($app) {
     return new AddPartnerController($app);
@@ -113,12 +123,15 @@ $admin
     ->bind('admin_addpartners');
 
 $admin
-    ->match('/addpartners/suppression/{id}', 'admin.addpartner.controller:refuseAction') //match accepte plusieurs méthodes, nomtamment get et post
+    ->match('/addpartners/refuse/{id}', 'admin.addpartner.controller:refuseAction') //match accepte plusieurs méthodes, nomtamment get et post
     ->bind('admin_addpartner_refuse');
 
 $admin
-    ->match('/addpartners/suppression/{id}', 'admin.addpartner.controller:accepteAction') //match accepte plusieurs méthodes, nomtamment get et post
+    ->match('/addpartners/accepte/{id}', 'admin.addpartner.controller:accepteAction')
     ->bind('admin_addpartner_accepte');
+
+
+// A NE PAS TOUCHER
 
 $app->error(function (Exception $e, Request $request, $code) use ($app) {
     if ($app['debug']) {

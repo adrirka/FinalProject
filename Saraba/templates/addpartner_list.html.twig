@@ -1,0 +1,68 @@
+{%extends "layout.html.twig"%}
+{% block content %}
+
+
+<!-- FORMULAIRE -->
+        
+        <main>
+            <section class="col-md-6" id="partenaire">
+                        <h2>Pourquoi devenir partenaire ?</h2>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia laudantium, sapiente possimus molestiae consectetur quisquam dolores? Quas natus possimus perferendis a, nisi aspernatur harum asperiores inventore non ipsam facilis tenetur.</p><br>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia laudantium, sapiente possimus molestiae consectetur quisquam dolores? Quas natus possimus perferendis a, nisi aspernatur harum asperiores inventore non ipsam facilis tenetur.</p><br>
+
+            </section>
+
+            <section class="col-md-6" id="contact">
+                <h2>Nous contacter</h2>
+                <form class="form-vertical form_contact" method="post" action="#">
+                        <article class="form-group">
+                            <label class="control-label col-sm-12" for="userName">Votre nom <b></b> </label>
+                            <input class="col-sm-6 form-control" type="text" id="userName" name="name">
+                        </article>
+
+
+                        <article class="form-group">
+                            <label class="control-label col-sm-12" for="userEmail">Votre Email <b></b> </label>
+                            <input class="col-sm-6 form-control" type="email" id="userEmail" name="email">
+                        </article>
+
+                        <article class="form-group">
+                            <label class="control-label col-sm-12" for="userSubject">Choisir un sujet <b></b> </label>
+                                <div class="col-sm-6 form-control">
+                                    <select  id="userSubject" name="subject">
+                                        <option value="rdv">Prise de rendez-vous</option>
+                                    </select>
+                                </div>
+                        </article>
+
+                        <article class="form-group">
+                            <label class="control-label col-sm-12" for="userMessage">Votre Message <b></b> </label>
+                            <textarea class="col-sm-6 form-control" id="userMessage" name="message"></textarea>
+                        </article>
+
+                        <article class="form-group">
+                            <label class="control-label col-sm-12" for="userTitle">Title <b></b> </label>
+                            <input class="col-sm-6 form-control" type="text" id="userTitle" name="title">
+                        </article>
+
+                        <article class="form-group">
+                            <label class="control-label col-sm-12" for="userContent">Content <b></b> </label>
+                            <input class="col-sm-6 form-control" type="text" id="userContent" name="content">
+                        </article>
+
+                        <div class="col-sm-12">
+                            <input class="btn btn-success" type="submit" value="Envoyer">
+                        </div>
+
+                    </form>
+            </section>
+        </main>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script>var ajaxUrl = '{{ path('partner_ajax') }}'</script>
+    <script src="{{ asset('js/contact.js') }}"></script>
+{% endblock %}

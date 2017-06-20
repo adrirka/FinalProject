@@ -24,11 +24,7 @@ EOS;
     
     public function save(AddPartner $addpartner){
         
-        if(!empty($addpartner->getId())) {
-            $this->update($addpartner);
-        }else{
-            $this->insert($addpartner);
-        }
+        $this->insert($addpartner);
     }
     
     public function insert(AddPartner $addpartner){
@@ -37,24 +33,17 @@ EOS;
             'addpartner',
             ['title' => $addpartner->getTitle(),
             'content' => $addpartner->getContent(),
-            'img' => $addpartner->getImg(),
+            'nom' => $addpartner->getName(),
+            'email' => $addpartner->getEmail(),
+            'sujet' => $addpartner->getSubject(),
+            'message' => $addpartner->getMessage(),
+
+            //'img' => $addpartner->getImg(),
             ] // valeurs
         );
         
     }
     
-    public function update(AddPartner $partner){
-         $this->db->update(
-            'addpartner', // nom de la table
-            ['title' => $addpartner->getTitle(),
-            'content' => $addpartner->getContent(),
-            'img' => $addpartner->getImg(),
-            ], //valeurs
-            ['id' => $addpartner->getId()] // clause WHERE
-        );
-        
-    }
-
     public function delete(AddPartner $addpartner ){
         
         $this-> db->delete('addpartner',['id'=> $addpartner->getId()]);
@@ -69,6 +58,11 @@ EOS;
             ->setId($dbAddPartner['id'])
             ->setTitle($dbAddPartner['title'])
             ->setContent($dbAddPartner['content'])
+            ->setName($dbAddPartner['nom'])
+            ->setEmail($dbAddPartner['email'])
+            ->setSubject($dbAddPartner['sujet'])
+            ->setMessage($dbAddPartner['message'])
+
             ->setImg($dbAddPartner['img']);
         return $addpartner;
 

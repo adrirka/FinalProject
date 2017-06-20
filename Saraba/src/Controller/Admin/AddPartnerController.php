@@ -3,6 +3,7 @@
 namespace Controller\Admin;
 
 use Controller\ControllerAbstract;
+use Entity\Partner;
 
 class AddPartnerController extends ControllerAbstract{
 
@@ -17,7 +18,7 @@ class AddPartnerController extends ControllerAbstract{
         $addpartner = $this->app['addpartner.repository']->find($id);
         $addpartner->setStatus('accepted');
                   
-        $partner = new \Entity\Partner();
+        $partner = new Partner();
         
         $partner->setTitle($addpartner->getPartner());
         $partner->setContent($addpartner->getPartner());

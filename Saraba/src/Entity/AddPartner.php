@@ -30,8 +30,33 @@ class AddPartner {
      * @var string 
      */
     private $status;
+    
+    /**
+    * @var string
+    */
+    private $name;
+            
+    
+    /**
+    * @var string
+    */
+    private $email;
 
     
+    /**
+    * @var string
+    */
+    private $subject;
+    
+    /**
+    * @var string
+    */
+    private $message;
+
+    
+            
+
+
     public function getId() {
         return $this->id;
     }
@@ -74,6 +99,42 @@ class AddPartner {
 
     public function setStatus($status) {
         $this->status = $status;
+        return $this;
+    }
+
+    public function getName() {
+        return $this->name;
+    }
+
+    public function getEmail() {
+        return $this->email;
+    }
+
+    public function getSubject() {
+        return $this->subject;
+    }
+
+    public function getMessage() {
+        return $this->message;
+    }
+
+    public function setName($name) {
+        $this->name = $name;
+        return $this;
+    }
+
+    public function setEmail($email) {
+        $this->email = $email;
+        return $this;
+    }
+
+    public function setSubject($subject) {
+        $this->subject = $subject;
+        return $this;
+    }
+
+    public function setMessage($message) {
+        $this->message = $message;
         return $this;
     }
 

@@ -2,6 +2,7 @@
 
 use Repository\AddPartnerRepository;
 use Repository\ArticleRepository;
+use Repository\GalleryRepository;
 use Repository\PartnerRepository;
 use Repository\UserRepository;
 use Service\UserManager;
@@ -51,6 +52,10 @@ $app->register(new ValidatorServiceProvider());
 
 $app['article.repository'] = function () use ($app){
     return new ArticleRepository($app['db']);
+};
+
+$app['gallery.repository'] = function () use ($app){
+    return new GalleryRepository($app['db']);
 };
 
 $app['partner.repository'] = function () use ($app){

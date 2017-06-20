@@ -2,6 +2,7 @@
 
 use Controller\Admin\PartnerController as AdminPartnerController;
 use Controller\Admin\AddPartnerController;
+use Controller\Admin\GalleryController;
 use Controller\IndexController;
 use Controller\PartnerController;
 use Controller\UserController;
@@ -129,6 +130,28 @@ $admin
 $admin
     ->match('/addpartners/accepte/{id}', 'admin.addpartner.controller:acceptAction')
     ->bind('admin_addpartner_accepte');
+
+
+// ADMIN GALLERY
+
+$app['admin.gallery.controller'] = function () use ($app) {
+    return new GalleryController($app);
+};
+
+$admin
+    ->get('/gallerys', 'admin.gallery.controller:listAction')  
+    ->bind('admin_gallerys');
+
+$admin
+    ->match('/gallerys/edition/{id}', 'admin.gallery.controller:editAction') //match accepte plusieurs méthodes, nomtamment get et post
+    ->value('id', null) // valeur par défaut (null) pour le paramètre (id) de la route
+    ->assert('id', '\d+')
+    ->bind('admin_gallery_edit');
+
+$admin
+    ->match('/gallerys/suppression/{id}', 'admin.gallery.controller:deleteAction')
+    ->bind('admin_gallery_delete');
+
 
 
 // A NE PAS TOUCHER

@@ -2,78 +2,58 @@
 namespace Controller\Admin;
 
 use Controller\ControllerAbstract;
+use Entity\Gallery;
 
 
 class GalleryController extends ControllerAbstract {
     public function listAction(){
-        $articles = $this->app['article.repository']->findAll();
+        $gallerys = $this->app['gallery.repository']->findAll();
         
-        return $this->render('admin/article/list.html.twig', ['articles' => $articles]);
+        return $this->render('admin/gallery/list.html.twig', ['gallerys' => $gallerys]);
     }
     
-    public function editAction(Request $request, $id = null){
+    public function editAction(){
         
-        if(!is_null($id)){  
-            $article = $this->app['article.repository']->find($id);
-        }
-        else{
-            $article = new Article();
-        }
+        $gallery = new Gallery();
         
-        if (!empty($_POST)){
-            echo '<pre>';
-            var_dump(realpath(__DIR__ . '/../../../web/img/'));
-            var_dump($_FILES);
-            echo '</pre>';
-           
-              if(!empty($_FILES['img'] ['name'])){ // si une image a été uploadée, $_FILES est remplie
-                // on constitue un nom unique pour le fichier photo :
-                $nom_photo = $_POST['title'] . '_' . $_FILES['img']['name']; 
-                // On constitue le chemin de la photo enregistré en BDD :
-                $photo = realpath(__DIR__ . '/../../../web/img/') . '/' . $nom_photo;  // On obtient ici le nom et le chemin de la photo depuis la racine du site
-                // dd($photo);
-         
-                // On constitue le chemin absolu complet de la photo depuis la racine serveur :
-                //$photo_dossier = $request->getBasePath() . $photo;
-                
-                //  echo '<pre>'; print_r($photo_dossier); echo '</pre>';
-                // Enregistrement du fichier photo sur le serveur : 
-                copy($_FILES['img']['tmp_name'], $photo); // on copie le fichier tempoiraire de la photo stockée au chemin indiqué par $_FILES['photo'] ['tmp_name'] dans le chemin $photo_dossier de notre serveur
-                
-                if (!empty($article->getImg())) {
-                    unlink(realpath(__DIR__ . '/../../../web/img/') . '/' . $article->getImg());
-                }
-                
-                $article->setImg($nom_photo);
-                
-             }
-             
-             
-            $article->setTitle($_POST['title'])
-                    ->setContent($_POST['content'])
-                    ->setShortContent($_POST['short_content']);
+
+        if(!empty($_FILES['img'] ['name'])){ // si une image a été uploadée, $_FILES est remplie
+            // on constitue un nom unique pour le fichier photo :
+            $nom_photo = uniqid() . '_' . $_FILES['img']['name']; 
+            // On constitue le chemin de la photo enregistré en BDD :
+            $photo = realpath(__DIR__ . '/../../../web/img/') . '/' . $nom_photo;  // On obtient ici le nom et le chemin de la photo depuis la racine du site
+            // dd($photo);
+
+            // On constitue le chemin absolu complet de la photo depuis la racine serveur :
+            //$photo_dossier = $request->getBasePath() . $photo;
+
+            //  echo '<pre>'; print_r($photo_dossier); echo '</pre>';
+            // Enregistrement du fichier photo sur le serveur : 
+            copy($_FILES['img']['tmp_name'], $photo); // on copie le fichier tempoiraire de la photo stockée au chemin indiqué par $_FILES['photo'] ['tmp_name'] dans le chemin $photo_dossier de notre serveur
 
 
-            $this->app['article.repository']->save($article); // save vérifie que l'id existe, si non => insert, si oui => update
-            $this->addflashMessage('L\'article est enregistrée');
-            
-            return $this->redirectRoute('admin_articles');
+            $gallery->setImg($nom_photo);
 
+            $this->app['gallery.repository']->save($gallery); // save vérifie que l'id existe, si non => insert, si oui => update
+            $this->addflashMessage('L\'image a bien été enregistrée');
+
+            return $this->redirectRoute('admin_gallerys');
         }
+
                 
         return $this->render(
-                'admin/article/edit.html.twig',
-                ['article' => $article]
+                'admin/gallery/edit.html.twig',
+                ['gallery' => $gallery]
         );
     }
     
     public function deleteAction($id){
         
-         $article = $this->app['article.repository']->find($id);
+         $gallery = $this->app['gallery.repository']->find($id);
         
-        $this->app['article.repository']->delete($article); // save vérifie que l'id existe, si non => insert, si oui => update
-        $this->addflashMessage('La rubrique est supprimée');
+        $this->app['gallery.repository']->delete($gallery); // save vérifie que l'id existe, si non => insert, si oui => update
+        $this->addflashMessage('L\'image à bien été supprimée');
         
-        return $this->redirectRoute('admin_articles');
+        return $this->redirectRoute('admin_gallerys');
     }
 }

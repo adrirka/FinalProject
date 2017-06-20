@@ -20,13 +20,14 @@ class AddPartnerController extends ControllerAbstract{
                   
         $partner = new Partner();
         
-        $partner->setTitle($addpartner->getPartner());
-        $partner->setContent($addpartner->getPartner());
-        $partner->setImg($addpartner->getPartner());
-
-        $this->app['addpartner.repository']->save($addpartner);
+        $partner->setTitle($addpartner->getTitle());
+        $partner->setContent($addpartner->getContent());
+        $partner->setImg($addpartner->getImg());
+        $this->app['partner.repository']->save($partner);
         
-        $this->addflashMessage('Le partner est accepter');
+        $this->app['addpartner.repository']->updateStatus($addpartner);
+        
+        $this->addflashMessage('Le partner est accepté');
         
         return $this->redirectRoute('admin_partner_edit', ['id' => $partner->getId()]);
         
@@ -37,7 +38,7 @@ class AddPartnerController extends ControllerAbstract{
         $addpartner = $this->app['addpartner.repository']->find($id);
         $addpartner->setStatus('refused');
         
-        $this->app['addpartner.repository']->save($addpartner);
+        $this->app['addpartner.repository']->updateStatus($addpartner);
         
         $this->addflashMessage('Le partner est refuser');
         

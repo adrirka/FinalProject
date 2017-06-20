@@ -127,7 +127,7 @@ $admin
     ->bind('admin_addpartner_refuse');
 
 $admin
-    ->match('/addpartners/accepte/{id}', 'admin.addpartner.controller:accepteAction')
+    ->match('/addpartners/accepte/{id}', 'admin.addpartner.controller:acceptAction')
     ->bind('admin_addpartner_accepte');
 
 

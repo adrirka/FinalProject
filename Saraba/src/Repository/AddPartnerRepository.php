@@ -44,6 +44,15 @@ EOS;
         
     }
     
+    public function updateStatus(AddPartner $addpartner)
+    {
+        $this->db->update(
+            'addpartner', 
+            ['status' => $addpartner->getStatus()], 
+            ['id'=> $addpartner->getId()])
+        ;
+    }
+    
     public function delete(AddPartner $addpartner ){
         
         $this-> db->delete('addpartner',['id'=> $addpartner->getId()]);
@@ -62,7 +71,7 @@ EOS;
             ->setEmail($dbAddPartner['email'])
             ->setSubject($dbAddPartner['sujet'])
             ->setMessage($dbAddPartner['message'])
-
+            ->setStatus($dbAddPartner['status'])
             ->setImg($dbAddPartner['img']);
         return $addpartner;
 

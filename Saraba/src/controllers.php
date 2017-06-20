@@ -34,9 +34,9 @@ $app['user.controller'] = function () use ($app) {
     return new UserController($app);
 };
 
-$app
-    ->match('utilisateur/inscription', 'user.controller:registerAction')
-    ->bind ('register');
+//$app
+//    ->match('utilisateur/inscription', 'user.controller:registerAction')
+//    ->bind ('register');
 
 $app
     ->match('utilisateur/connexion', 'user.controller:loginAction')

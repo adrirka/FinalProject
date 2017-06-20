@@ -64,7 +64,7 @@ EOS;
     
     private function buildArticleFromArray(array $dbArticle){
         
-        var_dump($dbArticle);
+        // var_dump($dbArticle);
         $article = new Article(); // $article est un objet instance de la classe Entity article
         $article
             ->setId($dbArticle['id'])
@@ -77,7 +77,9 @@ EOS;
     }
     
     public function find($id){
-          
+ $query = <<<EOS
+SELECT a.* FROM article a WHERE id = :id
+EOS;
         $dbArticle = $this->db->fetchAssoc(
             $query, [':id' => $id]);
         

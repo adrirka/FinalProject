@@ -2,24 +2,25 @@
 namespace Controller\Admin;
 
 use Controller\ControllerAbstract;
-use Entity\Article;
+use Entity\Partner;
 use Symfony\Component\HttpFoundation\Request;
 
 
-class ArticleController extends ControllerAbstract{
-    public function listAction(){
-        $articles = $this->app['article.repository']->findAll();
+class PartnerController extends ControllerAbstract{
+
+     public function listAction(){
+        $partners = $this->app['partner.repository']->findAll();
         
-        return $this->render('admin/article/list.html.twig', ['articles' => $articles]);
+        return $this->render('admin/partner/list.html.twig', ['partners' => $partners]);
     }
     
     public function editAction(Request $request, $id = null){
         
         if(!is_null($id)){  
-            $article = $this->app['article.repository']->find($id);
+            $partner = $this->app['partner.repository']->find($id);
         }
         else{
-            $article = new Article();
+            $partner = new Partner();
         }
         
         if (!empty($_POST)){
@@ -42,40 +43,39 @@ class ArticleController extends ControllerAbstract{
                 // Enregistrement du fichier photo sur le serveur : 
                 copy($_FILES['img']['tmp_name'], $photo); // on copie le fichier tempoiraire de la photo stockée au chemin indiqué par $_FILES['photo'] ['tmp_name'] dans le chemin $photo_dossier de notre serveur
                 
-                if (!empty($article->getImg())) {
-                    unlink(realpath(__DIR__ . '/../../../web/img/') . '/' . $article->getImg());
+                if (!empty($partner->getImg())) {
+                    unlink(realpath(__DIR__ . '/../../../web/img/') . '/' . $partner->getImg());
                 }
                 
-                $article->setImg($nom_photo);
+                $partner->setImg($nom_photo);
                 
              }
              
              
-            $article->setTitle($_POST['title'])
-                    ->setContent($_POST['content'])
-                    ->setShortContent($_POST['short_content']);
+            $partner->setTitle($_POST['title'])
+                    ->setContent($_POST['content']);
 
 
-            $this->app['article.repository']->save($article); // save vérifie que l'id existe, si non => insert, si oui => update
-            $this->addflashMessage('L\'article est enregistrée');
+            $this->app['partner.repository']->save($partner); // save vérifie que l'id existe, si non => insert, si oui => update
+            $this->addflashMessage('Le partner est enregistrée');
             
-            return $this->redirectRoute('admin_articles');
+            return $this->redirectRoute('admin_partners');
 
         }
                 
         return $this->render(
-                'admin/article/edit.html.twig',
-                ['article' => $article]
+                'admin/partner/edit.html.twig',
+                ['partner' => $partner]
         );
     }
     
     public function deleteAction($id){
         
-         $article = $this->app['article.repository']->find($id);
+         $partner = $this->app['partner.repository']->find($id);
         
-        $this->app['article.repository']->delete($article); // save vérifie que l'id existe, si non => insert, si oui => update
-        $this->addflashMessage('La rubrique est supprimée');
+        $this->app['partner.repository']->delete($partner); // save vérifie que l'id existe, si non => insert, si oui => update
+        $this->addflashMessage('Le partner est supprimée');
         
-        return $this->redirectRoute('admin_articles');
+        return $this->redirectRoute('admin_partners');
     }
 }

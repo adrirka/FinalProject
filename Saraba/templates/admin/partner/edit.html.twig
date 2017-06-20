@@ -1,0 +1,31 @@
+{% extends "layout.html.twig" %}
+
+{% block title 'Admin partners' %}
+
+{% block content %}
+    <h2>Edition Partner</h2>
+    
+    <form method="post" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="Titre">Titre</label>
+            <input type="text" name="title" value="{{ partner.title }}" class="form-control"> 
+        </div>
+        
+         <div class="form-group">
+            <label for="Contenu">Contenu</label>
+            <textarea name="content" class="form-control">{{partner.content}}</textarea>
+
+        </div>
+        
+        <div class="form-group">
+            <label for="img">Image</label>
+            <input name="img" type="file" class="form-control" {{partner.img}}>
+        </div>
+
+        <button type="submit" class="btn btn-primary">
+            Enregistrer
+        </button>
+        <a href="{{ path('admin_partners') }}" class="btn btn-default">Annuler</a>
+    </form>
+
+{% endblock %}

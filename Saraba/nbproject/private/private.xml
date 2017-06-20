@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/templates/register.html.twig</file>
+            <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/src/Entity/Article.php</file>
+            <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/templates/admin/article/list.html.twig</file>
+            <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/src/Repository/ArticleRepository.php</file>
+            <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/src/Controller/Admin/ArticleController.php</file>
+            <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/templates/admin/article/edit.html.twig</file>
+            <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/templates/layout.html.twig</file>
+            <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/src/Controller/ControllerAbstract.php</file>
+            <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/web/index.php</file>
+            <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/src/controllers.php</file>
+        </group>
+    </open-files>
+</project-private>

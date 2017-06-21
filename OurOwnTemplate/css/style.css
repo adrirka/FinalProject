@@ -88,6 +88,10 @@ Style Reset
 
     }
 
+    section#actions, section#actualite{
+        padding-left: 0;
+        padding-right: 0;
+    }
 
 /*
 Style header
@@ -111,6 +115,8 @@ Style header
         top: 0;
         left: 0;
         width: 100%;
+        z-index:1000;
+
     }
 
     nav a{
@@ -203,6 +209,7 @@ Style Contact
         margin-top: 1rem;
     }
 
+
 /*
 Style Donation
 */
@@ -210,59 +217,12 @@ Style Donation
     #donation{
         color: #222;
         background: #eee;
-        padding: 4rem 2rem;
-        height: 60rem;
+        padding: 11rem 2rem;
+        height: 45rem;
     }
 
 
 
-/*
-Style Portfolio
-
-    figure{
-        position: relative;
-        float: left;
-        width: 100%;
-        line-height: 0;
-    }
-
-    figcaption{
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(240, 95, 64, .7);
-        line-height: 1;
-        opacity: 0;
-    }
-
-    figcaption:hover{
-        opacity: 1;
-    }
-
-    figcaption a{
-        color: rgba(255, 255, 255, .7);
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        width: 80%;
-      
-        -webkit-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%)
-    }
-
-    
-
-    a b{
-        font-weight: 400;
-        font-size: 1.3em;
-        color: white;
-        display: block;
-        text-transform: none;
-    }
-
-*/
 
 /*
 Style Download
@@ -291,6 +251,7 @@ Style Footer
         padding: 2rem 2rem;
         min-height:.5rem;
         color: black;
+        font-size: 1rem;
     }
 
     footer .fa{
@@ -372,7 +333,61 @@ Requêtes media
                 font-weight: bold;
             }
 
+        /*Style contact*/
             
+            #contact{
+                color: white;
+                background: #F05F40;
+                padding: 4rem 2rem 6rem 2rem;
+                height: 54rem;
+            }
+
+        /*
+        Style Actions et Actualite
+        */
+
+            figure{
+                position: relative;
+                float: left;
+                width: 100%;
+                line-height: 0;
+            }
+
+            figcaption{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(240, 95, 64, .7);
+                line-height: 1;
+                opacity: 0;
+            }
+
+            figcaption:hover{
+                opacity: 1;
+            }
+
+            figcaption a{
+                color: rgba(255, 255, 255, .7);
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 80%;
+            
+                -webkit-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%)
+            }
+
+            
+
+            a b{
+                font-weight: 700;
+                font-size: 2.3em;
+                color: white;
+                display: block;
+                text-transform: none;
+            }
 
         /* Style Services / Style Footer 
             section:nth-child(2) article, footer article{
@@ -384,10 +399,12 @@ Requêtes media
 
 
           /* Style Portfolio 
+          
             figure{
-                width: 50%;
+                width: 49%;
             }
-            */
+        */
+        
     }
 
     /* Ecran d'une taille minimale de 850px */

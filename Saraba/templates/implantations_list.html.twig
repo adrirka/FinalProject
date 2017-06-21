@@ -1,0 +1,32 @@
+{% extends "layout.html.twig" %}
+{% block page_title 'Nos implantations' %}    
+
+
+{% block content %}
+
+            <article id="map"></article>
+
+            <!--script src="{#{asset('js/implantations.js')}#}"></script-->
+            
+
+            <article class="maps">
+                 <aside class="fa fa-map-marker" aria-hidden="true" >  Babacar NIANG et Amélie DEMONCHY :  Rue Abraham Lincoln  92220 Bagneux </aside><br><br>
+                 <aside class="fa fa-map-marker" aria-hidden="true" >  Association SARABA : 12 rue Clavel 75019 Paris </aside><br><br>
+                 <aside class="fa fa-map-marker" aria-hidden="true" >  Les Grands Voisins : 82 Avenue Denfert-Rochereau, 75014 Paris </aside><br><br>
+                 <aside class="fa fa-map-marker" aria-hidden="true" >  Auberge des deux Baobabs : Warang, Mbour, Senegal</aside><br><br>
+            </article>
+            
+{% endblock %}
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset('js/implantations.js') }}"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyACWqGTYGT4CJS2IWhI5QxZmBaVnIKVo6o&callback=myMap"></script>
+    
+    
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{asset('css/implantations.css')}}"/>
+
+{% endblock %}

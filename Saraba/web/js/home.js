@@ -36,8 +36,8 @@ $(document).ready(function(){
             });
 
             //Capter la soumission de mon formulaire
-            $('form').submit(function(evt){
-console.log('test');
+            $('#form_contact').submit(function(evt){
+console.log('ici');
                 // Bloquer le comportement naturel du formulaire
                 evt.preventDefault();
 

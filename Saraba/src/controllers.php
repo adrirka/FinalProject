@@ -7,6 +7,7 @@ use Controller\IndexController;
 use Controller\PagePartnerController;
 use Controller\PageGalleryController;
 use Controller\PageContactController;
+use Controller\PageImplantationsController;
 use Controller\PartnerController;
 use Controller\UserController;
 use Controller\Admin\ArticleController;
@@ -83,6 +84,15 @@ $app['pagegallery.controller'] = function () use ($app) {
 $app
     ->match('/pagegallerys/edition', 'pagegallery.controller:galleryAction') //match accepte plusieurs méthodes, nomtamment get et post
     ->bind('galerie');
+
+$app['pageimplantations.controller'] = function () use ($app) {
+    return new PageImplantationsController($app);
+};
+
+$app
+    ->match('/pageimplantationss/edition', 'pageimplantations.controller:implantationsAction') //match accepte plusieurs méthodes, nomtamment get et post
+    ->bind('implantations');
+
 
 
 

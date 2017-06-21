@@ -1,0 +1,68 @@
+
+/*
+Style page implatation
+*/
+
+    main {
+            background: #efe0c4;
+            padding: 2rem;
+    }
+
+    #map{
+            margin: 2rem auto;
+            width:30rem;
+            height:30rem;
+            z-index: 0;
+    }
+
+    article{
+            margin: 2rem auto;
+            max-width: 35rem;
+    }
+
+    .maps {
+            padding: 2rem;
+    }
+
+    article.maps {
+            background: #efe0c4;
+            font-style: italic;
+            font-size: large;
+    }
+
+    aside {
+            font-family: monospace;
+            font-size: larger;
+            font-weight: 600;
+            color: #000;
+    }
+
+
+    .fa-map-marker:before {
+            content: "\f041";
+            margin: 0.6rem;
+    }
+
+
+
+
+
+
+@media screen and (min-width: 850px){
+
+    #map{
+        width: 70rem;
+        height: 30rem;
+        z-index: 0;
+    }
+
+    article{
+        max-width: 80rem;
+}
+
+    aside {
+        font-family: monospace;
+        font-size: larger;
+        font-weight: 400;
+        color: #000;
+}

@@ -23,7 +23,7 @@
                 <a href="index.html"><img src="img/logo.png" alt="SARABA Association"/></a>
                 <p>Menu <i class="fa fa-bars"></i></p>
                 <ul>
-                    <li><a href="#">Nos actions</a></li>
+                    <li><a href="#donation">Nos actions</a></li>
                     <li><a href="#">Notre présence</a></li>
                     <li><a href="#">Nous soutenir</a></li>
                     <li><a href="#">Nos actualité</a></li>                    
@@ -44,45 +44,45 @@
 
         </header>
 
-        <!-- FORMULAIRE -->
+        <!--Contenu Principal -->
         
         <main>
+
+            <!-- Formulaire -->
 
             <section class="col-md-6" id="contact">
                 <h2>Nous contacter</h2>
                 <form class="form-vertical" method="post" action="#">
                         <article class="form-group">
-                            <label class="control-label col-sm-12" for="userName">Votre nom <b></b> </label>
-                                <input class="col-sm-6 form-control" type="text" id="userName" name="name">
+                                <input class="col-sm-6 form-control" type="text" id="userName" name="userName" placeholder="Votre nom">
                         </article>
 
                         <article class="form-group">
-                            <label class="control-label col-sm-12" for="userEmail">Votre Email <b></b> </label>
-                                <input class="col-sm-6 form-control" type="email" id="userEmail" name="email">
+                                <input class="col-sm-6 form-control" type="email" id="userEmail" name="userEmail" placeholder="Votre Email">
                         </article>
 
                         <article class="form-group">
-                            <label class="control-label col-sm-12" for="userSubject">Choisir un sujet <b></b> </label>
-                                <div class="col-sm-6 form-control">
-                                    <select  id="userSubject" name="subject">
+                                    <select class="col-sm-6 form-control" id="userSubject" name="userSubject">
+                                        <option value="null" selected>--Sélectionnez un sujet--</option>
                                         <option value="contacts">Demande d'information</option>
                                         <option value="inscription">Inscription session</option>
+                                        <option value="atelier">Atelier thérapeuthique</option>
                                     </select>
-                                </div>
                         </article>
 
                         <article class="form-group">
-                            <label class="control-label col-sm-12" for="userMessage">Votre Message <b></b> </label>
-                                <textarea class="col-sm-6 form-control" id="userMessage" name="message"></textarea>
+                                <textarea class="col-sm-6 form-control" id="userMessage" name="message" placeholder="Votre Message"></textarea>
                         </article>
 
-                        <div class="col-sm-12">
+                        <article class="col-sm-12">
                             <input type="button" class="btn btn-success" type="submit" value="Envoyer">
-                        </div>
+                        </article>
 
                     </form>
                 </section>
                 
+                <!-- Nos actions -->
+
                 <section id="actions" class="col-md-6">
                     <figure>
                         <img src="img/actions.jpg" alt="actions">
@@ -90,12 +90,16 @@
                     </figure>
                 </section>
                 
+                <!-- Notre actualite -->
+
                 <section id="actualite" class="col-md-6">
                     <figure>
                         <img src="img/actualite.jpg" alt="actualite">
                         <figcaption><a href="#"><b>Suivez notre actualite</b></a></figcaption>
                     </figure>
                 </section>
+
+                <!-- Donation -->
 
                 <section class="col-md-6" id="donation">
                     <h2>Faites un don</h2>
@@ -113,43 +117,8 @@
             
             </main>
 
-    
-            <!--
-            // Portfolio //
-            <section>
-                <figure>
-                    <img src="img/1.jpg" alt="Projet 1">
-                    <figcaption><a href="#">Category <b>Project name</b></a></figcaption>
-                </figure>
-                <figure>
-                    <img src="img/2.jpg" alt="Projet 2">
-                    <figcaption><a href="#">Category <b>Project name</b></a></figcaption>
-                </figure>
-                <figure>
-                    <img src="img/3.jpg" alt="Projet 3">
-                    <figcaption><a href="#">Category <b>Project name</b></a></figcaption>
-                </figure>
-                <figure>
-                    <img src="img/4.jpg" alt="Projet 4">
-                    <figcaption><a href="#">Category <b>Project name</b></a></figcaption>
-                </figure>
-                <figure>
-                    <img src="img/5.jpg" alt="Projet 5">
-                    <figcaption><a href="#">Category <b>Project name</b></a></figcaption>
-                </figure>
-                <figure>
-                    <img src="img/6.jpg" alt="Projet 6">
-                    <figcaption><a href="#">Category <b>Project name</b></a></figcaption>
-                </figure>
-            </section>
-
-            // Download //
-            <section>
-                <h2>Free Download at Start Bootstrap!</h2>
-                <a href="#">Download now!</a>
-            </section> -->
-
-
+        <!-- Fermeture de la page -->
+        
        <footer>
             <p class="social-icons">
                 <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
@@ -158,6 +127,15 @@
             </p>
             <p>Copyright 2017 <a href="#">Saraba, association reconnue d'utilité publique</a>. All Rights Reserved.</p>
 		</footer>
+
+         
+        <!-- Script JQuery -->
+        
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+        <!-- Script de la page -->
+        
+        <script src="js/script.js"></script>
 
     </body>
 </html>

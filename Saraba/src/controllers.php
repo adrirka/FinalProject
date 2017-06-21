@@ -4,6 +4,7 @@ use Controller\Admin\PartnerController as AdminPartnerController;
 use Controller\Admin\AddPartnerController;
 use Controller\Admin\GalleryController;
 use Controller\IndexController;
+use Controller\PagePartnerController;
 use Controller\PartnerController;
 use Controller\UserController;
 use Controller\Admin\ArticleController;
@@ -29,6 +30,11 @@ $app
     ->bind('partner_ajax')
 ;
 
+$app
+    ->post('/home/contact', 'partner.controller:formHomeAjaxAction')
+    ->bind('home_ajax')
+;
+
 /* Utilisateur */
 
 $app['user.controller'] = function () use ($app) {
@@ -50,6 +56,14 @@ $app
 $app
     ->match('/addpartners/edition', 'partner.controller:formAction') //match accepte plusieurs méthodes, nomtamment get et post
     ->bind('addpartner_edit');
+
+$app['pagepartner.controller'] = function () use ($app) {
+    return new PagePartnerController($app);
+};
+
+$app
+    ->match('/pagepartners/edition', 'pagepartner.controller:partnerAction') //match accepte plusieurs méthodes, nomtamment get et post
+    ->bind('partner_edit');
 
 
 

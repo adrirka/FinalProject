@@ -1,21 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
     <head>
- <html lang="fr">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-   
-        <title>{% block title '' %} - Blog</title>
-     
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-        <link href="{{ asset('css/main.css') }}" rel="stylesheet" type="text/css" /> {# asset est une fonction préinstallée (grace au skeleton)#}
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Saraba</title>
 
+        {% block stylesheets %}
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <!-- CDN BOOTSTRAP -->
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+            <!-- Feuille de style -->
+            <link rel="stylesheet" href="{{ asset('css/home.css') }}">
+        {% endblock %}
     </head>
     <body>
-        {% if user_manager.admin %}
-            <nav class="navbar navbar-inverse">
+        
+        <!-- Ouverture de la page -->
+        <header>
+            {% if user_manager.admin %}
+            <nav>
                 <div class="container">
                     <a class="navbar-brand">Menu admin</a>
                     <ul class="nav navbar-nav">
@@ -33,7 +38,7 @@
                         </li>
 
                     </ul>
-                    <ul class="nav navbar-nav navbar-right">
+                        <ul class="nav navbar-nav navbar-right">
                         <li>
                             <a href="{{ path('logout') }}">Déconnexion</a>
                         </li>
@@ -41,57 +46,59 @@
                 </div>
             </nav>
         {% endif %}
-        <nav class="navbar navbar-default">
-            <div class="container">
-                <a class="navbar-brand" href="{{ path('homepage') }}">Blog</a>
-                <ul class="nav navbar-nav navbar-right">
-                    
-                    {#
-                        Twig va chercher soit
-                            UserManager::getUserConnected()
-                            UserManager::isUserConnected()
-                            UserManager::hasUserConnected()
-                    #}
-                    
+            
+            <!-- Menu principal -->
+            <nav>
+                <a href="{{ path('homepage') }}"><img src="{{ asset('img/logo.png') }}" alt="SARABA Association"/></a>
+                <p>Menu <i class="fa fa-bars"></i></p>
+                <ul>
+                    <!--li><a href="#">Nos actions</a></li>
+                    <li><a href="#">Notre présence</a></li>
+                    <li><a href="#">Nous soutenir</a></li>
+                    <li><a href="#">Nos actualité</a></li>                    
+                    <li><a href="#">Contacts</a></li-->
                     
                     <li>
                         <a href="{#{ path('articles') }#}">Articles</a>
                     </li>
                     
                     <li>
-                        <a href="{#{ path('partners') }#}">Partners</a>
+                        <a href="{{ path('partner_edit') }}">Partners</a>
                     </li>
                     
                     <li>
-                        <a href="{#{ path('addpartners') }#}">Partners</a>
+                        <a href="{{ path('addpartner_edit') }}">Devenir Partners</a>
                     </li>
                 </ul>
-            </div>
-        </nav>
+            </nav>
             
-        <div class="container">
-            {% for label, flashes in global.session.flashbag.all %} {# correspond à foreach as label => flashes #}
-                {% for flash in flashes %}
-                    {% if label == 'error' %}
-                        {%set label = 'danger' %}
-                    {% endif %}
-                        <div class="alert alert-{{ label }}">{{ flash|raw }}</div>
-                {% endfor %}
-            {% endfor %}
+            <section id="contentHeader">
+                <h1>SARABA Association</h1>
+                <h2>Regards Croisés Afrique Europe</h2>
+
+                <p>Stage de rupture et projets éducatifs alternatifs pour la réconciliation de nos jeunes avec le modèle sociétal</p>
+            
+
+                <a href="#contact">Nos contacter</a>
+                <a href="#donation">Nous soutenir</a>
+            </section>
+             
+        </header>
+
+        <!-- FORMULAIRE -->
+        
+        <main>
             {% block content %}{% endblock %}
-        </div>
-        
-        {% block javascripts %}
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-            <script src="{{ asset('js/script.js') }}"></script>
-        {% endblock %}
+        </main>
 
-        
-
+        <footer>
+            <p class="social-icons">
+                <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a>
+            </p>
+            <p>Copyright 2017 <a href="#">Saraba Association</a>. All Rights Reserved.</p>
+        </footer>
+        {% block javascripts %}{% endblock %}
     </body>
-
-
-
-    
 </html>

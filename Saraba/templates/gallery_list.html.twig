@@ -1,20 +1,21 @@
-{%extends "layout.html.twig"%}
+{% extends "layout.html.twig" %}
+
+{% block title 'gallerys' %}
+
+{% block page_title 'Gallerie' %}    
+    
 {% block content %}
-<h2>Partners</h2>
+    <h2>Galerie</h2>
     <table class="table">
         <tr>
             <th>Id</th>
-            <th>Titre</th>
-            <th>Contenu</th>            
             <th>Image</th>
             <th width="200px"></th>
         </tr>
-        {% for partner in partners %}
+        {% for gallery in gallerys %}
             <tr>
-                <td>{{ partner.id }}</td>
-                <td>{{ partner.title }}</td>
-                <td>{{ partner.content }}</td>
-                <td><img src="{{ asset('img/' ~ partner.img) }}"></td>
+                <td>{{ gallery.id }}</td>
+                <td><img src="{{ asset('img/' ~ gallery.img) }}"></td>
             </tr>
         {% else %}
             <tr>
@@ -22,7 +23,6 @@
             </tr>
         {% endfor %}
     </table>
-
 {% endblock %}
 
 {% block stylesheets %}

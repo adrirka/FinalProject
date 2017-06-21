@@ -66,3 +66,9 @@
     <script>var ajaxUrl = '{{ path('partner_ajax') }}'</script>
     <script src="{{ asset('js/contact.js') }}"></script>
 {% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{asset ('css/addpartner.css')}}"/>
+
+{% endblock %}

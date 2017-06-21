@@ -5,6 +5,8 @@ use Controller\Admin\AddPartnerController;
 use Controller\Admin\GalleryController;
 use Controller\IndexController;
 use Controller\PagePartnerController;
+use Controller\PageGalleryController;
+use Controller\PageContactController;
 use Controller\PartnerController;
 use Controller\UserController;
 use Controller\Admin\ArticleController;
@@ -64,6 +66,23 @@ $app['pagepartner.controller'] = function () use ($app) {
 $app
     ->match('/pagepartners/edition', 'pagepartner.controller:partnerAction') //match accepte plusieurs méthodes, nomtamment get et post
     ->bind('partner_edit');
+
+$app['pagecontact.controller'] = function () use ($app) {
+    return new PageContactController($app);
+};
+
+$app
+    ->match('/pagecontacts/edition', 'pagecontact.controller:contactAction') //match accepte plusieurs méthodes, nomtamment get et post
+    ->bind('contact_edit');
+
+
+$app['pagegallery.controller'] = function () use ($app) {
+    return new PageGalleryController($app);
+};
+
+$app
+    ->match('/pagegallerys/edition', 'pagegallery.controller:galleryAction') //match accepte plusieurs méthodes, nomtamment get et post
+    ->bind('galerie');
 
 
 

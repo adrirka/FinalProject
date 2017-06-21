@@ -1,0 +1,31 @@
+{% extends "layout.html.twig" %}
+
+{% block title 'contacts' %}
+
+{% block content %}
+            <section>
+                        <h2>Siège à Paris</h2>
+                        <img src="{{asset('img/france.jpg')}}" alt="France" width="10%">
+
+                        <p>Babacar NIANG et Amélie DEMONCHY</p>
+                        <p>3, Rue Abraham Lincoln</p>
+                        <p>92220 Bagneux</p>
+  
+            </section>
+
+            <section>
+                        <h2>Structure d'accueil au Sénégal</h2>
+                        <img src="{{asset('img/senegal.png')}}" alt="Senegal" width="10%">
+                        
+
+                        <p>Auberge des deux Baobabs</p>
+                        <p>Warang, Mbour</p>
+                        <p><a href="mailto:int_saraba@yahoo.fr">int_saraba@yahoo.fr</a></p>              
+            </section>
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+<link rel="stylesheet" href="{{ asset('css/contactinfo.css') }}">
+
+{% endblock %}

@@ -32,6 +32,7 @@ Style Reset
     h1, h2 {
         font-family: 'Open Sans', sans-serif;
         font-weight: 400;
+        color:white;
     }
 
     h1 {
@@ -167,6 +168,10 @@ Style Main
         color: #222;
         padding: 2rem;
         height: 30rem;            
+    }
+    
+    main h2{ 
+        color: black;
     }
 
 

@@ -80,18 +80,6 @@ class UserManager {
         }
     }
     
-    /**
-     * 
-     * @return string
-     */
-    public function getUsername(){
-        if ($this->isUserConnected()){
-            return $this->session->get('user')->getFullname();
-
-        }
-        return '';
-    }
-    
     public function isAdmin(){
         return $this->isUserConnected() && $this->session->get('user')->isAdmin();
     }

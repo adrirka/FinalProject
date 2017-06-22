@@ -1,16 +1,19 @@
 <?php
 
-use Controller\Admin\PartnerController as AdminPartnerController;
 use Controller\Admin\AddPartnerController;
+use Controller\Admin\ArticleController;
 use Controller\Admin\GalleryController;
+use Controller\Admin\PartnerController as AdminPartnerController;
 use Controller\IndexController;
-use Controller\PagePartnerController;
-use Controller\PageGalleryController;
+use Controller\PageActionController;
+use Controller\PageActuController;
 use Controller\PageContactController;
+use Controller\PageGalleryController;
 use Controller\PageImplantationsController;
+use Controller\PageMembreController;
+use Controller\PagePartnerController;
 use Controller\PartnerController;
 use Controller\UserController;
-use Controller\Admin\ArticleController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
@@ -40,59 +43,101 @@ $app
 
 /* Utilisateur */
 
-$app['user.controller'] = function () use ($app) {
-    return new UserController($app);
-};
+    $app['user.controller'] = function () use ($app) {
+        return new UserController($app);
+    };
 
-//$app
-//    ->match('utilisateur/inscription', 'user.controller:registerAction')
-//    ->bind ('register');
+    //$app
+    //    ->match('utilisateur/inscription', 'user.controller:registerAction')
+    //    ->bind ('register');
 
-$app
-    ->match('utilisateur/connexion', 'user.controller:loginAction')
-    ->bind ('login');
+    $app
+        ->match('utilisateur/connexion', 'user.controller:loginAction')
+        ->bind ('login');
 
-$app
-    ->get('utilisateur/deconnexion', 'user.controller:logoutAction')
-    ->bind ('logout');
+    $app
+        ->get('utilisateur/deconnexion', 'user.controller:logoutAction')
+        ->bind ('logout');
 
-$app
-    ->match('/addpartners/edition', 'partner.controller:formAction') //match accepte plusieurs méthodes, nomtamment get et post
-    ->bind('addpartner_edit');
-
-$app['pagepartner.controller'] = function () use ($app) {
-    return new PagePartnerController($app);
-};
-
-$app
-    ->match('/pagepartners/edition', 'pagepartner.controller:partnerAction') //match accepte plusieurs méthodes, nomtamment get et post
-    ->bind('partner_edit');
-
-$app['pagecontact.controller'] = function () use ($app) {
-    return new PageContactController($app);
-};
-
-$app
-    ->match('/pagecontacts/edition', 'pagecontact.controller:contactAction') //match accepte plusieurs méthodes, nomtamment get et post
-    ->bind('contact_edit');
+    $app
+        ->match('/addpartners/edition', 'partner.controller:formAction') //match accepte plusieurs méthodes, nomtamment get et post
+        ->bind('addpartner_edit');
 
 
-$app['pagegallery.controller'] = function () use ($app) {
-    return new PageGalleryController($app);
-};
+// PAGE PARTNER
 
-$app
-    ->match('/pagegallerys/edition', 'pagegallery.controller:galleryAction') //match accepte plusieurs méthodes, nomtamment get et post
-    ->bind('galerie');
+    $app['pagepartner.controller'] = function () use ($app) {
+        return new PagePartnerController($app);
+    };
 
-$app['pageimplantations.controller'] = function () use ($app) {
-    return new PageImplantationsController($app);
-};
+    $app
+        ->match('/pagepartners/edition', 'pagepartner.controller:partnerAction') //match accepte plusieurs méthodes, nomtamment get et post
+        ->bind('partner_edit');
 
-$app
-    ->match('/pageimplantationss/edition', 'pageimplantations.controller:implantationsAction') //match accepte plusieurs méthodes, nomtamment get et post
-    ->bind('implantations');
 
+// PAGE CONTACT
+
+    $app['pagecontact.controller'] = function () use ($app) {
+        return new PageContactController($app);
+    };
+
+    $app
+        ->match('/pagecontacts/edition', 'pagecontact.controller:contactAction') //match accepte plusieurs méthodes, nomtamment get et post
+        ->bind('contact_edit');
+
+
+//PAGE GALLERIE
+
+    $app['pagegallery.controller'] = function () use ($app) {
+        return new PageGalleryController($app);
+    };
+
+    $app
+        ->match('/pagegallerys/edition', 'pagegallery.controller:galleryAction') //match accepte plusieurs méthodes, nomtamment get et post
+        ->bind('galerie');
+
+
+//PAGE IMPLANTATIONS
+
+    $app['pageimplantations.controller'] = function () use ($app) {
+        return new PageImplantationsController($app);
+    };
+
+    $app
+        ->match('/pageimplantationss/edition', 'pageimplantations.controller:implantationsAction') //match accepte plusieurs méthodes, nomtamment get et post
+        ->bind('implantations');
+
+
+// PAGE ACTU
+
+    $app['pageactu.controller'] = function () use ($app) {
+        return new PageActuController($app);
+    };
+
+    $app
+        ->match('/pageactus/edition', 'pageactu.controller:actuAction') //match accepte plusieurs méthodes, nomtamment get et post
+        ->bind('actu');
+
+
+// PAGE ACTION
+
+    $app['pageaction.controller'] = function () use ($app) {
+        return new PageActionController($app);
+    };
+
+    $app
+        ->match('/pageactions/edition', 'pageaction.controller:actionAction') //match accepte plusieurs méthodes, nomtamment get et post
+        ->bind('action');
+    
+// PAGE MEMBRE
+
+    $app['pagemembre.controller'] = function () use ($app) {
+        return new PageMembreController($app);
+    };
+
+    $app
+        ->match('/pagemembres/edition', 'pagemembre.controller:membreAction') //match accepte plusieurs méthodes, nomtamment get et post
+        ->bind('membre');
 
 
 

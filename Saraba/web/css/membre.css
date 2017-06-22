@@ -12,12 +12,12 @@ Style Reset
         margin: 0;
         padding: 0;
 
-        /* Intégrer les padding et les border dans les largeurs */
+        /* IntÃŠgrer les padding et les border dans les largeurs */
         -webkit-box-sizing: border-box;
         box-sizing: border-box;
     }
 
-    /* Ramener la valeur de 1rem à 10px */
+    /* Ramener la valeur de 1rem Ã  10px */
     html{
         font-size: 62.5%;
     }
@@ -50,33 +50,30 @@ Style Reset
         margin: 2rem auto;
     }
 
-    #donation h2:after {
-        content: "";
-        display: block;
-        width: 20rem;
-        height: .2rem;
-        background: #F05F40;
-        margin: 2rem auto;
-    }
 
 
     h3{
         font-size: 2rem;
-        margin: 2rem auto 1rem auto;
     }
 
-    a, figcaption, nav p{
+    a, nav p{
         text-decoration: none;
 
         -webkit-transition: all .5s;
         transition: all .5s;
     }
 
+    u:nth-child(1), u:nth-child(2){
+        font-size: 1.8rem;
+        color: red;
+        line-height: 4rem;
+    }
+
     img{
         max-width: 100%;
     }
 
-    #contentHeader > a, main a{
+    header > a, main a{
         font-size: 1.2rem;
         font-family: 'Open Sans', sans-serif;
         font-weight: 700;
@@ -175,114 +172,51 @@ Style header
         display: block;
     }
 
-    #contentHeader > p{
-        color: lightgrey;
-        margin: 12rem auto 2rem auto;
-        max-width: 42rem;
-    }
 
-
-    #contentHeader > a{
-        color: white;
-        background: #F05F40;
-    }
-
-
-/*
-Style Contact 
-*/
-
-    #contact{
-        color: white;
-        background: #F05F40;
-        padding: 4rem 2rem 6rem 2rem;
-        height: 60rem;
-    }
-
-    label, [type="button"]{
-        margin-top: 1rem;
-    }
-
-/*
-Style Donation
-*/
-
-    #donation{
-        color: #222;
-        background: #eee;
-        padding: 4rem 2rem;
-        height: 60rem;
-    }
-
-
-
-/*
-Style Portfolio
-
-    figure{
-        position: relative;
-        float: left;
-        width: 100%;
-        line-height: 0;
-    }
-
-    figcaption{
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(240, 95, 64, .7);
-        line-height: 1;
-        opacity: 0;
-    }
-
-    figcaption:hover{
-        opacity: 1;
-    }
-
-    figcaption a{
-        color: rgba(255, 255, 255, .7);
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        width: 80%;
-      
-        -webkit-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%)
-    }
-
-    
-
-    a b{
-        font-weight: 400;
-        font-size: 1.3em;
-        color: white;
-        display: block;
-        text-transform: none;
-    }
-
-*/
-
-/*
-Style Download
-
-    section:nth-child(4){
-        color: white;
-        background: #222;
-        clear: both;
-        padding: 4rem 2rem 6rem 2rem;
-    }
-
-    section:nth-child(4) h2{
+    header > p{
+        padding: 0 2rem;
         margin-bottom: 4rem;
     }
 
-    section:nth-child(4) h2:after{
-        display: none;
+    header > a{
+        color: white;
+        background: #F05F40;
     }
 
+
+
+
+/*
+Style Main
 */
+
+    section:first-child{
+        color: #222;
+        background-color: #eee;
+        padding: 2rem 1rem;
+        
+        
+    }
+
+    main section:last-child{
+        background-color: antiquewhite;
+        padding: 2rem 1rem;
+    }
+
+    section:first-child p{
+        line-height: 2.3rem;
+    }
+
+    section:last-child p{
+        line-height: 3rem;
+    }
+
+    section:first-child article{
+        margin-bottom: 2rem;
+        border-style: groove;
+    }
+
+
 
 /*
 Style Footer
@@ -306,7 +240,7 @@ Style Footer
 
 
 /*
-Requêtes media
+RequÃĒtes media
 */
     /* Ecran d'une taille minimale de 650px */
     @media screen and (min-width: 650px) {
@@ -314,7 +248,6 @@ Requêtes media
         /* Style Header */
             header{
                 padding: 0 0 20rem 0;
-                min-height: 70rem;
             }
 
             nav img{
@@ -331,13 +264,12 @@ Requêtes media
             }
 
             nav a{
-                color: lightgrey;
+                color: white;
                 top: 2.4rem;
             }
 
             nav a:hover{
                 color: white;
-                opacity: 1;
             }
 
             nav p{
@@ -358,42 +290,24 @@ Requêtes media
                 margin-right: 1rem;
             }
 
-            #contentHeader{
-                position: absolute;
-                top: 14rem;
-                left: 35rem;
-                width:50%;
-                /*display: none;*/
+
+            /* Style Main */
+
+            section{
+                display: block;
             }
 
-            #contentHeader p{
-                color: lightgrey;
-                max-width: 70rem;
-                margin: 3rem auto;
-                font-weight: bold;
+            section:first-child article{
+                display: inline-block;
+                width: 18%;
+                vertical-align: top;
             }
-           /* section#actions, section#actualite{
-                padding-left: 0;
-                padding-right: 0;
-            }
-*/
+
 
             
 
-        /* Style Services / Style Footer 
-            section:nth-child(2) article, footer article{
-                display: inline-block;
-                vertical-align: top;
-                width: 49%;
-                padding: 0 2rem;
-            }
 
-
-          /* Style Portfolio 
-            figure{
-                width: 50%;
-            }
-            */
+          
     }
 
     /* Ecran d'une taille minimale de 850px */
@@ -402,10 +316,9 @@ Requêtes media
         /* Style Reset */
             h2{
                 font-size: 3rem;
-                margin:auto;
             }
 
-            #contentHeader > a, main a{
+            header > a, main a{
                 font-size: 1.5rem;
             }
 
@@ -433,46 +346,30 @@ Requêtes media
                 margin: auto;
             }
 
-            
-
-            /*header > p{
+            header > p{
                 font-size: 1.8rem;
-                max-width: 85rem;
-                margin: 0 auto 4rem auto;
-            }
-            */
-
-        /* Style What you need 
-            section:first-child{
-                padding: 8rem 2rem;
-            }
-            
-            section:first-child p{
                 max-width: 65rem;
                 margin: 0 auto 4rem auto;
             }
+
+    
             
-        /* Style Services
-            section:nth-child(2), footer{
-                max-width: 95rem;
+            
+            
+            
+        /* Style Main*/
+            section:nth-child(1), footer{
                 margin: auto;
-                padding: 8rem 2rem;
+                padding: 8rem 14rem;
             }
 
-            section:nth-child(2) article {
-                width: 24%;
-            }
+            
 
-        /* Style Portfolio 
-            figure {
-                width: 33.3333%;
-            }
-        */
+       
 
         /* Style footer */
             footer{
                 color: black;
-                max-width: 75rem;
                 margin: auto;
                 padding: 0 0;
             }

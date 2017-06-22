@@ -1,0 +1,106 @@
+{%extends "layout.html.twig"%}
+
+{% block page_title 'Membre de l\'assos' %} 
+{% block content %}
+
+            <section>
+                        <h2><b>Conseil d'administration de l'association Saraba</b></h2>
+
+
+                        <b><p><u>Présidente</u></p></b>
+                        <article>
+                            <p><b>Yolande De Rochefort</b></p>
+                            <p>Psychothérapeute</p>
+                            <p>Tel : 01 42 51 31 01</p>
+                        </article><br><br>    
+
+                        <b><p><u>Secrétaire</u></p></b>
+                        <article>
+                            <p><b>Valérie Bouissou</b></p>
+                            <p>Conservateur à la B.N.F</p>
+                        </article><br><br>                       
+
+
+                        <b><p><u>Membres</u></p></b>
+                        
+                        <article>
+                            <p><b>Sylvie Payan</b></p>
+                            <p>Directrice de la politique de la ville de Montreuil</p>
+                        </article>
+
+                        <article>
+                            <p><b>Philippe Availlant</b></p>
+                            <p>Educateur</p>
+                            <p>Directeur du centre de formation</p>
+                        </article><br>
+
+                        <article>
+                            <p><b>Chantal Aniel</b></p>
+                            <p>Conseillère socio-éducative</p>
+                        </article>
+
+                        <article>
+                            <p><b>Cathy Soulet</b></p>
+                            <p>Psychiatre</p>
+                        </article><br><br>                        
+                
+
+                        <b><p><u>Membres d'honneur</u></p></b>
+                        
+                        <article>
+                            <p><b>Paul Oriol</b></p>
+                            <p>Médecin retraité</p>
+                        </article>
+
+                        <article>
+                            <p><b>Thierry Kupler</b></p>
+                            <p>Journaliste</p>
+                        </article>
+
+                        <article>
+                            <p><b>Edouard Zambeaux</b></p>
+                        </article>                        
+                                                            
+            </section>
+                
+
+            <section>
+                <h2><b>Equipe du projet Regards Croisés Afrique-Europe</b></h2>
+
+                <article>
+                    <h3><b>A Paris</b> <img src="{{asset('img/france.png')}}" alt="France" width="20rem"> :</h3>
+                    <p>- Babacar Niang, sociologue, directeur</p>
+                    <p>- Amélie Demonchy, psychologue coordinatrice</p>
+                    <p>- Marie France Terral, psychiatre</p>
+                </article><br>
+                
+
+                <article>
+                    <h3><b>Au Sénégal</b> <img src="{{asset('img/senegal.png')}}" alt="Senegal" width="20rem"> :</h3>
+                    <p>- Thierno Ndiaye, éducateur spécialisé à la retraite</p>
+                    <p>- Cheikh Ahmadou Bassirou Sarr, consultant</p>
+                </article><br>
+               
+                <article>
+                    <h3><b>Au niveau du village de Warang</b> <img src="{{asset('img/senegal.png')}}" alt="Senegal" width="20rem"> :</h3>
+                    <p>- Pape Ali Diop, Educateur spécialisé  à la retraite</p>
+                    <p>- Pape Mamadou Diop, Educateur spécialisé  à la retraite</p>
+                </article><br>
+                
+                <article>
+                    <h3><b>Veille éducative au niveau du site</b> <img src="{{asset('img/senegal.png')}}" alt="Senegal" width="20rem"> :</h3>
+                    <p>- Maguette Niang, Educateur spécialisé à la retraite</p>
+                    <p>- Arona Ndiaye, Commandant de brigade gendarmerie à la retraite</p>
+                    <p>- Ngor Emmanuel Diouf, tradipraticien</p>
+                </article>
+                
+
+            </section>
+{% endblock %}
+
+
+{% block stylesheets %}
+    {{ parent() }}
+
+    <link rel="stylesheet" href="{{asset('css/membre.css')}}">
+{% endblock %}

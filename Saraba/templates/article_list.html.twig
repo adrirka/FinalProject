@@ -1,8 +1,25 @@
-{% for article in articles %}
-        <h3>{{article.title}}<small>{{article.categoryName}}</small></h3>
-        <p><b>{{article.shortContent}}</b></p>
-        <p>{{article.content}}</p>
+{%extends "layout.html.twig"%}
+
+{% block page_title 'News' %}    
+{% block content %}
+
+   {% for article in articles %}
+        <tr>
+            <td>{{ article.id }}</td>
+            <td>{{ article.title }}</td>
+            <td>{{ article.content }}</td>
+            <td>{{ article.shortContent }}</td>
+            <td><img src="{{ asset('img/' ~ article.img) }}"></td>
+            <td>
+
+        </tr>
         {% if not loop.last %}
-            <hr>
+        <hr>
         {% endif %}
+    {% else %}
+        <tr>
+            <td colspan="4" align="center">Aucun Résultat</td>
+        </tr>
     {% endfor %}
+    
+{% endblock %}

@@ -24,6 +24,11 @@ $app['index.controller'] = function () use ($app) {
 };
 
 $app
+    ->post('/index/contact', 'index.controller:formHomeAjaxAction')
+    ->bind('home_ajax')
+;
+
+$app
     ->get('/', 'index.controller:indexAction')  
     ->bind('homepage');
 
@@ -36,10 +41,6 @@ $app
     ->bind('partner_ajax')
 ;
 
-$app
-    ->post('/home/contact', 'partner.controller:formHomeAjaxAction')
-    ->bind('home_ajax')
-;
 
 /* Utilisateur */
 

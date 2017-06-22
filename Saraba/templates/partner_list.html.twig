@@ -1,23 +1,12 @@
 {%extends "layout.html.twig"%}
-
-{% block page_title 'Nos Partenaire' %}    
-
 {% block content %}
 <h2>Partners</h2>
     <table class="table">
-        <tr>
-            <th>Id</th>
-            <th>Titre</th>
-            <th>Contenu</th>            
-            <th>Image</th>
-            <th width="200px"></th>
-        </tr>
+        
         {% for partner in partners %}
             <tr>
-                <td>{{ partner.id }}</td>
-                <td>{{ partner.title }}</td>
-                <td>{{ partner.content }}</td>
-                <td><img src="{{ asset('img/' ~ partner.img) }}"></td>
+                <td><img src="{{ asset('img/' ~ partner.img) }}"  width="180" height="150"></td>                
+                <td><b>{{ partner.title }}</b><br><br>{{ partner.content }}</td>
             </tr>
         {% else %}
             <tr>
@@ -30,6 +19,8 @@
 
 {% block stylesheets %}
     {{ parent() }}
+    <link rel="stylesheet" href="{{asset ('css/partner.css')}}"/>
 
 
 {% endblock %}
+

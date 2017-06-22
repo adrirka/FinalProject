@@ -1,0 +1,17 @@
+main {
+    margin: 2rem 6%;
+}
+
+
+        
+/*
+RequÃªtes media
+*/
+     /*Ecran d'une taille minimale de 1100px */
+    @media screen and (min-width: 1100px) {
+        
+        main {
+            margin: 2rem 27%;
+        }
+
+    }

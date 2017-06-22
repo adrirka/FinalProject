@@ -6,18 +6,16 @@
     <h2>Add Partners</h2>
     <table class="table">
         <tr>
-            <th>Id</th>
             <th>Titre</th>
             <th>Contenu</th>            
             <th>Image</th>
-            <th width="200px"></th>
+            <th>Action</th>
         </tr>
         {% for addpartner in addpartners %}
             <tr>
-                <td>{{ addpartner.id }}</td>
                 <td>{{ addpartner.title }}</td>
                 <td>{{ addpartner.content }}</td>
-                <td><img src="{{ asset('img/' ~ addpartner.img) }}"></td>
+                <td><img src="{{ asset('img/' ~ addpartner.img) }}" width="130" height="90"></td>
                 <td>
                     <a href="{{ path('admin_addpartner_accepte', { id: addpartner.id }) }}" class="btn btn-primary">
                         Accepter
@@ -34,4 +32,9 @@
             </tr>
         {% endfor %}
     </table>
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{asset('css/adminArticle.css')}}"/>
 {% endblock %}

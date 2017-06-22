@@ -1,4 +1,30 @@
 $(document).ready(function(){
+    
+    /*
+        Modal Page Portfolio
+    */ 
+        // Créer une fonction pour ouvrir la modal
+        function openModal(){
+
+            // Ouvrir la modal au click sur les boutons
+            $('button').click(function(){
+
+                // Afficher le titre du projet
+                var modalTitle = $(this).prev().text();
+                $('#modal span').text(modalTitle);
+
+                // Afficher l'image du projet
+                var modalImage = $(this).parent().prev().attr('src');
+                $('#modal img').attr('src', modalImage).attr('alt', modalTitle);
+
+                $('#modal').fadeIn();    
+            });
+
+            // Fermer la modal au click sur .fa-times
+            $('.fa-times').click(function(){
+                $('#modal').fadeOut();
+            });
+        };
      /*
         Formulaire Page Contacts
     */ 
@@ -37,7 +63,7 @@ $(document).ready(function(){
 
             //Capter la soumission de mon formulaire
             $('#form_contact').submit(function(evt){
-console.log('ici');
+
                 // Bloquer le comportement naturel du formulaire
                 evt.preventDefault();
 
@@ -121,7 +147,7 @@ console.log('ici');
                         $('#modal').fadeIn();
 
                         // Vider les champs du formulaire
-                        //$('form')[0].reset();
+                        $('form#form_contact')[0].reset();
                         
                         // Supprimer les msg d'erreur
                         $('form b').text('');
@@ -132,7 +158,7 @@ console.log('ici');
                 else{
                     if(formScore == 0){
                         // Vider les champs du formulaire
-                        //$('form')[0].reset();
+                        $('form#form_contact')[0].reset();
                     
                         // Replacer les label
                         $('label').removeClass();
@@ -142,7 +168,7 @@ console.log('ici');
         };
       
 /************************************************************************************/
-  
+    openModal();
     contactForm();
     
 });

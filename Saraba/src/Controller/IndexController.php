@@ -1,8 +1,8 @@
 <?php
 
 namespace Controller;
+use Symfony\Component\HttpFoundation\Response;
 
-use Entity\Home;
 
 class IndexController extends ControllerAbstract{
     

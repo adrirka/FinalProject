@@ -144,7 +144,7 @@ $(document).ready(function(){
                         $('#modal').fadeIn();
 
                         // Vider les champs du formulaire
-                        //$('form')[0].reset();
+                        $('form')[0].reset();
                         
                         // Supprimer les msg d'erreur
                         $('form b').text('');
@@ -155,7 +155,7 @@ $(document).ready(function(){
                 else{
                     if(formScore == 0){
                         // Vider les champs du formulaire
-                        //$('form')[0].reset();
+                        $('form')[0].reset();
                     
                         // Replacer les label
                         $('label').removeClass();

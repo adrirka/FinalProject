@@ -290,13 +290,21 @@ Style Footer
     footer{
         padding: 2rem 2rem;
         min-height:.5rem;
-        color: black;
+        color: snow !important;
+        font-size: 1.2rem;
+        background-color: #001819;
+        max-width: 100%;
+        clear: both;
+            
     }
 
     footer .fa{
         font-size: 3rem;
         display: inline-block;
         margin: 3rem auto 1rem auto;
+    }
+    footer .fa:hover, a:hover{
+        color:snow;
     }
 
     footer a{
@@ -360,9 +368,9 @@ Requêtes media
 
             #contentHeader{
                 position: absolute;
-                top: 14rem;
-                left: 35rem;
-                width:50%;
+                top: 16rem;
+                left: 36rem;
+                width: 60%;
                 /*display: none;*/
             }
 
@@ -434,47 +442,19 @@ Requêtes media
             }
 
             
-
-            /*header > p{
-                font-size: 1.8rem;
-                max-width: 85rem;
-                margin: 0 auto 4rem auto;
-            }
-            */
-
-        /* Style What you need 
-            section:first-child{
-                padding: 8rem 2rem;
-            }
-            
-            section:first-child p{
-                max-width: 65rem;
-                margin: 0 auto 4rem auto;
-            }
-            
-        /* Style Services
-            section:nth-child(2), footer{
-                max-width: 95rem;
-                margin: auto;
-                padding: 8rem 2rem;
-            }
-
-            section:nth-child(2) article {
-                width: 24%;
-            }
-
-        /* Style Portfolio 
-            figure {
-                width: 33.3333%;
-            }
-        */
-
         /* Style footer */
             footer{
-                color: black;
+                color: snow;
                 max-width: 75rem;
                 margin: auto;
-                padding: 0 0;
+
+                background-color: #001819;
+                max-width: 100%;
+                clear: both;
+            }
+            
+            footer p{
+                font-size: 1.2rem;
             }
     }
     

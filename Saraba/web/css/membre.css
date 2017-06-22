@@ -358,7 +358,7 @@ RequÃĒtes media
             
             
         /* Style Main*/
-            section:nth-child(1), footer{
+            section:nth-child(1){
                 margin: auto;
                 padding: 8rem 14rem;
             }
@@ -369,8 +369,12 @@ RequÃĒtes media
 
         /* Style footer */
             footer{
-                color: black;
+                color: snow !important;
+                max-width: 75rem;
                 margin: auto;
-                padding: 0 0;
+                background-color: #001819;
+                max-width: 100%;
+                clear: both !important;
+
             }
     }

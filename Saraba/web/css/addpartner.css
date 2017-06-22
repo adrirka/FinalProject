@@ -8,11 +8,18 @@
     section#contact {
         height: 72rem;
     }
-h1:after, h2:after {
+header h1:after, h2:after {
+    display: block;
+    width: 20rem;
+    height: .2rem;
+    background: snow;
+    margin: 2rem auto;
+}
+
+main section h1:after,main section h2:after {
     display: block;
     width: 20rem;
     height: .2rem;
     background: black;
     margin: 2rem auto;
 }
-

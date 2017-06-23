@@ -155,15 +155,6 @@ $(document).ready(function(){
                         // Replacer les label
                         $('label').removeClass();
                 }
-                else{
-                    if(formScore == 0){
-                        // Vider les champs du formulaire
-                        $('form#form_contact')[0].reset();
-                    
-                        // Replacer les label
-                        $('label').removeClass();
-                    }
-                }
             });
         };
       

@@ -1,7 +1,7 @@
 {% extends "layout.html.twig" %}
 {% block page_boutton %}
-    <a href="#contact">Nos contacter</a>
-    <a href="#donation">Nous soutenir</a>
+    <a href="{{ path('action') }}">Nos Actions</a>
+    <a href="{{ path('actu') }}">Nos News</a>
 {% endblock %}
 
 {% block content %}
@@ -10,29 +10,29 @@
                 <h2>Nous contacter</h2>
                 <form class="form-vertical" method="post" id="form_contact">
                         <article class="form-group">
-                            <label class="control-label col-sm-12" for="userName">Votre nom <b></b> </label>
-                                <input class="col-sm-6 form-control" type="text" id="userName" name="name">
+                            <label class="control-label col-sm-12" for="userName">Votre nom : <b></b> </label>
+                                <input class="col-sm-6 form-control" type="text" id="userName" name="name" placeholder="Votre Nom">
                         </article>
 
                         <article class="form-group">
-                            <label class="control-label col-sm-12" for="userEmail">Votre Email <b></b> </label>
-                                <input class="col-sm-6 form-control" type="email" id="userEmail" name="email">
+                            <label class="control-label col-sm-12" for="userEmail">Votre email : <b></b> </label>
+                                <input class="col-sm-6 form-control" type="email" id="userEmail" name="email" placeholder="Votre Email">
                         </article>
 
                         <article class="form-group">
-                            <label class="control-label col-sm-12" for="userSubject">Choisir un sujet <b></b> </label>
+                            <label class="control-label col-sm-12" for="userSubject">Choisir un sujet : <b></b> </label>
                                 <div class="col-sm-6 form-control">
                                     <select  id="userSubject" name="subject">
                                         <option value="rdv">Demande d'information</option>
-                                        <option value="projet_sejour_de_rupture">Inscription session</option>
+                                        <option value="projet_sejour_de_rupture">Inscription sejour de rupture</option>
                                         <option value="atelier_therapeutique">Atelier thérapetique</option>
                                     </select>
                                 </div>
                         </article>
 
                         <article class="form-group">
-                            <label class="control-label col-sm-12" for="userMessage">Votre Message <b></b> </label>
-                                <textarea class="col-sm-6 form-control" id="userMessage" name="message"></textarea>
+                            <label class="control-label col-sm-12" for="userMessage">Votre message : <b></b> </label>
+                                <textarea class="col-sm-6 form-control" id="userMessage" name="message" placeholder="Votre Message"></textarea>
                         </article>
 
                         <div class="col-sm-12">

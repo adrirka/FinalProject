@@ -206,6 +206,37 @@ Style Contact
         margin-top: 1rem;
     }
 
+    #userName{
+        background:url(../img/picto/name.png) no-repeat;
+    }
+
+    #userEmail{
+        background:url(../img/picto/email.png) no-repeat;
+    }
+    
+    #userSubject{
+        border: none;
+    }
+
+    #userMessage, #userTitle, #userContent{
+        background:url(../img/picto/message.png) no-repeat;
+    }
+
+    #userName, #userEmail, #userSubject, #userMessage, #userTitle, #userContent{
+        background-color: white;
+        background-position: 1rem 1rem;
+        padding-left: 3rem;
+        margin-bottom: 2rem;
+    }
+
+    [type="button"]{
+        margin-top: 1rem;
+    }
+    
+    form b{
+        color:black;
+    }
+    
 /*
 Style Donation
 */

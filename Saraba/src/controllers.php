@@ -75,18 +75,6 @@ $app
         ->match('/pagepartners/edition', 'pagepartner.controller:partnerAction') //match accepte plusieurs méthodes, nomtamment get et post
         ->bind('partner_edit');
 
-
-// PAGE CONTACT
-
-    $app['pagecontact.controller'] = function () use ($app) {
-        return new PageContactController($app);
-    };
-
-    $app
-        ->match('/pagecontacts/edition', 'pagecontact.controller:contactAction') //match accepte plusieurs méthodes, nomtamment get et post
-        ->bind('contact_edit');
-
-
 //PAGE GALLERIE
 
     $app['pagegallery.controller'] = function () use ($app) {

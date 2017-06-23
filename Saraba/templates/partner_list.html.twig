@@ -3,28 +3,36 @@
 
 
 {% block page_title 'Partenaire' %}
-{% block content %}
-<h2>Partners</h2>
-    <table class="table">
-        
-        {% for partner in partners %}
-            <tr>
-                <td><img src="{{ asset('img/' ~ partner.img) }}"  width="180" height="150"></td>                
-                <td><b>{{ partner.title }}</b><br><br>{{ partner.content }}</td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="4" align="center">Aucun Résultat</td>
-            </tr>
-        {% endfor %}
-    </table>
 
+{% block content %}
+   {% for partner in partners %}
+        <table class="table">
+            <th>
+                <td>
+                    <img src="{{ asset('img/' ~ partner.img) }}" max-width="400" height="350">
+                </td>
+                <td>
+                    <article>
+                        <p><b>{{ partner.title }}</b></p>
+                    </article>
+                    <article>
+                        {{ partner.content }}
+                    </article>
+                </td>
+            </th>
+        </table>
+
+
+    {% else %}
+        <tr>
+            <td colspan="4" align="center">Aucun Résultat</td>
+        </tr>
+    {% endfor %}
+    
 {% endblock %}
 
 {% block stylesheets %}
     {{ parent() }}
-    <link rel="stylesheet" href="{{asset ('css/partner.css')}}"/>
-
-
+    <link rel="stylesheet" href="{{asset ('css/news.css')}}"/>
 {% endblock %}
 

@@ -53,44 +53,37 @@
                 <p>Menu <i class="fa fa-bars"></i></p>
                 <ul>
                     <li>
-                        <a href="{{ path('actu') }}">News</a>
+                        <a href="{{ path('action') }}">Nos Action</a>
                     </li>
-                    
                     <li>
-                        <a href="{{ path('partner_edit') }}">Partners</a>
+                        <a href="{{ path('actu') }}">Nos News</a>
                     </li>
-                    
                     <li>
-                        <a href="{{ path('addpartner_edit') }}">Devenir Partners</a>
+                        <a href="{{ path('implantations') }}">Notre Présence</a>
                     </li>
-                    
-                     <li>
-                        <a href="{{ path('galerie') }}">Galerie</a>
-                    </li>
-                    
                     <li>
-                        <a href="{{ path('contact_edit') }}">Contact</a>
+                        <a href="{{ path('partner_edit') }}">Nos Partenaires</a>
                     </li>
-                    
                     <li>
-                        <a href="{{ path('implantations') }}">Implantations</a>
+                        <a href="{{ path('addpartner_edit') }}">Devenir Partenaire</a>
                     </li>
-                    
-                    <li>
-                        <a href="{{ path('action') }}">Action</a>
-                    </li>
-                    
                     <li>
                         <a href="{{ path('membre') }}">Membre de l'asso</a>
                     </li>
+                    <li>
+                        <a href="{{ path('galerie') }}">Galerie</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('contact_edit') }}">Contacts</a>
+                    </li>                  
                 </ul>
             </nav>
             
             <section id="contentHeader">
                 <h1>{% block page_title 'SARABA Association' %}</h1>
                 <h2>Regards Croisés Afrique Europe</h2>
-
-                <p>Stage de rupture et projets éducatifs alternatifs pour la réconciliation de nos jeunes avec le modèle sociétal</p>
+                
+                <p>{% block p 'Stage de rupture et projets éducatifs alternatifs pour la réconciliation de nos jeunes avec le modèle sociétal'%}</p>
             
                 {% block page_boutton %}{% endblock %}
                 

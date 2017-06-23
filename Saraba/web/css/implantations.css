@@ -18,6 +18,7 @@ Style page implatation
     article{
             margin: 2rem auto;
             max-width: 35rem;
+            text-align: left;
     }
 
     .maps {
@@ -41,6 +42,7 @@ Style page implatation
     .fa-map-marker:before {
             content: "\f041";
             margin: 0.6rem;
+            color:orangered;
     }
 
 

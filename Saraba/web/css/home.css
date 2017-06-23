@@ -71,6 +71,9 @@ Style Reset
         -webkit-transition: all .5s;
         transition: all .5s;
     }
+    a{
+        text-decoration: none !important;
+    }
 
     img{
         max-width: 100%;
@@ -430,7 +433,7 @@ Requêtes media
             }
 
             nav{
-                max-width: 95rem;
+                max-width: 105rem !important;
                 margin: 0 auto 15rem auto;
                 border: none;
             }

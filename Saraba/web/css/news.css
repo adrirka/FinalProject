@@ -1,0 +1,33 @@
+td{
+    padding-top:1rem; 
+    text-align: left;
+    width: 85rem;
+}
+
+article{
+    text-align: left;
+    padding-bottom: 1rem;
+}
+
+body{
+    background: #f8f8f8;
+}
+main{
+        background: #f8f8f8
+
+}
+.table{
+    border: blue;
+}
+
+article b{
+    font-size: 2rem;
+}
+article p{
+    text-align: center;
+}
+
+.table>tbody>tr>td{
+    border-top: 1px solid black;
+    padding-top: 3rem;
+}

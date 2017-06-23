@@ -4,21 +4,37 @@
 {% block content %}
 
    {% for article in articles %}
-        <tr>
-            <td>{{ article.title }}</td>
-            <td>{{ article.content }}</td>
-            <td>{{ article.shortContent }}</td>
-            <td><img src="{{ asset('img/' ~ article.img) }}"></td>
-            <td>
+        <table class="table">
+            <th>
+                <td>
+                    <img src="{{ asset('img/' ~ article.img) }}" max-width="400" height="350">
+                </td>
+                <td>
+                    <article>
+                        <p><b>{{ article.title }}</b></p>
+                    </article>
+                    <article>
+                        {{ article.content }}
+                    </article>
+                    <article>
+                        {{ article.content }}
+                    </article>
+                </td>
+            </th>
+        </table>
 
-        </tr>
-        {% if not loop.last %}
-        <hr>
-        {% endif %}
+
     {% else %}
         <tr>
             <td colspan="4" align="center">Aucun Résultat</td>
         </tr>
     {% endfor %}
     
+{% endblock %}
+
+
+{% block stylesheets %}
+    {{ parent() }}
+<link rel="stylesheet" href="{{ asset('css/contactinfo.css') }}">
+<link rel="stylesheet" href="{{ asset('css/news.css') }}">
 {% endblock %}

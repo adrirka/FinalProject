@@ -49,83 +49,99 @@
         <main>
 
             <!-- Formulaire -->
+            <div class="container">
+                <div class="row">
+                    <section id="contact" class="col-md-6 col-lg-6">
+                        <h2>Nous contacter</h2>
+                        <form class="form-vertical" method="post" action="#">
+                            <article class="form-group">
+                                <label for="type"></label>
+                                <p>Vous êtes :</p>
+                                <input type="radio" name="Person" value="Person">Un particulier
+                                <input type="radio" name="type" value="Autre">Autre
+                            </article>
+                            <article class="form-group">
+                                <label for="userName"></label>
+                                <input class="col-sm-6 form-control" type="text" id="userName" name="userName" placeholder="Votre nom ou Raison Sociale">
+                            </article>
 
-            <section class="col-md-6" id="contact">
-                <h2>Nous contacter</h2>
-                <form class="form-vertical" method="post" action="#">
-                        <article class="form-group">
-                                <input class="col-sm-6 form-control" type="text" id="userName" name="userName" placeholder="Votre nom">
-                        </article>
+                            <article class="form-group">
+                                    <label for="userName"></label>
+                                    <input class="col-sm-6 form-control" type="email" id="userEmail" name="userEmail" placeholder="Votre Email">
+                            </article>
 
-                        <article class="form-group">
-                                <input class="col-sm-6 form-control" type="email" id="userEmail" name="userEmail" placeholder="Votre Email">
-                        </article>
+                            <article class="form-group">
+                                        <select class="col-sm-6 form-control" id="userSubject" name="userSubject">
+                                            <option value="null" selected>--Sélectionnez un sujet--</option>
+                                            <option value="contacts">Demande d'information</option>
+                                            <option value="inscription">Inscription session</option>
+                                            <option value="atelier">Atelier thérapeuthique</option>
+                                        </select>
+                            </article>
 
-                        <article class="form-group">
-                                    <select class="col-sm-6 form-control" id="userSubject" name="userSubject">
-                                        <option value="null" selected>--Sélectionnez un sujet--</option>
-                                        <option value="contacts">Demande d'information</option>
-                                        <option value="inscription">Inscription session</option>
-                                        <option value="atelier">Atelier thérapeuthique</option>
-                                    </select>
-                        </article>
+                            <article class="form-group">
+                                    <label for="userMessage"></label>                                
+                                    <textarea class="col-sm-6 form-control" id="userMessage" name="message" placeholder="Votre Message"></textarea>
+                            </article>
 
-                        <article class="form-group">
-                                <textarea class="col-sm-6 form-control" id="userMessage" name="message" placeholder="Votre Message"></textarea>
-                        </article>
+                            <article class="col-sm-12">
+                                <input type="button" class="btn btn-success" type="submit" value="Envoyer">
+                            </article>
 
-                        <article class="col-sm-12">
-                            <input type="button" class="btn btn-success" type="submit" value="Envoyer">
-                        </article>
-
-                    </form>
-                </section>
+                        </form>
+                    </section>
                 
-                <!-- Nos actions -->
-
-                <section id="actions" class="col-md-6">
-                    <figure>
-                        <img src="img/actions.jpg" alt="actions">
-                        <figcaption><a href="#"><b>Découvrez nos actions</b></a></figcaption>
-                    </figure>
-                </section>
-                
-                <!-- Notre actualite -->
-
-                <section id="actualite" class="col-md-6">
-                    <figure>
-                        <img src="img/actualite.jpg" alt="actualite">
-                        <figcaption><a href="#"><b>Suivez notre actualite</b></a></figcaption>
-                    </figure>
-                </section>
-
-                <!-- Donation -->
-
-                <section class="col-md-6" id="donation">
-                    <h2>Faites un don</h2>
-
-                    <p>Nous avons besoin de VOUS pour mettre en oeuvre nos projets !</p><br>
-
-                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-                    <input type="hidden" name="cmd" value="_s-xclick">
-                    <input type="hidden" name="hosted_button_id" value="RUHFJ3NPKSCJN">
-                    <input type="image" src="https://www.paypalobjects.com/fr_FR/FR/i/btn/btn_donateCC_LG.gif"  border="0" name="submit" alt="PayPal, le réflexe sécurité pour payer en ligne">
-                    <img alt="" border="0" src="https://www.paypalobjects.com/fr_FR/i/scr/pixel.gif" width="1" height="1">
-                    </form>
-                </section>
-    
+                        
+                        <!-- Nos actions -->
+                    <section id="actions" class="col-md-6 col-lg-6">
+                        <figure>
+                            <img src="img/actions.jpg" alt="actions">
+                            <figcaption><a href="#"><b>Découvrez nos actions</b></a></figcaption>
+                        </figure>
+                    </section>
+                </div>
+            </div>
             
-            </main>
+            <div class="container">
+                <div class="row">
+                    <!-- Notre actualite -->
+
+                    <section id="actualite" class="col-md-6 col-lg-6">
+                        <figure>
+                            <img src="img/actualite.jpg" alt="actualite">
+                            <figcaption><a href="#"><b>Suivez notre actualite</b></a></figcaption>
+                        </figure>
+                    </section>
+
+                    <!-- Donation -->
+
+                    <section id="donation" class="col-md-6 col-lg-6">
+                        <h2>Faites un don</h2>
+
+                        <p>Nous avons besoin de VOUS pour mettre en oeuvre nos projets !</p><br>
+
+                        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+                        <input type="hidden" name="cmd" value="_s-xclick">
+                        <input type="hidden" name="hosted_button_id" value="RUHFJ3NPKSCJN">
+                        <input type="image" src="https://www.paypalobjects.com/fr_FR/FR/i/btn/btn_donateCC_LG.gif"  border="0" name="submit" alt="PayPal, le réflexe sécurité pour payer en ligne">
+                        <img alt="" border="0" src="https://www.paypalobjects.com/fr_FR/i/scr/pixel.gif" width="1" height="1">
+
+                        </form>
+                    </section>
+                </div>
+            </div>
+        </main>
 
         <!-- Fermeture de la page -->
         
        <footer>
-            <p class="social-icons">
+        
                 <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                 <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
                 <a href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a>
-            </p>
+            
             <p>Copyright 2017 <a href="#">Saraba, association reconnue d'utilité publique</a>. All Rights Reserved.</p>
+        
 		</footer>
 
          

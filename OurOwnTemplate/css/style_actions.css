@@ -26,6 +26,7 @@ Style Reset
         font-size: 1.5rem; /* => 15px */
         font-family: 'Merriweather', serif;
         text-align: center;
+       
     }
 
     h1, h2, h3 {
@@ -49,15 +50,6 @@ Style Reset
         margin: 2rem auto;
     }
 
-    #donation h2:after {
-        content: "";
-        display: block;
-        width: 20rem;
-        height: .2rem;
-        background: #F05F40;
-        margin: 2rem auto;
-    }
-
 
     h3{
         font-size: 2rem;
@@ -75,31 +67,6 @@ Style Reset
         max-width: 100%;
     }
 
-    #contentHeader > a, main a{
-        font-size: 1.2rem;
-        font-family: 'Open Sans', sans-serif;
-        font-weight: 700;
-        text-transform: uppercase;
-        padding: 1rem 1.5rem;
-        
-        -webkit-border-radius: 2rem;
-        border-radius: 2rem;
-
-    }
-    
-    section#actions, section#actualite{
-        padding-left: 0;
-        padding-right: 0;
-    }
-
-    .container{
-        margin-left:0;
-        margin-right:0;
-        width: 100%;
-    }
-
-    
-    
 /*
 Style header
 */
@@ -198,130 +165,180 @@ Style header
         background: #F05F40;
     }
 
-
-/*
-Style Contact 
+/* 
+Style Action 
 */
-    
-    #contact{
-        background: #F05F40;
-        color: white;
-        padding: 4rem 2rem 6rem 2rem;
-    }
+    /* Circular Bar */
+            .progress{
+                width: 150px;
+                height: 150px;
+                line-height: 150px;
+                background: none;
+                margin: 0 auto;
+                box-shadow: none;
+                position: relative;
+            }
 
-    #userName{
-        background:url(../img/picto/name.png) no-repeat;
-    }
+            .progress:after{
+                content: "";
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                border: 12px solid #fff;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
 
-    #userEmail{
-        background:url(../img/picto/email.png) no-repeat;
-    }
-    
-    #userSubject{
-        border: none;
-    }
+            .progress > span{
+                width: 50%;
+                height: 100%;
+                overflow: hidden;
+                position: absolute;
+                top: 0;
+                z-index: 1;
+            }
 
-    #userMessage{
-        background:url(../img/picto/message.png) no-repeat;
-    }
+            .progress .progress-left{
+                left: 0;
+            }
 
-    #userName, #userEmail, #userSubject, #userMessage{
-        background-color: white;
-        background-position: 1rem 1rem;
-        padding-left: 3rem;
-        margin-bottom: 2rem;
-    }
+            .progress .progress-bar{
+                width: 100%;
+                height: 100%;
+                background: none;
+                border-width: 12px;
+                border-style: solid;
+                position: absolute;
+                top: 0;
+            }
 
-    #contact input, [type="button"]{
-        margin-top: 1rem;
-    }
+            .progress .progress-left .progress-bar{
+                left: 100%;
+                border-top-right-radius: 80px;
+                border-bottom-right-radius: 80px;
+                border-left: 0;
+                -webkit-transform-origin: center left;
+                transform-origin: center left;
+            }
 
-    form p{
-        display: inline;
-        margin: .5rem;
-    }
+            .progress .progress-right{
+                right: 0;
+            }
 
- /*Style contact*/
+            .progress .progress-right .progress-bar{
+                left: -100%;
+                border-top-left-radius: 80px;
+                border-bottom-left-radius: 80px;
+                border-right: 0;
+                -webkit-transform-origin: center right;
+                transform-origin: center right;
+                animation: loading-1 1.8s linear forwards;
+            }
+
+            .progress .progress-value{
+                width: 90%;
+                height: 90%;
+                border-radius: 50%;
+                font-size: 24px;
+                color: #fff;
+                line-height: 135px;
+                text-align: center;
+                position: absolute;
+                top: 5%;
+                left: 5%;
+            }
+
+            #circular-bar :first-child .progress-value{
+                background:url(../img/a1.jpg);
+            }
+
+            #circular-bar :nth-child(2) .progress-value{
+                background:url(../img/a2.jpg);
+            }
+
+            #circular-bar :nth-child(3) .progress-value{
+                background:url(../img/a3.jpg);
+            }
+
+            .progress.blue .progress-bar{
+                border-color: #049dff;
+            }
+
+            .progress.blue .progress-left .progress-bar{
+                animation: loading-2 0.5s linear forwards 1.8s;
+            }
+
+            .progress.yellow .progress-bar{
+                border-color: #fdba04;
+            }
+
+            .progress.yellow .progress-left .progress-bar{
+                animation: loading-2 0.8s linear forwards 1.8s;
+            }
+
+            .progress.green .progress-bar{
+                border-color: #1abc9c;
+            }
             
-    #contact{
-        color: white;
-        background: #F05F40;
-        padding: 10.6rem 2rem 6rem 2rem;
-        
+            .progress.green .progress-left .progress-bar{
+                animation: loading-2 1s linear forwards 1.8s;
+            }
+
+            @keyframes loading-1{
+                0%{
+                    -webkit-transform: rotate(0deg);
+                    transform: rotate(0deg);
+                }
+                100%{
+                    -webkit-transform: rotate(180deg);
+                    transform: rotate(180deg);
+                }
+            }
+            @keyframes loading-2{
+                0%{
+                    -webkit-transform: rotate(0deg);
+                    transform: rotate(0deg);
+                }
+                100%{
+                    -webkit-transform: rotate(180deg);
+                    transform: rotate(180deg);
+                }
+            }
+
+            #circular-bar{
+               margin-bottom: 10rem;
+            }
+
+        /* Sections */
+
+        #action1{
+            clear: both;
+            background: #049dff;
+        }
+
+        #action2{
+            background: #fdba04;
+        }
+
+        #action3{
+            background: #1abc9c;
+        }
+
+        #action1, #action2, #action3{
+            min-height: 20rem;
+            padding: 2rem 2rem;
+        }
     }
-
-/*
-Style Actions et Actualite
-*/
-
-    figure{
-        position: relative;
-        float: left;
-        width: 100%;
-        line-height: 0;
-        
-    }
-
-    figcaption{
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(255, 255, 255, .7);
-        line-height: 1;
-        opacity: 0;
-    }
-
-    figcaption:hover{
-        opacity: 1;
-    }
-
-    figcaption a{
-        color: rgba(255, 255, 255, .7);
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        width: 80%;
-    
-        -webkit-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%)
-    }
-
-    a b{
-        text-decoration: none;
-        font-weight: 700;
-        font-size: 2.3em;
-        color: #F05F40;;
-        display: block;
-        text-transform: none;
-    }
-
-   
-/*
-Style Donation
-*/
-
-    #donation{
-        color: #222;
-        background: #eee;
-        padding: 13.5rem 2rem;
-    }
-
 
 /*
 Style Footer
 */
     footer{
-        clear: both;
         padding: 2rem 2rem;
         min-height:.5rem;
         color: black;
         font-size: 1rem;
-        bottom: 0; 
-        left: 0;
-        width: 100%;
-        
     }
 
     footer .fa{
@@ -335,27 +352,13 @@ Style Footer
     }
 
 
+
 /*
 Requêtes media
 */
     /* Ecran d'une taille minimale de 650px */
     @media screen and (min-width: 650px) {
         
-        /*Style Reset */
-            div:first-of-type{
-                overflow:hidden;
-                height: 54rem;
-            }
-
-            div:nth-of-type(2){
-                overflow:hidden;
-                height: 45rem;
-            }
-        
-            a:focus, a:hover{
-                 text-decoration: none;
-            }
-            
         /* Style Header */
             header{
                 padding: 0 0 20rem 0;
@@ -417,18 +420,15 @@ Requêtes media
                 font-weight: bold;
             }
 
-            a b{
-                text-decoration: none;
-            }
+        /*Style actions 1 */
+
+
+    }
 
     /* Ecran d'une taille minimale de 850px */
     @media screen and (min-width: 850px){
 
         /* Style Reset */
-            img{
-                max-width: 100%;
-            }
-            
             h2{
                 font-size: 3rem;
                 margin:auto;
@@ -462,15 +462,12 @@ Requêtes media
                 margin: auto;
             }
 
+            
         /* Style footer */
             footer{
-                padding: 2rem 2rem;
-                min-height:.5rem;
                 color: black;
-                font-size: 1rem;
-                bottom: 0; 
-                left: 0;
-                width: 100%;
-            
+                max-width: 75rem;
+                margin: auto;
+                padding: 0 0;
             }
     }

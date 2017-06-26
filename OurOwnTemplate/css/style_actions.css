@@ -45,7 +45,7 @@ Style Reset
     }
     
 
-    h1:after, h2:after {
+    h1:after {
         content: "";
         display: block;
         width: 20rem;
@@ -57,7 +57,7 @@ Style Reset
 
     h3{
         font-size: 2rem;
-        margin: 2rem auto 1rem auto;
+        margin: 4rem auto 5rem auto;
     }
 
     a, figcaption, nav p{
@@ -227,18 +227,33 @@ Style header
         left: 5%;
     }
 
-    #circular-bar :first-child .progress-value{
+    #circular-bar article:first-child .progress-value{
         background:url(../img/a1.jpg);
     }
 
+    #circular-bar article:first-child a:hover .progress-value{
+        background:url(../img/picto/header-8x.png) #eee no-repeat center;
+        z-index:1000;
+    }
+    
     #circular-bar :nth-child(2) .progress-value{
         background:url(../img/a2.jpg);
     }
 
+    #circular-bar :nth-child(2) a:hover .progress-value{
+        background:url(../img/picto/text-8x.png) #eee no-repeat center;
+        z-index:1000;
+    }
+    
     #circular-bar :nth-child(3) .progress-value{
         background:url(../img/a3.jpg);
     }
 
+    #circular-bar :nth-child(3) a:hover .progress-value{
+        background:url(../img/picto/globe-8x.png) #eee no-repeat center;
+        z-index:1000;
+    }
+    
     .progress.blue .progress-bar{
         border-color: #F05F40;
     }
@@ -284,39 +299,31 @@ Style header
         }
     }
 
-    
-    
-    a:hover, a:hover :not(#circular-bar){
-        border-radius: .5rem;
-        webkit-border-radius: .5rem;
-        text-decoration: none;
-        background: #eee;
-        color: #F05F40;
-    }
 
-    #circular-bar{
+    #circular-bar :not(h2){
         margin-bottom: 5rem;
     }
 
-        /* Sections */
+        /* Accordeon */
 
-        #action1{
+        action{
             clear: both;
-            
-        }
-
-        #action2{
-            
-        }
-
-        #action3{
-            
-        }
-
-        #action1, #action2, #action3{
             border: 1px solid black;
             min-height: 20rem;
-            padding: 2rem 2rem;
+            padding: 2rem 2rem;   
+        }
+
+        
+
+        h3{
+            padding-top: 2rem;
+        }
+
+        h3 + p{
+            /* Pour le slideToggle */
+            display: none;
+            background: #eee;
+            border: 1px solid black;
         }
 
 /*
@@ -344,6 +351,7 @@ Style Footer
         display: inline-block;
         margin: .5rem auto 1rem auto;
     }
+
 
     footer a{
         color: #F05F40;
@@ -409,12 +417,21 @@ Requêtes media
                 width:50%
             }
 
-            li a:hover, a:hover :not(#circular-bar){
+            li a:hover, a:hover :not(#circular-bar):not(h2){
                 padding: 1rem;
                 border-radius: .5rem;
                 webkit-border-radius: .5rem;
                 text-decoration: none;
             }
+
+    }
+
+        /* Style section */
+
+            h3{ 
+                text-align: left;
+                padding-left: 2rem;
+            } 
 
            
 
@@ -469,7 +486,7 @@ Requêtes media
                 width:50%;
             }
 
-           
+        
         /* Style footer */
             footer{
                 padding: 2rem 2rem;

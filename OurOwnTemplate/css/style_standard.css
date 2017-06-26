@@ -1,0 +1,308 @@
+********* CSS COMMUN NAV FOOTER *********
+
+/* MOBILE FIRST */
+
+
+    /*
+    Style Reset
+    */
+        *{
+            margin: 0;
+            padding: 0;
+
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        
+        html{
+            font-size: 62.5%;
+        }
+
+        body{
+            font-size: 1.5rem; /* => 15px */
+            font-family: 'Merriweather', serif;
+            text-align: center;
+            background: url(../img/background_action.jpg);
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 400;
+            color: white;
+        }
+
+        h1 {
+            font-weight: 700;
+            line-height: 1em;
+            text-transform: uppercase;
+            display: block;
+            margin: 15rem auto 2rem auto;
+        
+        }
+        
+
+        h1:after {
+            content: "";
+            display: block;
+            width: 20rem;
+            height: .2rem;
+            background: #eee;
+            margin: 2rem auto;
+        }
+
+
+        h3{
+            font-size: 2rem;
+            margin: 4rem auto 5rem auto;
+        }
+
+        a, figcaption, nav p{
+            text-decoration: none;
+        }
+
+        img{
+            max-width: 100%;
+        }
+        
+        
+    /*
+    Style header
+    */
+
+
+        nav {
+            text-align: right;
+            color: #222;
+            text-transform: uppercase;
+            padding: 3rem;
+            border-bottom: .1rem solid rgba(255, 255, 255, .3);
+            background: white;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index:1000;
+        }
+
+        li {
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 700;
+            padding: 0;
+            margin: 1rem auto;
+            -webkit-transition: all .5s;
+            transition: all .5s;
+        }
+
+        
+        nav > a {
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 700;
+            position: absolute;
+            left: 2rem;
+            top: 2.8rem;
+            -webkit-transition: all .5s;
+            transition: all .5s;
+        }
+        
+
+        nav ul {
+            display: none;
+            border-top: .1rem solid #c6c6c6;
+            background-color: white;
+            text-align: left;
+            list-style: none;
+            padding-top: 1rem;
+            margin-top: 2rem;
+        }
+
+        nav ul :hover{
+            color: white;
+            background-color: #c6c6c6;
+            text-decoration: none;
+        }
+        
+
+        nav img{
+            margin: -3rem auto;
+        }
+
+        nav p {
+            font-size: 1.2rem;
+            font-weight: 700;
+            font-family: 'Open Sans', sans-serif;
+            display: inline-block;
+            border: .1rem solid #c6c6c6;
+            padding: 1rem;
+            cursor: pointer;
+            
+            -webkit-border-radius: .5rem;
+            border-radius: .5rem;
+        }
+
+    /*
+    Style Footer
+    */
+        footer{
+            clear: both;
+            padding: 2rem 2rem;
+            min-height:.5rem;
+            background: black;
+            font-size: 1rem;
+            bottom: 0; 
+            left: 0;
+            width: 100%;
+            height: 10rem;
+            overflow:hidden;
+        }
+
+        footer p{
+            color: white;
+        }
+
+        footer .fa{
+            font-size: 3rem;
+            display: inline-block;
+            margin: .5rem auto 1rem auto;
+        }
+
+
+        footer a{
+            color: #F05F40;
+        }
+
+/*
+Requêtes media
+*/
+    /* Ecran d'une taille minimale de 650px */
+    @media screen and (min-width: 650px) {
+        
+
+        /* Style Header */
+        
+            
+            nav img{
+                margin : 0rem auto;
+            }
+
+            nav{
+                position: relative;
+                margin-bottom: 15rem;
+            }
+
+            nav, nav ul{
+                background: transparent;
+            }
+
+            nav a{
+                color: lightgrey;
+                top: 2.4rem;
+                left:10rem;
+            }
+
+            nav a:hover{
+                color: white;
+                opacity: 1;
+            }
+
+            nav p{
+                display: none;
+            }
+
+            nav li, nav ul{
+                display: inline-block;  
+            }
+
+            nav ul{
+                border: none;
+                margin: 0 0;
+                padding: 0;
+            }
+
+            nav li:not(:last-child){
+                margin-right: 1rem;
+            }
+
+            #contentHeader{
+                position: absolute;
+                top: 2rem;
+                left: 35rem;
+                width:50%
+            }
+
+            li a:hover, a:hover{
+                padding: 1rem;
+                border-radius: .5rem;
+                webkit-border-radius: .5rem;
+                text-decoration: none;
+            }
+
+    }
+           
+
+    /* Ecran d'une taille minimale de 1920px */
+    @media screen and (min-width: 1920px){
+
+        /* Style Reset */
+        
+            h2{
+                font-size: 3rem;
+                margin:auto;
+            }
+
+        /* Style Header */
+            header:before {
+                content: "";
+                display: block;
+                height: .1rem;
+                background: white;
+                opacity: .7;
+                position: absolute;
+                width: 100%;
+                top: 8rem;
+            }
+
+            nav{
+                max-width: 95rem;
+                margin: 0 auto 15rem auto;
+                border: none;
+            }
+
+            nav > a{
+                left:-30rem;
+            }
+
+            nav ul{
+                margin: 0 -40rem;
+            }
+
+            #contentHeader{
+                left:50rem;
+                top:15rem;
+            }
+
+            h1 {
+                font-size: 5rem;
+                max-width: 85rem;
+                margin: auto;
+                position: absolute;
+                top: 15rem;
+                left: 35rem;
+                width:50%;
+            }
+
+        
+        /* Style footer */
+            footer{
+                padding: 2rem 2rem;
+                min-height:.5rem;
+                color: black;
+                font-size: 1rem;
+                bottom: 0; 
+                left: 0;
+                width: 100%;
+            
+            }
+    }

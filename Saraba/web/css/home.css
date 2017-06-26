@@ -44,13 +44,13 @@ Style Reset
         text-transform: uppercase;
         padding: 0 2rem;
     }
-
-    h1:after, h2:after {
+    
+    header h1:after{
         content: "";
         display: block;
         width: 20rem;
         height: .2rem;
-        background: #eee;
+        background: snow;
         margin: 2rem auto;
     }
 
@@ -94,7 +94,6 @@ Style Reset
         border-radius: 2rem;
 
     }
-
 
 /*
 Style header

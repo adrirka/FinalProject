@@ -5,19 +5,23 @@
         <group>
             <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/web/css/news.css</file>
             <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/templates/register.html.twig</file>
+            <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/web/css/gallery.css</file>
             <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/templates/login.html.twig</file>
             <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/templates/article_list.html.twig</file>
             <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/src/Service/UserManager.php</file>
             <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/src/Entity/AddPartner.php</file>
             <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/web/css/main.css</file>
             <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/web/css/admingallery.css</file>
+            <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/templates/admin/partner/edit.html.twig</file>
             <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/src/Controller/Admin/ArticleController.php</file>
             <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/templates/admin/article/edit.html.twig</file>
             <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/src/Controller/IndexController.php</file>
             <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/src/Controller/Admin/AddPartnerController.php</file>
+            <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/web/css/action.css</file>
             <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/templates/action_list.html.twig</file>
             <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/src/Repository/PartnerRepository.php</file>
             <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/src/Controller/PageImplantationsController.php</file>
+            <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/templates/admin/addpartner/edit.html.twig</file>
             <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/src/Controller/UserController.php</file>
             <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/web/css/contactinfo.css</file>
             <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/src/Controller/Admin/PartnerController.php</file>
@@ -25,6 +29,7 @@
             <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/src/Controller/PageActionController.php</file>
             <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/src/Repository/AddPartnerRepository.php</file>
             <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/src/Controller/PagePartnerController.php</file>
+            <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/web/js/scriptbuger.js</file>
             <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/templates/layout.html.twig</file>
             <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/templates/admin/partner/list.html.twig</file>
             <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/web/js/home.js</file>
@@ -40,6 +45,8 @@
             <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/src/controllers.php</file>
             <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/templates/membre_list.html.twig</file>
             <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/src/app.php</file>
+            <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/web/css/admin.css</file>
+            <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/web/css/home1.css</file>
             <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/src/Repository/GalleryRepository.php</file>
             <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/src/Controller/Admin/GalleryController.php</file>
             <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/src/Controller/PageActuController.php</file>
@@ -48,6 +55,7 @@
             <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/web/css/implantations.css</file>
             <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/web/js/implantations.js</file>
             <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/templates/admin/addpartner/list.html.twig</file>
+            <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/templates/admin/gallery/edit.html.twig</file>
             <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/templates/layout.back.html.twig</file>
             <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/templates/index.html.twig</file>
             <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/templates/admin/article/list.html.twig</file>

@@ -51,7 +51,7 @@ Style Reset
         margin: 0 !important;
     }
 
-    header h1:after, h2:after {
+    header h1:after{
         content: "";
         display: block;
         width: 20rem;

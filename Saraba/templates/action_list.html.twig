@@ -1,4 +1,72 @@
 {%extends "layout.html.twig"%}
 
 {% block page_title 'Nos Actions' %}
+{% block h2 '' %}
 {% block p '' %}
+
+    
+{% block content %}
+
+    <section id="circular-bar" class="animated bounceInUp">
+    
+                <article class="col-md-4 col-sm-6">
+                    <h2 class="animated slideInLeft">Humanitaire<h2>
+                    <a href=""><div class="progress blue">
+                        <span class="progress-left">
+                            <span class="progress-bar"></span>
+                        </span>
+                        <span class="progress-right">
+                            <span class="progress-bar"></span>
+                        </span>
+                        <div class="progress-value"></div>
+                    </div></a>
+                </article>
+                <article class="col-md-4 col-sm-6">
+                    <h2 class="animated slideInLeft">Thérapeutique<h2>
+                    <a href=""><div class="progress yellow">
+                        <span class="progress-left">
+                            <span class="progress-bar"></span>
+                        </span>
+                        <span class="progress-right">
+                            <span class="progress-bar"></span>
+                        </span>
+                        <div class="progress-value"></div>
+                    </div></a>
+                </article>
+                <article class="col-md-4 col-sm-6">
+                    <h2 class="animated slideInLeft">Artistique<h2>
+                    <a href=""><div class="progress green">
+                        <span class="progress-left">
+                            <span class="progress-bar"></span>
+                        </span>
+                        <span class="progress-right">
+                            <span class="progress-bar"></span>
+                        </span>
+                    <div class="progress-value"></div>
+                    </div></a>
+                </article>   
+            </section>
+
+            <section id="action">
+                <article>
+                    <h3><i class="fa fa-arrow-right" aria-hidden="true"></i>Humanitaire</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, voluptatum minus eius adipisci nesciunt quibusdam porro qui magni reiciendis, ad commodi. Similique fugiat amet animi tenetur, unde aspernatur necessitatibus, a!</p>
+                </article>
+
+                <article>        
+                    <h3><i class="fa fa-arrow-right" aria-hidden="true"></i>Thérapeutique</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore aut praesentium, distinctio voluptate odit pariatur illo aspernatur, similique non suscipit commodi hic quia minus temporibus, maiores fugiat ab possimus dolorem!</p>
+                </article> 
+
+                <article>
+                    <h3><i class="fa fa-arrow-right" aria-hidden="true"></i>Artistique</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab fuga, voluptas amet provident perferendis porro voluptate maiores harum sint dolorum adipisci nesciunt delectus ullam minus quae temporibus quod ipsum itaque.</p>
+                </article>
+            <section>
+{% endblock %}
+
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('css/action.css') }}">
+{% endblock %}

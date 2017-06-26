@@ -41,7 +41,7 @@ Style Reset
         padding: 0 2rem;
     }
 
-    h1:after, h2:after {
+    h1:after{
         content: "";
         display: block;
         width: 20rem;

@@ -10,17 +10,17 @@
                 <h2>Nous contacter</h2>
                 <form class="form-vertical" method="post" id="form_contact">
                         <article class="form-group">
-                            <label class="control-label col-sm-12" for="userName">Votre nom : <b></b> </label>
+                            <label class="control-label col-sm-12" for="userName"><b></b> </label>
                                 <input class="col-sm-6 form-control" type="text" id="userName" name="name" placeholder="Votre Nom">
                         </article>
 
                         <article class="form-group">
-                            <label class="control-label col-sm-12" for="userEmail">Votre email : <b></b> </label>
+                            <label class="control-label col-sm-12" for="userEmail"><b></b> </label>
                                 <input class="col-sm-6 form-control" type="email" id="userEmail" name="email" placeholder="Votre Email">
                         </article>
 
                         <article class="form-group">
-                            <label class="control-label col-sm-12" for="userSubject">Choisir un sujet : <b></b> </label>
+                            <label class="control-label col-sm-12" for="userSubject"><b></b> </label>
                                 <div class="col-sm-6 form-control">
                                     <select  id="userSubject" name="subject">
                                         <option value="rdv">Demande d'information</option>
@@ -31,7 +31,7 @@
                         </article>
 
                         <article class="form-group">
-                            <label class="control-label col-sm-12" for="userMessage">Votre message : <b></b> </label>
+                            <label class="control-label col-sm-12" for="userMessage"><b></b> </label>
                                 <textarea class="col-sm-6 form-control" id="userMessage" name="message" placeholder="Votre Message"></textarea>
                         </article>
 
@@ -64,5 +64,6 @@
 {% block stylesheets %}
     {{ parent() }}
 
+            <link rel="stylesheet" href="{{ asset('css/home.css') }}">
 
 {% endblock %}

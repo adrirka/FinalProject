@@ -447,15 +447,16 @@ Requêtes media
             }
 
             nav > a{
-                left:-15rem;
+                left:-30rem;
             }
 
             nav ul{
-                margin: 0 -30rem;
+                margin: 0 -40rem;
             }
 
             #contentHeader{
-                left:45rem;
+                left:50rem;
+                top:15rem;
             }
 
             h1 {

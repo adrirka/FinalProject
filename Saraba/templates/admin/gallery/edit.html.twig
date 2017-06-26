@@ -1,6 +1,8 @@
 {% extends "layout.html.twig" %}
 
 {% block title 'Admin gallerys' %}
+    {% block p '' %}
+
 
 {% block content %}
     <h2>Edition Galerie</h2>
@@ -17,5 +19,10 @@
         </button>
         <a href="{{ path('admin_gallerys') }}" class="btn btn-default">Annuler</a>
     </form>
+
+{% endblock %}
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{asset('css/admin.css')}}"/>
 
 {% endblock %}

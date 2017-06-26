@@ -1,59 +1,107 @@
 {% extends "layout.html.twig" %}
 {% block page_boutton %}
-    <a href="{{ path('action') }}">Nos Actions</a>
-    <a href="{{ path('actu') }}">Nos News</a>
+    
+    <button class="animated tada" ><a href="#contact">Nous contacter</a></button>
+    <button class="animated tada" ><a href="#donation">Nous soutenir</a></button>
+
 {% endblock %}
 
 {% block content %}
     
-<section class="col-md-6" id="contact">
-                <h2>Nous contacter</h2>
-                <form class="form-vertical" method="post" id="form_contact">
-                        <article class="form-group">
-                            <label class="control-label col-sm-12" for="userName"><b></b> </label>
-                                <input class="col-sm-6 form-control" type="text" id="userName" name="name" placeholder="Votre Nom">
-                        </article>
+<div class="container">
+                <div class="row">
 
-                        <article class="form-group">
-                            <label class="control-label col-sm-12" for="userEmail"><b></b> </label>
+                    <!-- Formulaire -->
+                    <section id="contact" class="col-md-6 col-lg-6">
+                        
+                        <form class="form-vertical" method="post" id="form_contact">
+                        <h2>Nous contacter</h2> 
+                                <label for="userName"><b></b></label>
+                                <input class="col-sm-6 form-control" type="text" id="userName" name="name" placeholder="Votre nom ou Raison Sociale">
+                            
+                                <label for="userEmail"><b></b></label>
                                 <input class="col-sm-6 form-control" type="email" id="userEmail" name="email" placeholder="Votre Email">
-                        </article>
-
-                        <article class="form-group">
-                            <label class="control-label col-sm-12" for="userSubject"><b></b> </label>
-                                <div class="col-sm-6 form-control">
-                                    <select  id="userSubject" name="subject">
-                                        <option value="rdv">Demande d'information</option>
-                                        <option value="projet_sejour_de_rupture">Inscription sejour de rupture</option>
-                                        <option value="atelier_therapeutique">Atelier thérapetique</option>
-                                    </select>
-                                </div>
-                        </article>
-
-                        <article class="form-group">
-                            <label class="control-label col-sm-12" for="userMessage"><b></b> </label>
+                        
+                                <label for="userSubject"><b></b></label>
+                                <select class="col-sm-6 form-control" id="userSubject" name="subject">
+                                    <option value="rdv">Demande d'information</option>
+                                    <option value="projet_sejour_de_rupture">Inscription sejour de rupture</option>
+                                    <option value="atelier_therapetique">Atelier thérapeuthique</option>
+                                </select>
+                
+                                <label for="userMessage"><b></b></label>                                
                                 <textarea class="col-sm-6 form-control" id="userMessage" name="message" placeholder="Votre Message"></textarea>
-                        </article>
+                        
+                                <input class="button" type="submit" value="Envoyer">
+                         
+                        </form>
+                    </section>
+                                  
+                    <!-- Nos actions -->
+                    <section id="actions" class="col-md-6 col-lg-6">
+                        <figure>
+                            <img src="{{ asset('img/actions.jpg') }}" alt="actions">
+                            <figcaption><a href="{{ path('action') }}"><b>Découvrez nos actions</b></a></figcaption>
+                        </figure>
+                    </section>
+                </div>
+            </div>
+            
+            <div class="container">
+                <div class="row">
 
-                        <div class="col-sm-12">
-                            <input class="btn btn-success" type="submit" value="Envoyer">
+                    <!-- Notre actualite -->
+                    <section id="actualite" class="col-md-6 col-lg-6">
+                        <figure>
+                            <img src="{{ asset('img/actualite.jpg') }}" alt="actualite">
+                            <figcaption><a href="{{ path('actu') }}"><b>Suivez notre actualite</b></a></figcaption>
+                        </figure>
+                    </section>
+
+                    <!-- Donation -->
+                    <section id="donation" class="col-md-6 col-lg-6">
+
+                        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+                        <h2>Faites un don</h2>
+                        <p>Nous avons besoin de VOUS pour mettre en oeuvre nos projets !</p>
+                            <input type="hidden" name="cmd" value="_s-xclick">
+                            <input type="hidden" name="hosted_button_id" value="RUHFJ3NPKSCJN">
+                            <input type="image" src="https://www.paypalobjects.com/fr_FR/FR/i/btn/btn_donateCC_LG.gif"  border="0" name="submit" alt="PayPal, le réflexe sécurité pour payer en ligne">
+                            <img alt="" border="0" src="https://www.paypalobjects.com/fr_FR/i/scr/pixel.gif" width="1" height="1">
+
+                        </form>
+                    </section>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="row">
+
+                    <!-- Newsletter -->
+                    <section id="newsletterform" class="col-md-6 col-lg-6">
+                        <div class="wrap">
+                            <h2>Tenez-vous informé !</h2>
+                            <p>L'association Saraba vous donne des nouvelles régulièrement sur nos activités, nos locaux, nos jeunes - Saraba, porteur de projet</p>
+                            <form action="send.php" method="post" id="newsletter" name="newsletter">
+                                <input type="email" name="signup-email" id="signup-email" value="" placeholder="Adresse email" />
+                                <input type="submit" value="S'abonner" name="signup-button" id="signup-button">
+                                <span class="arrow"></span>
+                            </form>
+                            <div id="response"></div>
                         </div>
+                    </section>
+                    
+                    <!-- Réseau sociaux -->
+                    <section id="media" class="col-md-6 col-lg-6">
+                        <figure>
+                            <img src="{{ asset('img/media.jpg') }}" alt="media">
+                            <figcaption><a href="facebook.fr"><b>Retrouvez-nous sur les réseaux sociaux</b></a></figcaption>
+                        </figure>
+                    </section>
+            
+                </div>
+            </div>
 
-                    </form>
-                </section>
-
-                <section class="col-md-6" id="donation">
-                    <h2>Faites un don</h2>
-
-                    <p>Nous avons besoin de VOUS pour mettre en oeuvre nos projets !</p><br>
-
-                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-                    <input type="hidden" name="cmd" value="_s-xclick">
-                    <input type="hidden" name="hosted_button_id" value="RUHFJ3NPKSCJN">
-                    <input type="image" src="https://www.paypalobjects.com/fr_FR/FR/i/btn/btn_donateCC_LG.gif"  border="0" name="submit" alt="PayPal, le réflexe sécurité pour payer en ligne">
-                    <img alt="" border="0" src="https://www.paypalobjects.com/fr_FR/i/scr/pixel.gif" width="1" height="1">
-                    </form>
-                </section>
 {% endblock %}
 {% block javascripts %}
     {{ parent() }}
@@ -63,7 +111,8 @@
 
 {% block stylesheets %}
     {{ parent() }}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 
-            <link rel="stylesheet" href="{{ asset('css/home.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/home1.css') }}">
 
 {% endblock %}

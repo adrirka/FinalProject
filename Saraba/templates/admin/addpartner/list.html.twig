@@ -1,6 +1,8 @@
 {% extends "layout.html.twig" %}
 
 {% block title 'Admin addpartners' %}
+    {% block p '' %}
+
 
 {% block content %}
     <h2>Add Partners</h2>
@@ -37,4 +39,6 @@
 {% block stylesheets %}
     {{ parent() }}
     <link rel="stylesheet" href="{{asset('css/adminArticle.css')}}"/>
+    <link rel="stylesheet" href="{{asset('css/admin.css')}}"/>
+
 {% endblock %}

@@ -100,7 +100,7 @@ Style header
         color: #222;
         text-transform: uppercase;
         padding: 3rem;
-        border-bottom: .1rem solid rgba(255, 255, 255, .3);
+        /*border-bottom: .1rem solid rgba(255, 255, 255, .3);*/
         background: white;
         position: fixed;
         top: 0;
@@ -410,7 +410,7 @@ Style Newsletter
 
     #newsletterform .arrow {
         display: inline-block;
-        background: url("../img/arrow.png") no-repeat;
+        /*background: url("../img/arrow.png") no-repeat;*/
         width: 139px;
         height: 48px;
         position: absolute;
@@ -443,12 +443,11 @@ Style Footer
         clear: both;
         padding: 2rem 2rem;
         min-height:.5rem;
-        background: black;
         font-size: 1rem;
         bottom: 0; 
         left: 0;
         width: 100%;
-        height: 10rem;
+        height: 100%;
         overflow:hidden;
     }
 
@@ -552,7 +551,6 @@ Requêtes media
                 position: absolute;
                 top: 14rem;
                 left: 35rem;
-                width:50%;
             }
 
             #contentHeader p{

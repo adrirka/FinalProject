@@ -48,7 +48,7 @@ $(document).ready(function(){
                 // Vérifier que userName à au min 2 caractères
                 if(userName.val().length < 6){
                     // Afficher un msg d'erreur
-                    $('[for="userName"] b').text('Minimum 6 caractères');
+                    $('[for="userName"] b').text('Nom: Minimum 6 caractères');
 
                     // version 2 : userName.prev().children('b').text('Minimum 2 caractères')
                 }
@@ -60,7 +60,7 @@ $(document).ready(function(){
                 // Vérifier que userEmail à au moin 5 caractères
                 if(userEmail.val().length < 5){
                     // Afficher un msg d'erreur
-                    $('[for="userEmail"] b').text('Minimum 5 caractères');
+                    $('[for="userEmail"] b').text('Email: Minimum 5 caractères');
                 }
                 else{
                     // Incrémenter la valeur de formScore
@@ -80,7 +80,7 @@ $(document).ready(function(){
                 // Vérifier que userMessage à au moin 10 caractères
                 if(userMessage.val().length < 10){
                     // Afficher un msg d'erreur
-                    $('[for="userMessage"] b').text('Minimum 10 caractères');
+                    $('[for="userMessage"] b').text('MSG: Minimum 10 caractères');
                 }
                 else{
                     // Incrémenter la valeur de formScore

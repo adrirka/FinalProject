@@ -27,8 +27,12 @@ Style Reset
         font-size: 1.5rem; /* => 15px */
         font-family: 'Merriweather', serif;
         text-align: center;
-        background: #efe0c4;
-       
+        /*background: #efe0c4;*/
+        background-image: url(../img/background_action.jpg);
+    }
+    main{
+        background-image: url(../img/background_action.jpg);
+
     }
 
     h1, h2 {

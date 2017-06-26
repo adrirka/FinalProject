@@ -1,6 +1,8 @@
 {% extends "layout.html.twig" %}
 
 {% block title 'Admin partners' %}
+    {% block p '' %}
+
 
 {% block content %}
     <h2>Edition Partner</h2>
@@ -27,5 +29,11 @@
         </button>
         <a href="{{ path('admin_partners') }}" class="btn btn-default">Annuler</a>
     </form>
+
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{asset('css/admin.css')}}"/>
 
 {% endblock %}

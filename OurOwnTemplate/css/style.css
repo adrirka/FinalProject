@@ -331,6 +331,7 @@ Style Donation
 
     #donation p{
         margin-bottom: 2rem;
+        display: block;
     }
 
     #donation h2:after {
@@ -349,7 +350,6 @@ Style Newsletter
         font-family: 'Raleway', sans-serif;
         background-color: #64c6af;
         margin: 0 auto;
-        max-width: 780px;
         min-width: 320px;
         display: block;
         text-align: center;
@@ -495,6 +495,10 @@ Requêtes media
                  border-radius: .5rem;
                  webkit-border-radius: .5rem;
             }
+
+            figcaption a, b{
+                padding-bottom: 5rem;
+            }
             
         /* Style Header */
             header{
@@ -518,6 +522,7 @@ Requêtes media
             nav a{
                 color: lightgrey;
                 top: 2.4rem;
+                left:10rem;
             }
 
             nav a:hover{
@@ -535,7 +540,7 @@ Requêtes media
 
             nav ul{
                 border: none;
-                margin: 0 -15rem;
+                margin: 0 1rem;
                 padding: 0;
             }
 
@@ -559,8 +564,8 @@ Requêtes media
 
             
 
-    /* Ecran d'une taille minimale de 850px */
-    @media screen and (min-width: 850px){
+    /* Ecran d'une taille minimale de 1920px */
+    @media screen and (min-width: 1920px){
 
         /* Style Reset */
         
@@ -571,6 +576,14 @@ Requêtes media
 
             #contentHeader > a, main a{
                 font-size: 1.5rem;
+            }
+
+            #contentHeader{
+                left:45rem;
+            }
+
+            figcaption a, b{
+                padding-bottom: 15rem;
             }
 
         /* Style Header */
@@ -590,6 +603,11 @@ Requêtes media
                 margin: 0 auto 15rem auto;
                 border: none;
             }
+
+            nav > a{
+                left:-15rem;
+            }
+
 
             h1 {
                 font-size: 5rem;

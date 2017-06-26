@@ -376,6 +376,7 @@ Requêtes media
             nav a{
                 color: lightgrey;
                 top: 2.4rem;
+                left:10rem;
             }
 
             nav a:hover{
@@ -393,12 +394,19 @@ Requêtes media
 
             nav ul{
                 border: none;
-                margin: 0 -15rem;
+                margin: 0 0;
                 padding: 0;
             }
 
             nav li:not(:last-child){
                 margin-right: 1rem;
+            }
+
+            #contentHeader{
+                position: absolute;
+                top: 2rem;
+                left: 35rem;
+                width:50%
             }
 
             li a:hover, a:hover :not(#circular-bar){
@@ -410,8 +418,8 @@ Requêtes media
 
            
 
-    /* Ecran d'une taille minimale de 850px */
-    @media screen and (min-width: 850px){
+    /* Ecran d'une taille minimale de 1920px */
+    @media screen and (min-width: 1920px){
 
         /* Style Reset */
         
@@ -436,6 +444,18 @@ Requêtes media
                 max-width: 95rem;
                 margin: 0 auto 15rem auto;
                 border: none;
+            }
+
+            nav > a{
+                left:-15rem;
+            }
+
+            nav ul{
+                margin: 0 -30rem;
+            }
+
+            #contentHeader{
+                left:45rem;
             }
 
             h1 {

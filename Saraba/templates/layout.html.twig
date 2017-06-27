@@ -13,6 +13,8 @@
 
             <!-- Feuille de style -->
             <link rel="stylesheet" href="{{ asset('css/home.css') }}">
+            <!--link rel="stylesheet" href="{#{ asset('css/stylestandard.css') }#}"-->
+
         {% endblock %}
     </head>
     <body>
@@ -53,16 +55,16 @@
                 <p>Menu <i class="fa fa-bars"></i></p>
                 <ul>
                     <li>
-                        <a href="{{ path('action') }}">Nos Actions</a>
+                        <a href="{{ path('action') }}">Pédagogie</a>
                     </li>
                     <li>
-                        <a href="{{ path('actu') }}">Nos News</a>
+                        <a href="{{ path('actu') }}">Actualités</a>
                     </li>
                     <li>
-                        <a href="{{ path('implantations') }}">Notre Présence</a>
+                        <a href="{{ path('implantations') }}">Implantation</a>
                     </li>
                     <li>
-                        <a href="{{ path('partner_edit') }}">Nos Partenaires</a>
+                        <a href="{{ path('partner_edit') }}">Partenaires</a>
                     </li>
                     <li>
                         <a href="{{ path('addpartner_edit') }}">Devenir Partenaire</a>
@@ -77,7 +79,7 @@
             </nav>
             
             <section id="contentHeader">
-                <h1>{% block page_title 'SARABA Association' %}</h1>
+                <h1 class="h1place">{% block page_title 'SARABA Association' %}</h1>
                 <h2>{% block h2 'Regards Croisés Afrique Europe'%}</h2>
                 
                 <p>{% block p 'Stage de rupture et projets éducatifs alternatifs pour la réconciliation de nos jeunes avec le modèle sociétal'%}</p>
@@ -96,9 +98,9 @@
 
         <footer>
             <p class="social-icons">
-                <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                <a href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a>
+                <a href="https://www.facebook.com/AssoSaraba/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                <a href="https://twitter.com/sarabaasso?lang=fr" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a href="https://www.youtube.com/channel/UCYWtBPQlNRmBDgRa3KAjI-A" target="_blank"><i class="fa fa-youtube" aria-hidden="true"></i></a>
             </p>
             <p>Copyright 2017 <a href="#">Saraba, association reconnue d'utilité publique</a>.</p>
             <p>All Rights Reserved.</p>

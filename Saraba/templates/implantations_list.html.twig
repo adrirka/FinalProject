@@ -1,35 +1,22 @@
 {% extends "layout.html.twig" %}
 {% block page_title 'Nos implantations' %}
+{% block h2 '' %}
 {% block p '' %}
 
 
 
 {% block content %}
-    
-            <section>
-                <h2>Siège à Paris</h2>
-                <img src="{{asset('img/france.jpg')}}" alt="France" width="10%">
+            <article id="map" class="col-sm-10 col-lg-10"></article>
 
-                <p>Babacar NIANG et Amélie DEMONCHY</p>
-                <p>3, Rue Abraham Lincoln</p>
-                <p>92220 Bagneux</p>  
-            </section>
-
-            <section>
-                <h2>Structure d'accueil au Sénégal</h2>
-                <img src="{{asset('img/senegal.png')}}" alt="Senegal" width="10%">
-
-                <p>Auberge des deux Baobabs</p>
-                <p>Warang, Mbour</p>
-                <p><a href="mailto:int_saraba@yahoo.fr">int_saraba@yahoo.fr</a></p>              
-            </section>
-
-            <article class="maps">
+            <article class="maps col-sm-2 col-lg-2">
                 <aside class="fa fa-map-marker" aria-hidden="true" >  <b>Babacar NIANG et Amélie DEMONCHY :</b>  Rue Abraham Lincoln  92220 Bagneux</aside><br><br>
                 <aside class="fa fa-map-marker" aria-hidden="true" >  <b>Association SARABA :</b> 12 rue Clavel 75019 Paris </aside><br><br>
                 <aside class="fa fa-map-marker" aria-hidden="true" >  <b>Les Grands Voisins :</b> 82 Avenue Denfert-Rochereau, 75014 Paris </aside><br><br>
                 <aside class="fa fa-map-marker" aria-hidden="true" >  <b>Auberge des deux Baobabs :</b> Warang, Mbour, Senegal</aside><br><br>
+                <p><a href="mailto:int_saraba@yahoo.fr">int_saraba@yahoo.fr</a></p>              
+
             </article>
+                
                         
 {% endblock %}
 
@@ -37,7 +24,7 @@
 {% block javascripts %}
     {{ parent() }}
     <script src="{{ asset('js/implantations.js') }}"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyACWqGTYGT4CJS2IWhI5QxZmBaVnIKVo6o&callback=myMap"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyACWqGTYGT4CJS2IWhI5QxZmBaVnIKVo6o&callback=myMap" style="width:800px; height:600px"></script>
     
 {% endblock %}
 

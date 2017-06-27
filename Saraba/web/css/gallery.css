@@ -21,6 +21,11 @@ body{
     opacity: 0.7;
 }
 
+
+h1{
+    margin: 15rem auto 2rem auto;
+}
+
 /* The Modal (background) */
 .modal {
     display: none; /* Hidden by default */
@@ -64,8 +69,21 @@ body{
 }
 
 /* 100% Image Width on Smaller Screens */
-@media only screen and (max-width: 700px){
+@media only screen and (max-width: 650px){
     .modal-content {
         width: 100%;
     }
+}
+
+
+@media screen and (min-width: 1920px){
+
+    h1{
+        margin: auto !important;
+    }
+    header {
+        padding: 0px 0 10rem 0;
+    }
+    
+    
 }

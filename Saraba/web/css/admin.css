@@ -10,3 +10,8 @@ ul.nav.navbar-nav {
     bottom: 5.5rem;
     left: 6rem;
 }
+
+header{
+    background-image: url(../img/header.jpg);
+    background-size: cover;
+}

@@ -44,6 +44,9 @@ Style Reset
        
     }
     
+    h2{
+        font-size: 1.8rem;
+    }
 
     h1:after {
         content: "";
@@ -56,8 +59,8 @@ Style Reset
 
 
     h3{
-        font-size: 2rem;
-        margin: 4rem auto 5rem auto;
+        font-size: 1.5rem;
+        margin: 3rem auto 5rem auto;
     }
 
     a, figcaption, nav p{
@@ -67,26 +70,29 @@ Style Reset
     img{
         max-width: 100%;
     }
-    p{
-        margin: 0rem !important;
-    }
     
     
 /*
 Style header
 */
 
-header {
-    padding: 0 0 10rem 0 !important;
-    min-height: 0rem !important;
-}
+    header {
+        padding: 0 0 10rem 0 !important;
+        min-height: 0rem !important;
+    }
+    
+    nav{
+        z-index: 1000;
+    }
 
+/*
 
     nav {
         text-align: right;
         color: #222;
         text-transform: uppercase;
         padding: 3rem;
+        border-bottom: .1rem solid rgba(255, 255, 255, .3);
         background: white;
         position: fixed;
         top: 0;
@@ -94,6 +100,7 @@ header {
         width: 100%;
         z-index:1000;
     }
+
 
     li {
         font-family: 'Open Sans', sans-serif;
@@ -128,13 +135,14 @@ header {
 
     nav ul :hover{
         color: white;
-        /*background-color: #c6c6c6;*/
+        background-color: #c6c6c6;
         text-decoration: none;
     }
     
 
     nav img{
         margin: -3rem auto;
+        opacity: .8;
     }
 
     nav p {
@@ -149,7 +157,7 @@ header {
         -webkit-border-radius: .5rem;
         border-radius: .5rem;
     }
-
+*/
 
 /*Style 
  Circular Bar 
@@ -239,7 +247,7 @@ header {
     }
 
     #circular-bar article:first-child a:hover .progress-value{
-        background:url(../img/picto/header-8x.png) #eee no-repeat center;
+        background:url(../img/picto/pic_action1.png) #eee no-repeat center;
         z-index:1000;
     }
     
@@ -248,7 +256,7 @@ header {
     }
 
     #circular-bar :nth-child(2) a:hover .progress-value{
-        background:url(../img/picto/text-8x.png) #eee no-repeat center;
+        background:url(../img/picto/pic_action2.png) #eee no-repeat center;
         z-index:1000;
     }
     
@@ -257,7 +265,7 @@ header {
     }
 
     #circular-bar :nth-child(3) a:hover .progress-value{
-        background:url(../img/picto/globe-8x.png) #eee no-repeat center;
+        background:url(../img/picto/pic_action3.png) #eee no-repeat center;
         z-index:1000;
     }
     
@@ -311,27 +319,69 @@ header {
         margin-bottom: 5rem;
     }
 
-        /* Accordeon */
+/* Accordeon */
 
-        action{
-            clear: both;
-            border: 1px solid black;
-            min-height: 20rem;
-            padding: 2rem 2rem;   
-        }
+    #action{
+        clear: both;       
+        padding: 2rem 2rem; 
+        background: url(../img/overlay/15.png) !important;
+        background: rgba(255, 255, 255, 0.30);
+    }
 
-        
+    #action :first-child h3 {
+        background: #F05F40;
+    }
 
-        h3{
-            padding-top: 2rem;
-        }
+    #action :nth-child(2) h3 {
+        background: #fdba04;
+    }
 
-        h3 + p{
-            /* Pour le slideToggle */
-            display: none;
-            background: #eee;
-            border: 1px solid black;
-        }
+    #action :nth-child(3) h3  {
+        background: #1abc9c;
+    }
+    
+    #action h3{
+        font-size: 1.3rem;
+        padding-top: 2rem;
+        width: 100%;
+        text-align: left;
+        border: 1px solid white;
+        padding: 2rem 3rem 2rem 5rem;
+        border-radius: 1.7rem;
+        background:white;
+      
+    } 
+
+    .fa-arrow-circle-down, .fa-arrow-circle-up{
+        font-size: 3rem;
+        padding-right: 1rem;
+    }
+
+
+    #action h3 + p{
+        /* Pour le slideToggle */
+        display: none;
+        background: #eee;
+        border: 1px solid white;
+        padding: 2rem;
+        text-align:justify;
+        width:100%;
+        margin: -10% auto;
+        font-size:1.2rem;
+        margin-bottom: 2rem;
+    }
+
+
+
+#video iframe{
+    display:none;
+}
+
+/*Style PDF iframe*/
+
+    #pdf iframe, #pdf h2{
+        display:none;
+    }
 
 /*
 Style Footer
@@ -427,25 +477,80 @@ Requêtes media
             li a:hover, a:hover :not(#circular-bar):not(h2){
                 padding: 1rem;
                 border-radius: .5rem;
-                -webkit-border-radius: .5rem;
+                webkit-border-radius: .5rem;
                 text-decoration: none;
             }
 
-    }
+   
 
-        /* Style section */
+        /* Style accordeon  */
 
-            h3{ 
+            #action h3{ 
+                font-size: 1.5rem;
                 text-align: left;
-                padding-left: 2rem;
+                border: 1px solid white;
+                width: 30%;
+                padding: 2rem 3rem 2rem 5rem;
+                border-radius: 1.7rem;
+                background:white;
+                display: inline-block;
+                margin-right:50%;
             } 
 
-           
+            .fa-arrow-circle-down, .fa-arrow-circle-up{
+                font-size: 4rem;
+                padding-right: 2rem;
+            }
+
+            #action h3 + p{
+                /* Pour le slideToggle */
+                display: none;
+                background: #eee;
+                border: 1px solid white;
+                padding: 2rem;
+                text-align:justify;
+                width:30%;
+                margin: -3% 10% -2% 10%;
+                font-size:1.2rem;
+                margin-bottom:1rem;
+            }
+
+        /*Style video */
+
+            #video iframe{
+                display:inline-block;
+                position :absolute;
+                top:95%;
+                left:50%;
+            }
+        
+
+        /* Style PDF */
+
+            #pdf iframe{
+                display: block;
+                padding-top: 2rem;
+                padding-bottom: 2rem;
+                border: none;
+                width: 50%;
+                margin: auto;
+            }
+
+            #pdf h2{
+                margin-bottom: 50rem;
+            }
+   }         
 
     /* Ecran d'une taille minimale de 1920px */
     @media screen and (min-width: 1920px){
 
         /* Style Reset */
+            
+        #contentHeader {
+            position: absolute;
+            top: 0rem !important;
+            left: 45rem !important;
+        }
         
             h2{
                 font-size: 3rem;
@@ -492,6 +597,16 @@ Requêtes media
                 left: 35rem;
                 width:50%;
             }
+            
+            
+        /* Style video */
+        
+        #video iframe{
+            display:inline-block;
+            position :absolute;
+            top:78%;
+            left:50%;
+        }
 
         
         /* Style footer */
@@ -505,7 +620,12 @@ Requêtes media
                 width: 100%;
             
             }
+            
     }
+
+    
+
+
     
 /*
    Nav admin

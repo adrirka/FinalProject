@@ -100,7 +100,7 @@ Style header
 */
     header{
         color: white;
-        padding:13rem 0 6rem 0;
+        padding:0rem 0 6rem 0;
         /*background-image:  url(../img/header.jpg);*/
         background-size: cover;
         background-position: center;
@@ -200,7 +200,7 @@ Style Contact
 
     #contact{
         color: white;
-        background: #F05F40;
+       /* background: #F05F40; */
         padding: 4rem 2rem 6rem 2rem;
         height: 60rem;
     }
@@ -251,76 +251,6 @@ Style Donation
         height: 60rem;
     }
 
-
-
-/*
-Style Portfolio
-
-    figure{
-        position: relative;
-        float: left;
-        width: 100%;
-        line-height: 0;
-    }
-
-    figcaption{
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(240, 95, 64, .7);
-        line-height: 1;
-        opacity: 0;
-    }
-
-    figcaption:hover{
-        opacity: 1;
-    }
-
-    figcaption a{
-        color: rgba(255, 255, 255, .7);
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        width: 80%;
-      
-        -webkit-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%)
-    }
-
-    
-
-    a b{
-        font-weight: 400;
-        font-size: 1.3em;
-        color: white;
-        display: block;
-        text-transform: none;
-    }
-
-*/
-
-/*
-Style Download
-
-    section:nth-child(4){
-        color: white;
-        background: #222;
-        clear: both;
-        padding: 4rem 2rem 6rem 2rem;
-    }
-
-    section:nth-child(4) h2{
-        margin-bottom: 4rem;
-    }
-
-    section:nth-child(4) h2:after{
-        display: none;
-    }
-
-*/
-
 /*
 Style Footer
 */
@@ -359,7 +289,6 @@ Requêtes media
         /* Style Header */
             header{
                 padding: 0 0 20rem 0;
-                min-height: 70rem;
             }
 
             nav img{

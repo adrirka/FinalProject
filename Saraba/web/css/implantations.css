@@ -1,5 +1,7 @@
+
+
 /*
-Style Reset
+Style page implantations
 */
 
 body{
@@ -11,84 +13,110 @@ body{
         background-size: cover;
 }
 
-
-/*
-Style Main
-*/
+header{
+    background-image:url(../img/implantation.jpg) !important;
+    background-size: cover;
+}
 
 main {
         font-family: 'Pangolin';
         padding: 2rem;
 }
 
-section{
-        background-color: beige;
-        border-radius: 2rem;
-        color: black;
-}
+    
 
-#map{
-        margin: 2rem auto;
-        width:30rem;
-        height:30rem;
-        z-index: 0;
-}
+    #map{
+            margin: 2rem auto;
+            width:30rem;
+            height:30rem;
+            z-index: 0;
+    }
 
-article{
-        margin: 2rem auto;
-        max-width: 35rem;
-        text-align: center;
-}
+    article{
+            margin: 2rem 10rem 0rem 10rem;
+            max-width: 35rem;
+            text-align: center;
+    }
 
-.maps {
-        padding: 2rem;
-}
+    #map{
+        margin-left: 20rem;
+    }
+    .maps {
+            padding: 2rem;
+    }
 
-article.maps {
+   article.maps {
         font-style: italic;
         font-size: large;
         padding-bottom: 2rem;
+        background: beige;
+        border-radius: 2rem;
+        text-align: left;
+    }
+    main a{
+        color: darkred;
+    }
+
+    aside {
+            font-family: monospace;
+            font-size: larger;
+            font-weight: 600;
+            color: #000;
+    }
+
+    
+
+    .fa-map-marker:before {
+            content: "\f041";
+            margin: 0.6rem;
+            color:orangered;
+    }
+
+    section p{
+            color: cornsilk;
+    }
+    
+    
+
+
+
+
+
+@media screen and (min-width: 1920px){
+
+    #map{
+
+        width: 100rem;
+        height: 50rem;
+        z-index: 0;
+    }
+
+    article{
+        max-width: 80rem;
 }
 
-aside {
+    aside {
         font-family: monospace;
         font-size: larger;
-        font-weight: 600;
+        font-weight: 400;
         color: #000;
-}
-
-.fa-map-marker:before {
-        content: "\f041";
-        margin: 0.6rem;
-        color:orangered;
-}
-
-section p{
-        color: black;
-}
-
-
-
-
-
-
-@media screen and (min-width: 850px){
-
-        #map{
-                width: 70rem;
-                height: 30rem;
-                z-index: 0;
-        }
-
-        article{
-                max-width: 80rem;
-        }
-
-        aside {
-                font-family: monospace;
-                font-size: larger;
-                font-weight: 400;
-                color: #000;
-        }
-
+    }
+    
+    
+     /*
+        Nav admin
+    */
+    
+    
+    ul.nav.navbar-nav.navbar-right {
+        padding-right: 14rem;
+    }
+    
+    nav.nav1 {
+        padding: 0; 
+    }
+    nav.nav2 {
+        padding-top:3.5rem;
+        padding-right: 22rem;
+    }
 }

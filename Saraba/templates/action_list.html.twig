@@ -1,17 +1,17 @@
 {%extends "layout.html.twig"%}
 
-{% block page_title 'Nos Actions' %}
+{% block page_title 'Pédagogie' %}
 {% block h2 '' %}
 {% block p '' %}
 
     
 {% block content %}
 
-    <section id="circular-bar" class="animated bounceInUp">
+      <section id="circular-bar" class="animated bounceInUp">
     
                 <article class="col-md-4 col-sm-6">
-                    <h2 class="animated slideInLeft">Humanitaire<h2>
-                    <a href=""><div class="progress blue">
+                    <h2 class="animated slideInLeft">Engagement et implication<h2>
+                    <a href="#action" class="bubble"  id="engagement"><div class="progress blue">
                         <span class="progress-left">
                             <span class="progress-bar"></span>
                         </span>
@@ -22,8 +22,8 @@
                     </div></a>
                 </article>
                 <article class="col-md-4 col-sm-6">
-                    <h2 class="animated slideInLeft">Thérapeutique<h2>
-                    <a href=""><div class="progress yellow">
+                    <h2 class="animated slideInLeft">Psycho-éducation<h2>
+                    <a href="#action" class="bubble"  id="education"><div class="progress yellow">
                         <span class="progress-left">
                             <span class="progress-bar"></span>
                         </span>
@@ -34,8 +34,8 @@
                     </div></a>
                 </article>
                 <article class="col-md-4 col-sm-6">
-                    <h2 class="animated slideInLeft">Artistique<h2>
-                    <a href=""><div class="progress green">
+                    <h2 class="animated slideInLeft">Atelier culturel et artistique<h2>
+                    <a href="#action" class="bubble"  id="art"><div class="progress green">
                         <span class="progress-left">
                             <span class="progress-bar"></span>
                         </span>
@@ -46,23 +46,30 @@
                     </div></a>
                 </article>   
             </section>
+            
+            <section id="video"><iframe width="560" height="315" src="https://www.youtube.com/embed/wYZiO0e_-hI" frameborder="0" allowfullscreen></iframe></section>
 
             <section id="action">
                 <article>
-                    <h3><i class="fa fa-arrow-right" aria-hidden="true"></i>Humanitaire</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, voluptatum minus eius adipisci nesciunt quibusdam porro qui magni reiciendis, ad commodi. Similique fugiat amet animi tenetur, unde aspernatur necessitatibus, a!</p>
+                    <h3 id="title_engagement"><i class="fa fa-arrow-circle-down" aria-hidden="true"></i>Engagement et implication</h3>
+                    <p>Les jeunes s’investissent dans un projet humanitaire qui s’inscrit dans la durée et dans l’optique d’échange avec les habitants de la région, comme par exemple la découverte des services d’hygiène spécifiques au Sénégal alliée à de courtes actions de distribution d’eau de javel en période d’hivernage. La mise en place de ces projets s’effectue en équipe et avec le groupe d’adolescents qui s’investit du début à la fin du projet. C’est pour eux une manière positive et valorisante d’aller à la rencontre d’une autre culture différente de la leur et de se confronter à la réalité de vie des populations locales</p>
                 </article>
 
                 <article>        
-                    <h3><i class="fa fa-arrow-right" aria-hidden="true"></i>Thérapeutique</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore aut praesentium, distinctio voluptate odit pariatur illo aspernatur, similique non suscipit commodi hic quia minus temporibus, maiores fugiat ab possimus dolorem!</p>
+                    <h3 id="title_education"><i class="fa fa-arrow-circle-down" aria-hidden="true"></i>Psycho-éducation</h3>
+                    <p>L’objectif n’est pas de combler les lacunes des adolescents  souvent en rupture avec l’école depuis longtemps, mais de les réconcilier avec le désir d’apprendre en 	adaptant les cours à leur capacités et en valorisant leurs acquis. Le principal n’est point de reproduire une  situation d’échec et pour cela il est important d’avoir pu, auparavant si possible et avec l’aide des services de placement, évaluer leurs niveaux et les raisons de leurs difficultés (illettrisme, dyslexie, hyperactivité….)</p>
                 </article> 
 
                 <article>
-                    <h3><i class="fa fa-arrow-right" aria-hidden="true"></i>Artistique</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab fuga, voluptas amet provident perferendis porro voluptate maiores harum sint dolorum adipisci nesciunt delectus ullam minus quae temporibus quod ipsum itaque.</p>
+                    <h3 id="title_art"><i class="fa fa-arrow-circle-down" aria-hidden="true"></i>Art et Culture</h3>
+                    <p>En fonction des centres d’intérêt des adolescents, l’accent est plus ou moins mis sur tel ou tel atelier. Beaucoup de ces activités sont centrées sur une ouverture à la culture du pays d’accueil et à de nouveaux moyens d’expression. Si les ateliers artistiques permettent au jeune de se recentrer et se valoriser, les ateliers ou activités  collectives  l’insèrent dans un groupe et lui font assimiler les règles de discipline collective. Retrouvez des photos des différents ateliers dans <a href="galerie.html">la galerie</a></p>
                 </article>
-            <section>
+            </section>
+
+            <section id="pdf">
+                <h2>Consulter notre livre blanc</h2>
+                <iframe src="https://docs.google.com/document/d/1exUjMeX0ocJuGNpNXhE9dYFHiLbXMvmKYWfxvvV--A4/pub?embedded=true" width="700px" height="800px"></iframe>
+            </section> 
 {% endblock %}
 
 

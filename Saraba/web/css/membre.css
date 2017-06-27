@@ -63,12 +63,6 @@ Style Reset
         transition: all .5s;
     }
 
-    u:nth-child(1), u:nth-child(2){
-        font-size: 1.8rem;
-        color: red;
-        line-height: 4rem;
-    }
-
     img{
         max-width: 100%;
     }
@@ -190,31 +184,33 @@ Style header
 Style Main
 */
 
-    section:first-child{
-        color: #222;
-        background-color: #eee;
-        padding: 2rem 1rem;
-        
-        
-    }
+    
 
-    main section:last-child{
+    main section{
         background-color: antiquewhite;
         padding: 2rem 1rem;
     }
-
+    section p{
+        line-height: 3rem;
+    }
+    
+/*
     section:first-child p{
         line-height: 2.3rem;
     }
 
-    section:last-child p{
-        line-height: 3rem;
-    }
 
     section:first-child article{
         margin-bottom: 2rem;
         border-style: groove;
     }
+    section:first-child{
+        color: #222;
+        background-color: #eee;
+        padding: 2rem 1rem;
+    }
+*/
+
 
 
 
@@ -285,24 +281,24 @@ RequÃĒtes media
                 margin: 0 -15rem;
                 padding: 0;
             }
-
+/*
             nav li:not(:last-child){
                 margin-right: 1rem;
             }
-
+*/
 
             /* Style Main */
 
             section{
                 display: block;
             }
-
+/*
             section:first-child article{
                 display: inline-block;
                 width: 18%;
                 vertical-align: top;
             }
-
+*/
 
             
 

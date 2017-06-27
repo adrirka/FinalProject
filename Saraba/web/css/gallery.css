@@ -1,11 +1,25 @@
+/* Style Reset */
+
+body{
+    font-size: 1.5rem; /* => 15px */
+    font-family: 'Merriweather', serif;
+    text-align: center;
+    background: url(../img/background_action.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+}
+
 /* Style the Image Used to Trigger the Modal */
-#myImg {
+.myImg {
     border-radius: 5px;
     cursor: pointer;
     transition: 0.3s;
+    padding: 1rem;
 }
 
-#myImg:hover {opacity: 0.7;}
+#myImg:hover {
+    opacity: 0.7;
+}
 
 /* The Modal (background) */
 .modal {
@@ -20,34 +34,6 @@
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
-}
-
-/* Modal Content (Image) */
-.modal-content {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
-}
-
-/* Caption of Modal Image (Image Text) - Same Width as the Image */
-#caption {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
-    text-align: center;
-    color: #ccc;
-    padding: 10px 0;
-    height: 150px;
-}
-
-/* Add Animation - Zoom in the Modal */
-.modal-content, #caption { 
-    -webkit-animation-name: zoom;
-    -webkit-animation-duration: 0.6s;
-    animation-name: zoom;
-    animation-duration: 0.6s;
 }
 
 @-webkit-keyframes zoom {
@@ -71,8 +57,7 @@
     transition: 0.3s;
 }
 
-.close:hover,
-.close:focus {
+.close:hover, .close:focus {
     color: #bbb;
     text-decoration: none;
     cursor: pointer;

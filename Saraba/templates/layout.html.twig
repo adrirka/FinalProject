@@ -20,18 +20,18 @@
         <!-- Ouverture de la page -->
         <header>
             {% if user_manager.admin %}
-            <nav>
+            <nav class="nav1">
                 <div class="container">
                     <a class="navbar-brand">Menu admin</a>
                     <ul class="nav navbar-nav">
                         <li>
-                            <a href="{{ path('admin_articles') }}">Articles</a>
+                            <a href="{{ path('admin_articles') }}">News</a>
                         </li>
                         <li>
-                            <a href="{{ path('admin_partners') }}">Partners</a>
+                            <a href="{{ path('admin_partners') }}">Partenaires</a>
                         </li>
                         <li>
-                            <a href="{{ path('admin_addpartners') }}">Add Partners</a>
+                            <a href="{{ path('admin_addpartners') }}">Ajouter Partenaires</a>
                         </li>
                         <li>
                             <a href="{{ path('admin_gallerys') }}">Galerie</a>
@@ -48,7 +48,7 @@
         {% endif %}
             
             <!-- Menu principal -->
-            <nav>
+            <nav class="nav2">
                 <a href="{{ path('homepage') }}"><img src="{{ asset('img/logo_1.png') }}" alt="SARABA Association"/></a>
                 <p>Menu <i class="fa fa-bars"></i></p>
                 <ul>
@@ -68,7 +68,7 @@
                         <a href="{{ path('addpartner_edit') }}">Devenir Partenaire</a>
                     </li>
                     <li>
-                        <a href="{{ path('membre') }}">Membre de l'asso</a>
+                        <a href="{{ path('membre') }}">Membres de l'association</a>
                     </li>
                     <li>
                         <a href="{{ path('galerie') }}">Galerie</a>

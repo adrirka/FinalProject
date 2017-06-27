@@ -139,7 +139,7 @@ Style header
 
     nav ul :hover{
         color: white;
-        background-color: #c6c6c6;
+        /*background-color: #c6c6c6;*/
     }
     
 
@@ -519,13 +519,13 @@ Requêtes media
             }
 
             nav a{
-                color: lightgrey;
+                color: lightcyan !important;
                 top: 2.4rem;
                 left:10rem;
             }
 
             nav a:hover{
-                color: white;
+                color: darkred !important;
                 opacity: 1;
             }
 
@@ -638,4 +638,28 @@ Requêtes media
                 width: 100%;
             
             }
+    }
+
+    
+    /*
+        Nav admin
+    */
+    
+    
+    ul.nav.navbar-nav.navbar-right {
+        padding-right: 14rem;
+    }
+    
+    nav.nav1 {
+        padding: 0; 
+    }
+    
+    
+    @media screen and (min-width: 1850px){
+
+       nav.nav2{
+            max-width: 50rem !important;
+            margin: 0 auto 15rem auto;
+            border: none;
+        }
     }

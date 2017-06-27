@@ -178,18 +178,23 @@ Style header
 Style Main
 */
     main{
-        background-color: #efe0c4;      
-        
+        background-color: #efe0c4;
+        background-repeat: no-repeat;
+        background-size: cover;  
     }
 
     section{
         color: #222;
-        padding: 2rem;
-        height: 30rem;            
+        padding: 2rem;          
     }
     
     main h2{ 
         color: black;
+        padding-bottom: 2rem;
+    }
+    
+    aside.fa.fa-map-marker {
+        padding-top: 2rem;
     }
 
 

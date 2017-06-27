@@ -77,7 +77,7 @@ Style header
 */
 
 header {
-    padding: 0 0 5rem 0 !important;
+    padding: 0 0 10rem 0 !important;
     min-height: 0rem !important;
 }
 
@@ -128,7 +128,7 @@ header {
 
     nav ul :hover{
         color: white;
-        background-color: #c6c6c6;
+        /*background-color: #c6c6c6;*/
         text-decoration: none;
     }
     
@@ -505,4 +505,39 @@ Requêtes media
                 width: 100%;
             
             }
+    }
+    
+/*
+   Nav admin
+*/
+    
+    @media screen and (min-width: 1650px){
+
+        nav {
+            position: relative;
+            margin-bottom: 30rem;
+        }
+    }
+    
+    
+    
+   
+    
+    
+    ul.nav.navbar-nav.navbar-right {
+        padding-right: 14rem;
+    }
+    
+    nav.nav1 {
+        padding: 0; 
+    }
+    
+    
+    @media screen and (min-width: 1850px){
+
+       nav.nav2{
+            max-width: 50rem !important;
+            margin: 0 auto 15rem auto;
+            border: none;
+        }
     }

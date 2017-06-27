@@ -31,7 +31,7 @@ class ArticleController extends ControllerAbstract{
               if(!empty($_FILES['img'] ['name'])){ // si une image a été uploadée, $_FILES est remplie
               
                 // on constitue un nom unique pour le fichier photo :
-                $nom_photo = $_POST['title'] . '_' . $_FILES['img']['name']; 
+                $nom_photo = uniqid(). '_' . $_FILES['img']['name']; 
                 
                 // On constitue le chemin de la photo enregistré en BDD :
                 $photo = realpath(__DIR__ . '/../../../web/img/') . '/' . $nom_photo;  // On obtient ici le nom et le chemin de la photo depuis la racine du site

@@ -1,30 +1,32 @@
 {%extends "layout.html.twig"%}
 
-{% block page_title 'News' %}    
+{% block page_title '' %}    
 {% block h2 '' %}
 {% block p '' %}
-
+    
+    
 {% block content %}
    {% for article in articles %}
-        <table class="table">
-            <th>
-                <td>
-                    <img src="{{ asset('img/' ~ article.img) }}" max-width="400" height="350">
-                </td>
-                <td>
-                    <article>
-                        <p><b>{{ article.title }}</b></p>
-                    </article>
-                    <article>
-                        {{ article.content }}
-                    </article>
-                    <article>
-                        {{ article.content }}
-                    </article>
-                </td>
-            </th>
-        </table>
+        <div class="container">
+            <div class="row">
+            
+                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-4 col-lg-offset-1">
+                    <img src="{{ asset('img/' ~ article.img) }}" max-width="400" max-height="350">
+                </div>
 
+                <div class="col-xs-12 col-sm-9 col-md-9 col-lg-5 col-lg-offset-1"">
+                    <h3><b>{{ article.title }}</b></h3>
+                    <p>{{ article.content }}</p>
+                </div>
+
+                
+            
+            </div>
+
+            
+        </div>
+            
+        
 
     {% else %}
         <tr>
@@ -37,6 +39,6 @@
 
 {% block stylesheets %}
     {{ parent() }}
-<link rel="stylesheet" href="{{ asset('css/contactinfo.css') }}">
-<link rel="stylesheet" href="{{ asset('css/news.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/contactinfo.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/news.css') }}">
 {% endblock %}

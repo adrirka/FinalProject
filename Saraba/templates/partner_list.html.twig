@@ -7,22 +7,25 @@
 
 {% block content %}
    {% for partner in partners %}
-        <table class="table">
-            <th>
-                <td>
-                    <img src="{{ asset('img/' ~ partner.img) }}" max-width="400" height="350">
-                </td>
-                <td>
-                    <article>
-                        <p><b>{{ partner.title }}</b></p>
-                    </article>
-                    <article>
-                        {{ partner.content }}
-                    </article>
-                </td>
-            </th>
-        </table>
+        <div class="container">
+            <div class="row">
+            
+                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 col-lg-offset-1">
+                    <img src="{{ asset('img/' ~ partner.img) }}" max-width="400" max-height="350">
+                </div>
 
+                <div class="col-xs-12 col-sm-9 col-md-9 col-lg-6 col-lg-offset-1"">
+                    <h3><b>{{ partner.title }}</b></h3>
+                    <p>{{ partner.content }}</p>
+                </div>
+
+                 
+            
+            </div>
+            
+        </div>
+            
+        
 
     {% else %}
         <tr>
@@ -32,8 +35,8 @@
     
 {% endblock %}
 
+
 {% block stylesheets %}
     {{ parent() }}
-    <link rel="stylesheet" href="{{asset ('css/news.css')}}"/>
+    <link rel="stylesheet" href="{{asset ('css/partner.css')}}"/>
 {% endblock %}
-

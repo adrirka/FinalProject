@@ -8,29 +8,30 @@
             <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/web/css/gallery.css</file>
             <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/templates/login.html.twig</file>
             <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/templates/article_list.html.twig</file>
-            <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/src/Service/UserManager.php</file>
             <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/src/Entity/AddPartner.php</file>
             <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/web/css/main.css</file>
             <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/web/css/admingallery.css</file>
+            <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/templates/admin/partner/edit.html.twig</file>
             <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/src/Controller/Admin/ArticleController.php</file>
-            <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/templates/admin/article/edit.html.twig</file>
             <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/src/Controller/IndexController.php</file>
+            <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/templates/admin/article/edit.html.twig</file>
             <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/src/Entity/User.php</file>
             <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/src/Controller/Admin/NewsletterController.php</file>
             <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/src/Controller/Admin/AddPartnerController.php</file>
             <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/web/css/action.css</file>
             <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/templates/action_list.html.twig</file>
-            <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/src/Controller/NewsletterUController.php</file>
             <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/src/Repository/PartnerRepository.php</file>
             <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/src/Controller/PageImplantationsController.php</file>
             <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/templates/admin/addpartner/edit.html.twig</file>
             <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/src/Controller/UserController.php</file>
             <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/web/css/contactinfo.css</file>
             <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/src/Controller/Admin/PartnerController.php</file>
-            <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/src/Controller/PageGalleryController.php</file>
-            <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/src/Controller/PageActionController.php</file>
+            <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/src/Entity/Partner.php</file>
             <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/src/Repository/AddPartnerRepository.php</file>
+            <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/src/Controller/PageActionController.php</file>
+            <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/src/Controller/PageGalleryController.php</file>
             <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/src/Entity/Newsletter.php</file>
+            <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/web/index_dev.php</file>
             <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/web/css/login.css</file>
             <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/src/Controller/PagePartnerController.php</file>
             <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/web/js/scriptbuger.js</file>
@@ -41,35 +42,42 @@
             <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/web/css/addpartner.css</file>
             <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/src/Controller/ControllerAbstract.php</file>
             <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/templates/addpartner_list.html.twig</file>
-            <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/templates/gallery_list.html.twig</file>
             <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/web/css/partner.css</file>
+            <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/templates/gallery_list.html.twig</file>
             <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/web/js/contact.js</file>
             <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/web/css/adminArticle.css</file>
-            <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/web/css/membre.css</file>
+            <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/src/Repository/UserRepository.php</file>
             <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/src/Controller/PartnerController.php</file>
+            <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/web/css/membre.css</file>
             <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/src/controllers.php</file>
             <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/templates/membre_list.html.twig</file>
+            <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/src/console.php</file>
+            <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/tests/controllersTest.php</file>
             <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/web/css/stylestandard.css</file>
-            <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/src/app.php</file>
             <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/web/css/admin.css</file>
+            <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/src/app.php</file>
             <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/web/css/home1.css</file>
             <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/src/Repository/GalleryRepository.php</file>
             <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/src/Controller/Admin/GalleryController.php</file>
             <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/src/Controller/PageActuController.php</file>
+            <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/src/Entity/Gallery.php</file>
             <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/templates/implantations_list.html.twig</file>
             <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/templates/admin/gallery/list.html.twig</file>
+            <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/src/Entity/Article.php</file>
             <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/web/css/implantations.css</file>
-            <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/web/js/implantations.js</file>
             <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/src/Repository/NewsletterRepository.php</file>
+            <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/web/js/implantations.js</file>
+            <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/src/Repository/ArticleRepository.php</file>
             <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/templates/admin/addpartner/list.html.twig</file>
             <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/templates/admin/gallery/edit.html.twig</file>
-            <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/src/Repository/ArticleRepository.php</file>
             <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/templates/layout.back.html.twig</file>
+            <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/src/Repository/RepositoryAbstract.php</file>
             <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/templates/index.html.twig</file>
             <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/templates/admin/article/list.html.twig</file>
             <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/web/css/home.css</file>
             <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/templates/partner_list.html.twig</file>
             <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/src/Controller/PageMembreController.php</file>
+            <file>file:/C:/Users/Etudiant/AlexandreRodrigues-PERSO/FinalProject/Saraba/web/index.php</file>
         </group>
     </open-files>
 </project-private>

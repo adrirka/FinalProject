@@ -10,14 +10,14 @@
         <tr>
             <th>Titre</th>
             <th>Contenu</th>            
-            <th>Image</th>
+            <th>Statut</th>
             <th>Action</th>
         </tr>
         {% for addpartner in addpartners %}
             <tr>
                 <td>{{ addpartner.title }}</td>
                 <td>{{ addpartner.content }}</td>
-                <td><img src="{{ asset('img/' ~ addpartner.img) }}" width="130" height="90"></td>
+                <td>{{ addpartner.displayableStatus }}</td>
                 <td>
                     <a href="{{ path('admin_addpartner_accepte', { id: addpartner.id }) }}" class="btn btn-primary">
                         Accepter

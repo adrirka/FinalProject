@@ -23,6 +23,10 @@ header{
 header h1{
     padding:14rem 0 6rem 0;
 }
+
+nav{
+    z-index: 1000;
+}
 main section h1:after,main section h2:after {
     display: block;
     width: 20rem;

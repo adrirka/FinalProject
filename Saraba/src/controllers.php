@@ -29,7 +29,7 @@ $app
 ;
 
 $app
-    ->get('/', 'index.controller:indexAction')  
+    ->match('/', 'index.controller:indexAction')  
     ->bind('homepage');
 
 $app['partner.controller'] = function () use ($app) {

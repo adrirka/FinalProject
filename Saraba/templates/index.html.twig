@@ -32,7 +32,7 @@
                                 <label for="userMessage"><b></b></label>                                
                                 <textarea class="col-sm-6 form-control" id="userMessage" name="message" placeholder="Votre Message"></textarea>
                         
-                                <input class="button" type="submit" value="Envoyer">
+                                <input class="button" type="submit" value="Envoyer" name="contact-button">
                          
                         </form>
                     </section>
@@ -41,7 +41,7 @@
                     <section id="actions" class="col-md-6 col-lg-6">
                         <figure>
                             <img src="{{ asset('img/actions.jpg') }}" alt="actions">
-                            <figcaption><a href="{{ path('action') }}"><b>Découvrez nos actions</b></a></figcaption>
+                            <figcaption><a href="{{ path('action') }}"><b>Notre approche</b></a></figcaption>
                         </figure>
                     </section>
                 </div>
@@ -54,21 +54,20 @@
                     <section id="actualite" class="col-md-6 col-lg-6">
                         <figure>
                             <img src="{{ asset('img/actualite.jpg') }}" alt="actualite">
-                            <figcaption><a href="{{ path('actu') }}"><b>Suivez notre actualite</b></a></figcaption>
+                            <figcaption><a href="{{ path('actu') }}"><b>Suivez notre actualité</b></a></figcaption>
                         </figure>
                     </section>
 
                     <!-- Donation -->
                     <section id="donation" class="col-md-6 col-lg-6">
-
+                        
                         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
                         <h2>Faites un don</h2>
                         <p>Nous avons besoin de VOUS pour mettre en oeuvre nos projets !</p>
                             <input type="hidden" name="cmd" value="_s-xclick">
-                            <input type="hidden" name="hosted_button_id" value="RUHFJ3NPKSCJN">
-                            <input type="image" src="https://www.paypalobjects.com/fr_FR/FR/i/btn/btn_donateCC_LG.gif"  border="0" name="submit" alt="PayPal, le réflexe sécurité pour payer en ligne">
+                            <input type="hidden" name="hosted_button_id" value="GUDDW2VSXNEM4">
+                            <input type="image" src="https://www.paypalobjects.com/fr_FR/FR/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal, le réflexe sécurité pour payer en ligne">
                             <img alt="" border="0" src="https://www.paypalobjects.com/fr_FR/i/scr/pixel.gif" width="1" height="1">
-
                         </form>
                     </section>
                 </div>
@@ -82,7 +81,7 @@
                         <div class="wrap">
                             <h2>Tenez-vous informé !</h2>
                             <p>L'association Saraba vous donne des nouvelles régulièrement sur nos activités, nos locaux, nos jeunes - Saraba, porteur de projet</p>
-                            <form action="send.php" method="post" id="newsletter" name="newsletter">
+                            <form method="post" id="newsletter" name="newsletter">
                                 <input type="email" name="signup-email" id="signup-email" value="" placeholder="Adresse email" />
                                 <input type="submit" value="S'abonner" name="signup-button" id="signup-button">
                                 <span class="arrow"></span>

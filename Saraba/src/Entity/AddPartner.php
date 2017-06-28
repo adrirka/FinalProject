@@ -138,5 +138,15 @@ class AddPartner {
         return $this;
     }
 
-
+    public function getDisplayableStatus()
+    {
+        switch ($this->status) {
+            case 'accepted':
+                return 'Accepté';
+            case 'pending':
+                return 'En attente';
+            case 'refused':
+                return 'Refusé';
+        }
+    }
 }

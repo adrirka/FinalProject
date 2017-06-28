@@ -27,7 +27,7 @@ class AddPartnerController extends ControllerAbstract{
         
         $this->app['addpartner.repository']->updateStatus($addpartner);
         
-        $this->addflashMessage('Le partner est accepté');
+        $this->addflashMessage('Le partenaire est accepté');
         
         return $this->redirectRoute('admin_partner_edit', ['id' => $partner->getId()]);
         
@@ -40,7 +40,7 @@ class AddPartnerController extends ControllerAbstract{
         
         $this->app['addpartner.repository']->updateStatus($addpartner);
         
-        $this->addflashMessage('Le partner est refuser');
+        $this->addflashMessage('Le partenaire est refuser');
         
         return $this->redirectRoute('admin_addpartners');
     }

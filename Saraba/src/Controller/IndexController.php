@@ -13,7 +13,7 @@ class IndexController extends ControllerAbstract{
 
 	//Traitement du POST :;
 
-            if(!empty($_POST)){ // si le formulaire est postÃ©;
+            if(!empty($_POST['contact-button'])){ // si le formulaire est postÃ©;
             // echo '<pre>';
             // print_r($_POST);
             // echo '</pre>';
@@ -32,7 +32,7 @@ class IndexController extends ControllerAbstract{
                             }
 
                             if(strlen($_POST['message']) < 10 || strlen($_POST['message']) > 255){
-                                    $contenu .= '<div>Le message doit contenir au moins 10 caractÃ¨res</div>';
+                                    $contenu .= '<div>Le message doit contenir au moins 10 caractères</div>';
                             }
                             
                             // Si aucune erreur sur le formuaire avant envoi sur l'adresse email;
@@ -51,13 +51,55 @@ class IndexController extends ControllerAbstract{
 
                             }
                             else{
-                                    echo 'ProblÃ¨me d\'envoi il dois y avoir une erreur sur votre saisi';
+                                    echo 'Problème d\'envoi, il doit y avoir une erreur sur votre saisie';
                             }		
  
              }
              return new Response($contenu); 
     }
     public function indexAction(){
+        
+        if (isset($_POST['signup-button'])) {
+            $email    = $_POST['signup-email'];
+            $datetime = date('Y-m-d H:i:s');
+            $valid = true;
+
+            if (empty($email)) {
+                $status  = "error";
+                $message = "Le champs email est obligatoire";
+                $valid = false;
+            } else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                $status  = "error";
+                $message = "Veuillez entrer un email valide";
+                $valid = false;
+            }
+
+            if ($valid) {
+                $pdo = $this->app['db'];
+                $existingSignup = $pdo->prepare("SELECT COUNT(*) FROM newsletter WHERE email='$email'");
+                $existingSignup->execute();
+                $data_exists = ($existingSignup->fetchColumn() > 0) ? true : false;
+
+                if (!$data_exists) {
+                    $sql = "INSERT INTO newsletter (email, date) VALUES (:email, :date)";
+                    $q = $pdo->prepare($sql);
+
+                    $q->execute(
+                        array(':email' => $email, ':date' => $datetime));
+
+                    if ($q) {
+                        $status  = "success";
+                        $message = "Vous êtes inscrit avec succès";
+                    } else {
+                        $status  = "error";
+                        $message = "Une erreur est survenue, veuillez réessayer";
+                    }
+                } else {
+                    $status  = "error";
+                    $message = "Cet email existe déjâ";
+                }
+            }
+        }
         
         return $this->render('index.html.twig');
     }

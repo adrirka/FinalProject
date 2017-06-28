@@ -1,0 +1,39 @@
+{% extends "layout.html.twig" %}
+
+{% block title 'Admin gallerys' %}
+    {% block p '' %}
+
+
+{% block content %}
+    <h2>Galerie</h2>
+    <p><a href="{{ path('admin_gallery_edit') }}">Ajouter une image</a></p><br>
+    <table class="table">
+       <tr>    
+            <th>Image</th>
+            <th>Action</th>
+
+        </tr>
+        {% for gallery in gallerys %}
+            <tr>
+                <td><img src="{{ asset('img/' ~ gallery.img) }}" width="300" height="200"></td>
+                <td>
+                    <a href="{{ path('admin_gallery_delete', { id: gallery.id }) }}" class="btn btn-danger">
+                       Supprimer
+                    </a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4" align="center">Aucun Résultat</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{asset('css/adminArticle.css')}}"/>
+    <link rel="stylesheet" href="{{asset('css/admingallery.css')}}"/>
+    <link rel="stylesheet" href="{{asset('css/admin.css')}}"/>
+
+{% endblock %}

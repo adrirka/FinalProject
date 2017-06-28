@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Saraba - homepage</title>
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+        <!-- CDN BOOTSTRAP -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <!-- ANNIMATE CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
+        <!-- Feuille de style -->
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        
+        <!-- Ouverture de la page -->
+        <header>
+            <!-- Menu principal -->
+            <nav>
+                <a href="index.html"><img src="img/logo.png" alt="SARABA Association"/></a>
+                <p>Menu <i class="fa fa-bars"></i></p>
+                <ul>
+                    <li><a href="#donation">Nos actions</a></li>
+                    <li><a href="#">Notre présence</a></li>
+                    <li><a href="#">Nous soutenir</a></li>
+                    <li><a href="#">Nos actualité</a></li>                    
+                    <li><a href="#">Contacts</a></li>
+                </ul>
+            </nav>
+            
+            <section id="contentHeader">
+                <h1>SARABA Association</h1>
+                <h2>Regards Croisés Afrique Europe</h2>
+
+                <p>Stage de rupture et projets éducatifs alternatifs pour la réconciliation de nos jeunes avec le modèle sociétal</p>
+            
+
+                <button class="animated tada" ><a href="#contact">Nous contacter</a></button>
+                <button class="animated tada" ><a href="#donation">Nous soutenir</a></button>
+            </section>
+
+        </header>
+
+        <!--Contenu Principal -->
+        
+        <main>
+
+            <div class="container">
+                <div class="row">
+
+                    <!-- Formulaire -->
+                    <section id="contact" class="col-md-6 col-lg-6">
+                        
+                        <form class="form-vertical" method="post" action="#">
+                        <h2>Nous contacter</h2> 
+                                <label for="type"></label>
+                                <p>Vous êtes :</p>
+                                <input type="radio" name="type" value="Person">Un particulier
+                                <input type="radio" name="type" value="Autre">Autre
+                            
+                                <label for="userName"></label>
+                                <input class="col-sm-6 form-control" type="text" id="userName" name="userName" placeholder="Votre nom ou Raison Sociale">
+                            
+                                <label for="userName"></label>
+                                <input class="col-sm-6 form-control" type="email" id="userEmail" name="userEmail" placeholder="Votre Email">
+                        
+                                <select class="col-sm-6 form-control" id="userSubject" name="userSubject">
+                                    <option value="null" selected>--Sélectionnez un sujet--</option>
+                                    <option value="contacts">Demande d'information</option>
+                                    <option value="inscription">Inscription session</option>
+                                    <option value="atelier">Atelier thérapeuthique</option>
+                                </select>
+                
+                                <label for="userMessage"></label>                                
+                                <textarea class="col-sm-6 form-control" id="userMessage" name="message" placeholder="Votre Message"></textarea>
+                        
+                                <input type="button" class="button" type="submit" value="Envoyer">
+                         
+                        </form>
+                    </section>
+                
+                        
+                    <!-- Nos actions -->
+                    <section id="actions" class="col-md-6 col-lg-6">
+                        <figure>
+                            <img src="img/actions.jpg" alt="actions">
+                            <figcaption><a href="action.html"><b>Découvrez nos actions</b></a></figcaption>
+                        </figure>
+                    </section>
+                </div>
+            </div>
+            
+            <div class="container">
+                <div class="row">
+
+                    <!-- Notre actualite -->
+                    <section id="actualite" class="col-md-6 col-lg-6">
+                        <figure>
+                            <img src="img/actualite.jpg" alt="actualite">
+                            <figcaption><a href="actualite.html"><b>Suivez notre actualite</b></a></figcaption>
+                        </figure>
+                    </section>
+
+                    <!-- Donation -->
+                    <section id="donation" class="col-md-6 col-lg-6">
+
+                        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+                        <h2>Faites un don</h2>
+                        <p>Nous avons besoin de VOUS pour mettre en oeuvre nos projets !</p>
+                            <input type="hidden" name="cmd" value="_s-xclick">
+                            <input type="hidden" name="hosted_button_id" value="RUHFJ3NPKSCJN">
+                            <input type="image" src="https://www.paypalobjects.com/fr_FR/FR/i/btn/btn_donateCC_LG.gif"  border="0" name="submit" alt="PayPal, le réflexe sécurité pour payer en ligne">
+                            <img alt="" border="0" src="https://www.paypalobjects.com/fr_FR/i/scr/pixel.gif" width="1" height="1">
+
+                        </form>
+                    </section>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="row">
+
+                    <!-- Newsletter -->
+                    <section id="newsletterform" class="col-md-6 col-lg-6">
+                        <div class="wrap">
+                            <h2>Tenez-vous informé !</h2>
+                            <p>L'association Saraba vous donne des nouvelles régulièrement sur nos activités, nos locaux, nos jeunes - Saraba, porteur de projet</p>
+                            <form action="send.php" method="post" id="newsletter" name="newsletter">
+                                <input type="email" name="signup-email" id="signup-email" value="" placeholder="Adresse email" />
+                                <input type="submit" value="S'abonner" name="signup-button" id="signup-button">
+                                <span class="arrow"></span>
+                            </form>
+                            <div id="response"></div>
+                        </div>
+                    </section>
+                    
+                    <!-- Réseau sociaux -->
+                    <section id="media" class="col-md-6 col-lg-6">
+                        <figure>
+                            <img src="img/media.jpg" alt="media">
+                            <figcaption><a href="facebook.fr"><b>Retrouvez-nous sur les réseaux sociaux</b></a></figcaption>
+                        </figure>
+                    </section>
+            
+                </div>
+            </div>
+        </main>
+
+        <!-- Fermeture de la page -->
+        
+       <footer>
+        
+                <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a>
+            
+            <p>Copyright 2017 <a href="#">Saraba, association reconnue d'utilité publique</a>. All Rights Reserved.</p>
+        
+		</footer>
+
+         
+        <!-- Script JQuery -->
+        
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+        <!-- Script de la page -->
+        
+        <script src="js/script.js"></script>
+
+    </body>
+</html>

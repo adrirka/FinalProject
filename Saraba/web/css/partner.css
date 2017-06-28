@@ -1,0 +1,75 @@
+
+    /* Style Reset */
+
+
+
+
+    body{
+        font-size: 1.5rem; /* => 15px */
+        font-family: 'Merriweather', serif;
+        text-align: center;
+        background: beige !important;
+        
+    }
+
+    
+
+/* Style header */
+
+    
+    header{
+        background-image: url(../img/partenaire.jpg) !important;
+        background-size: cover;
+    }
+    
+    header h1{
+        padding:14rem 0 6rem 0;
+
+    }
+
+    nav {            
+        z-index:1000;
+    }
+
+
+/* Style Main */
+
+    main{
+        background-color: #a5916f;
+        text-align: center !important;
+        background-color: beige;
+    }
+
+    main h2{
+        color: red;
+    }
+
+    h3{
+        color: white;
+        text-transform: uppercase;
+        text-decoration: underline;
+    }
+
+
+    main img{
+        padding-top: 2.5rem;
+    }
+
+    main p{
+        text-align: left;
+        padding: 3rem;
+        background-color: beige;
+        border-radius: 1rem;
+    }
+
+    div.container{
+        background-color: #b9aa8f;
+        border-radius: 2rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        
+    }
+
+    .row{
+        padding-bottom: 2rem;
+    }

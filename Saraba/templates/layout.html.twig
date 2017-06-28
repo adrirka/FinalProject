@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Saraba</title>
+
+        {% block stylesheets %}
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <!-- CDN BOOTSTRAP -->
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+            <!-- Feuille de style -->
+            <link rel="stylesheet" href="{{ asset('css/home.css') }}">
+            <!--link rel="stylesheet" href="{#{ asset('css/stylestandard.css') }#}"-->
+
+        {% endblock %}
+    </head>
+    <body>
+        
+        <!-- Ouverture de la page -->
+        <header>
+            {% if user_manager.admin %}
+            <nav class="nav1">
+                <div class="container">
+                    <a class="navbar-brand">Menu admin</a>
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="{{ path('admin_articles') }}">Actualités</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('admin_partners') }}">Partenaires</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('admin_addpartners') }}">Ajouter Partenaires</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('admin_gallerys') }}">Galerie</a>
+                        </li>
+
+                    </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="{{ path('logout') }}">Déconnexion</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        {% endif %}
+            
+            <!-- Menu principal -->
+            <nav class="nav2">
+                <a href="{{ path('homepage') }}"><img src="{{ asset('img/logo_1.png') }}" alt="SARABA Association"/></a>
+                <p>Menu <i class="fa fa-bars"></i></p>
+                <ul>
+                    <li>
+                        <a href="{{ path('action') }}">Pédagogie</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('actu') }}">Actualités</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('implantations') }}">Implantation</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('partner_edit') }}">Partenaires</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('addpartner_edit') }}">Devenir Partenaire</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('membre') }}">Membres de l'association</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('galerie') }}">Galerie</a>
+                    </li>           
+                </ul>
+            </nav>
+            
+            <section id="contentHeader">
+                <h1 class="h1place">{% block page_title 'SARABA Association' %}</h1>
+                <h2>{% block h2 'Regards Croisés Afrique Europe'%}</h2>
+                
+                <p>{% block p 'Stage de rupture et projets éducatifs alternatifs pour la réconciliation de nos jeunes avec le modèle sociétal'%}</p>
+            
+                {% block page_boutton %}{% endblock %}
+                
+            </section>
+             
+        </header>
+
+        <!-- FORMULAIRE -->
+        
+        <main>
+            {% block content %}{% endblock %}
+        </main>
+
+        <footer>
+            <p class="social-icons">
+                <a href="https://www.facebook.com/AssoSaraba/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                <a href="https://twitter.com/sarabaasso?lang=fr" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a href="https://www.youtube.com/channel/UCYWtBPQlNRmBDgRa3KAjI-A" target="_blank"><i class="fa fa-youtube" aria-hidden="true"></i></a>
+            </p>
+            <p>Copyright 2017 <a href="#">Saraba, association reconnue d'utilité publique</a>.</p>
+            <p>All Rights Reserved.</p>
+        </footer>
+        {% block javascripts %}
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+            <script src="{{ asset('js/script.js') }}"></script>
+            <script src="{{ asset('js/scriptbuger.js') }}"></script>
+        {% endblock %}
+    </body>
+</html>

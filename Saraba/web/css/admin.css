@@ -1,0 +1,22 @@
+/* Nav admin */
+nav ul {
+    border: none;
+    margin: 0 !important;
+    padding-top: 2rem;
+}
+
+ul.nav.navbar-nav {
+    position: relative;
+    bottom: 5.5rem;
+    left: 6rem;
+}
+
+header{
+    background-image: url(../img/header.jpg);
+    background-size: cover;
+}
+
+
+nav{
+    z-index: 1000;
+}

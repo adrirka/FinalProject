@@ -1,0 +1,29 @@
+{% extends "layout.html.twig" %}
+
+{% block title 'Admin gallerys' %}
+    {% block p '' %}
+
+
+{% block content %}
+    <h2>Edition Galerie</h2>
+    
+    <form method="post" enctype="multipart/form-data">
+
+        <div class="form-group">
+            <label for="Resumer">Image</label>
+            <input name="img" type="file" class="form-control" {{gallery.img}}>
+        </div>
+
+        <button type="submit" class="btn btn-primary">
+            Enregistrer
+        </button>
+        <a href="{{ path('admin_gallerys') }}" class="btn btn-default">Annuler</a>
+    </form>
+
+{% endblock %}
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{asset('css/admin.css')}}"/>
+    <link rel="stylesheet" href="{{asset('css/admingallery.css')}}"/>
+
+{% endblock %}

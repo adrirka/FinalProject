@@ -1,0 +1,13 @@
+th{
+    
+    text-align: left !important;
+}
+
+table{
+    background-color: #eee;
+}
+
+td {
+    width: 1rem !important;
+    text-align: left !important;
+}

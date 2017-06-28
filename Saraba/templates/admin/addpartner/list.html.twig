@@ -1,0 +1,44 @@
+{% extends "layout.html.twig" %}
+
+{% block title 'Admin addpartners' %}
+    {% block p '' %}
+
+
+{% block content %}
+    <h2>Add Partners</h2>
+    <table class="table">
+        <tr>
+            <th>Titre</th>
+            <th>Contenu</th>            
+            <th>Statut</th>
+            <th>Action</th>
+        </tr>
+        {% for addpartner in addpartners %}
+            <tr>
+                <td>{{ addpartner.title }}</td>
+                <td>{{ addpartner.content }}</td>
+                <td>{{ addpartner.displayableStatus }}</td>
+                <td>
+                    <a href="{{ path('admin_addpartner_accepte', { id: addpartner.id }) }}" class="btn btn-primary">
+                        Accepter
+                    </a>
+
+                    <a href="{{ path('admin_addpartner_refuse', { id: addpartner.id }) }}" class="btn btn-danger">
+                       Refuser
+                    </a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4" align="center">Aucun Résultat</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{asset('css/adminArticle.css')}}"/>
+    <link rel="stylesheet" href="{{asset('css/admin.css')}}"/>
+
+{% endblock %}
